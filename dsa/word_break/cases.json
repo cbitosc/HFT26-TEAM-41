@@ -1,0 +1,1181 @@
+{
+ "visible": [
+  {
+   "id": "v1",
+   "input": {
+    "s": "cars",
+    "wordDict": [
+     "car",
+     "ca",
+     "rs"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "v2",
+   "input": {
+    "s": "goals",
+    "wordDict": [
+     "go",
+     "goal",
+     "goals"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "v3",
+   "input": {
+    "s": "leetcode",
+    "wordDict": [
+     "leet",
+     "code"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "v4",
+   "input": {
+    "s": "abcd",
+    "wordDict": [
+     "a",
+     "abc",
+     "b",
+     "cd"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "v5",
+   "input": {
+    "s": "aaaaaaa",
+    "wordDict": [
+     "aa",
+     "aaa"
+    ]
+   },
+   "expected": true
+  }
+ ],
+ "hidden": [
+  {
+   "id": "h01",
+   "input": {
+    "s": "pineapplepenapple",
+    "wordDict": [
+     "apple",
+     "pen",
+     "applepen",
+     "pine",
+     "pineapple"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h02",
+   "input": {
+    "s": "applepenapple",
+    "wordDict": [
+     "apple",
+     "pen"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h03",
+   "input": {
+    "s": "catsandog",
+    "wordDict": [
+     "cats",
+     "dog",
+     "sand",
+     "and",
+     "cat"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h04",
+   "input": {
+    "s": "supercalifragilisticexpialidocious",
+    "wordDict": [
+     "super",
+     "cali",
+     "fragi",
+     "listic",
+     "expi",
+     "ali",
+     "docious"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h05",
+   "input": {
+    "s": "skyscraper",
+    "wordDict": [
+     "sky",
+     "sc",
+     "raper",
+     "scra",
+     "per"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h06",
+   "input": {
+    "s": "wordbreakproblem",
+    "wordDict": [
+     "word",
+     "break",
+     "problem",
+     "wordbreak",
+     "breakproblem",
+     "wordbreakproblem",
+     "wordbreakpro",
+     "blem",
+     "wordprob",
+     "lem",
+     "wordb",
+     "reak",
+     "breakpro",
+     "brea",
+     "kprob",
+     "wordbre",
+     "akprob",
+     "wordbreakp",
+     "rob",
+     "reakp",
+     "reakpro",
+     "wordbre",
+     "reakproblem"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h07",
+   "input": {
+    "s": "cascadingsubstrings",
+    "wordDict": [
+     "cascade",
+     "sub",
+     "strings",
+     "cascade",
+     "ing",
+     "substring"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h08",
+   "input": {
+    "s": "breaktheglassceiling",
+    "wordDict": [
+     "break",
+     "the",
+     "glass",
+     "ceiling",
+     "breaks",
+     "theglass",
+     "ceiling"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h09",
+   "input": {
+    "s": "aquickbrownfoxjumpsoverthelazydog",
+    "wordDict": [
+     "a",
+     "quick",
+     "brown",
+     "fox",
+     "jumps",
+     "over",
+     "the",
+     "lazy",
+     "dog"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h10",
+   "input": {
+    "s": "abcdabcdabcd",
+    "wordDict": [
+     "a",
+     "ab",
+     "abc",
+     "abcd"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h11",
+   "input": {
+    "s": "abcd",
+    "wordDict": [
+     "a",
+     "b",
+     "c",
+     "d",
+     "abc",
+     "bc",
+     "abcd",
+     "cd"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h12",
+   "input": {
+    "s": "wordbreakproblem",
+    "wordDict": [
+     "word",
+     "break",
+     "problem",
+     "pro",
+     "gram",
+     "wordbreak",
+     "breakprob"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h13",
+   "input": {
+    "s": "aaaaaaaaaaaaaab",
+    "wordDict": [
+     "a",
+     "aa",
+     "aaa",
+     "aaaa",
+     "aaaaa",
+     "aaaaaa",
+     "aaaaaaa",
+     "aaaaaaaa",
+     "aaaaaaaaa",
+     "aaaaaaaaaa"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h14",
+   "input": {
+    "s": "interviewquestionsarehard",
+    "wordDict": [
+     "interview",
+     "questions",
+     "are",
+     "hard",
+     "inter",
+     "view",
+     "quest",
+     "ions",
+     "ques",
+     "tionsare",
+     "arehard"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h15",
+   "input": {
+    "s": "mississippi",
+    "wordDict": [
+     "mis",
+     "is",
+     "sip",
+     "i",
+     "pi",
+     "p",
+     "mississipp",
+     "missis",
+     "miss",
+     "issi",
+     "ippi",
+     "ssippi",
+     "ssipp",
+     "ssip",
+     "ssips",
+     "ssip",
+     "issipi",
+     "issipp",
+     "issip",
+     "issips",
+     "issip",
+     "issipp",
+     "issip",
+     "issips",
+     "issip",
+     "issipp",
+     "issip",
+     "issips",
+     "issip",
+     "issipp",
+     "issip",
+     "issips",
+     "issip",
+     "issipp",
+     "issip",
+     "issips",
+     "issip",
+     "issipp",
+     "issip",
+     "issips",
+     "issip",
+     "issipp",
+     "issip",
+     "issips",
+     "issip",
+     "issipp",
+     "issip",
+     "issips",
+     "issip",
+     "issipp",
+     "issip",
+     "issips",
+     "issip",
+     "issipp",
+     "issip",
+     "issips",
+     "issip",
+     "issipp",
+     "issip",
+     "issips",
+     "issip",
+     "issipp",
+     "issip",
+     "issips",
+     "issip",
+     "issipp",
+     "issip",
+     "issips",
+     "issip",
+     "issipp",
+     "issip",
+     "issips"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h16",
+   "input": {
+    "s": "complexwordbreakproblem",
+    "wordDict": [
+     "complex",
+     "word",
+     "break",
+     "problem",
+     "wordbreak",
+     "breakprob",
+     "lem",
+     "prob",
+     "lemp",
+     "complexword"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h17",
+   "input": {
+    "s": "mississippi",
+    "wordDict": [
+     "mis",
+     "issi",
+     "ppi",
+     "issip",
+     "ippi",
+     "missis",
+     "sip",
+     "pi",
+     "ssippi",
+     "is",
+     "ip",
+     "sipi",
+     "issipp",
+     "ippi",
+     "ippi",
+     "mississi",
+     "ppis",
+     "ippii",
+     "missi",
+     "mississipp",
+     "i",
+     "p",
+     "issippip",
+     "issiippi",
+     "mississippi"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h18",
+   "input": {
+    "s": "abracadabra",
+    "wordDict": [
+     "abra",
+     "cad",
+     "abra",
+     "cadabra",
+     "ra",
+     "dab",
+     "ra",
+     "cadabra"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h19",
+   "input": {
+    "s": "supercalifragilisticexpialidocious",
+    "wordDict": [
+     "super",
+     "cali",
+     "fragilistic",
+     "expiali",
+     "docious",
+     "superca",
+     "li",
+     "fragi",
+     "listicex",
+     "piali",
+     "do"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h20",
+   "input": {
+    "s": "abrakadabra",
+    "wordDict": [
+     "abra",
+     "kadabra",
+     "abra",
+     "ka",
+     "da",
+     "bra"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h21",
+   "input": {
+    "s": "aabbccddeeff",
+    "wordDict": [
+     "aa",
+     "bb",
+     "cc",
+     "dd",
+     "ee",
+     "ff",
+     "abc",
+     "def",
+     "ef",
+     "fe",
+     "efg",
+     "gh",
+     "abcdefgh"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h22",
+   "input": {
+    "s": "helplineshorthelpline",
+    "wordDict": [
+     "help",
+     "line",
+     "short",
+     "helpline"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h23",
+   "input": {
+    "s": "leetleetcodeleet",
+    "wordDict": [
+     "leet",
+     "code",
+     "leetcode"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h24",
+   "input": {
+    "s": "racecar",
+    "wordDict": [
+     "race",
+     "car",
+     "racec",
+     "arc",
+     "cec",
+     "er",
+     "c",
+     "ra",
+     "ec",
+     "ce"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h25",
+   "input": {
+    "s": "aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaab",
+    "wordDict": [
+     "a",
+     "aa",
+     "aaa",
+     "aaaa",
+     "aaaaa",
+     "ba"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h26",
+   "input": {
+    "s": "mississippi",
+    "wordDict": [
+     "mis",
+     "sis",
+     "ip",
+     "is"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h27",
+   "input": {
+    "s": "mississippi",
+    "wordDict": [
+     "mis",
+     "is",
+     "ip",
+     "i",
+     "ssip"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h28",
+   "input": {
+    "s": "supercalifragilisticexpialidocious",
+    "wordDict": [
+     "super",
+     "cali",
+     "fragilistic",
+     "expiali",
+     "docious",
+     "superfragilisticexpialidocious"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h29",
+   "input": {
+    "s": "banana",
+    "wordDict": [
+     "ba",
+     "na",
+     "nan",
+     "ban",
+     "nana",
+     "an"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h30",
+   "input": {
+    "s": "thisisatest",
+    "wordDict": [
+     "this",
+     "is",
+     "a",
+     "test",
+     "thisis",
+     "isatest"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h31",
+   "input": {
+    "s": "abcdefgh",
+    "wordDict": [
+     "a",
+     "abc",
+     "abcd",
+     "efg",
+     "h"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h32",
+   "input": {
+    "s": "abcdabcdeabcdabcde",
+    "wordDict": [
+     "abc",
+     "abcd",
+     "abcde",
+     "de",
+     "abcdabcde"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h33",
+   "input": {
+    "s": "ababcabcabcabab",
+    "wordDict": [
+     "ab",
+     "abc",
+     "ababc",
+     "ababcabc",
+     "ababcabcabc",
+     "abab"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h34",
+   "input": {
+    "s": "ababababab",
+    "wordDict": [
+     "ab",
+     "aba",
+     "bab",
+     "baba"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h35",
+   "input": {
+    "s": "aaaaaaa",
+    "wordDict": [
+     "aa",
+     "aaa",
+     "aaaa",
+     "aaaaa",
+     "aaaaaa",
+     "aaaaaaa"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h36",
+   "input": {
+    "s": "dynamicprogramming",
+    "wordDict": [
+     "dynamic",
+     "programming",
+     "dyna",
+     "mic",
+     "prog",
+     "gram",
+     "ming"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h37",
+   "input": {
+    "s": "aquickbrownfoxjumpsoverthelazydog",
+    "wordDict": [
+     "a",
+     "quick",
+     "brown",
+     "fox",
+     "jumps",
+     "over",
+     "the",
+     "lazy",
+     "dog",
+     "aquick",
+     "brownfox",
+     "jump",
+     "sover",
+     "thelazy",
+     "zydog",
+     "quickbr",
+     "ownfo",
+     "xjump",
+     "soverth"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h38",
+   "input": {
+    "s": "thisisaverylongstringthatisdifficulttobreak",
+    "wordDict": [
+     "this",
+     "is",
+     "a",
+     "very",
+     "long",
+     "string",
+     "that",
+     "is",
+     "difficult",
+     "to",
+     "break",
+     "avery",
+     "longstring",
+     "isdifficult"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h39",
+   "input": {
+    "s": "aabbccddeeff",
+    "wordDict": [
+     "aa",
+     "bb",
+     "cc",
+     "dd",
+     "ee",
+     "ff",
+     "abc",
+     "def",
+     "ef",
+     "cd",
+     "ab",
+     "de",
+     "fe",
+     "bc",
+     "dc",
+     "ad",
+     "da",
+     "fb",
+     "bf",
+     "ba",
+     "ac",
+     "ca",
+     "ea",
+     "ae",
+     "be",
+     "eb"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h40",
+   "input": {
+    "s": "programmingisfun",
+    "wordDict": [
+     "pro",
+     "gram",
+     "ming",
+     "is",
+     "fun",
+     "grammi",
+     "ngis",
+     "funny",
+     "progr",
+     "amming",
+     "isfun",
+     "ogramming",
+     "grammi",
+     "ngisfu",
+     "n"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h41",
+   "input": {
+    "s": "mississippi",
+    "wordDict": [
+     "missi",
+     "pi",
+     "ssippi",
+     "issipi",
+     "ippi"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h42",
+   "input": {
+    "s": "abcdefghij",
+    "wordDict": [
+     "a",
+     "ab",
+     "abc",
+     "abcd",
+     "abcde",
+     "abcdef",
+     "abcdefg",
+     "abcdefgh",
+     "abcdefghi",
+     "abcdefghij"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h43",
+   "input": {
+    "s": "abcdefghijk",
+    "wordDict": [
+     "abc",
+     "def",
+     "ghi",
+     "jkl"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h44",
+   "input": {
+    "s": "thefastbrownfoxjumpedoverthelazydog",
+    "wordDict": [
+     "the",
+     "fast",
+     "brown",
+     "fox",
+     "jumped",
+     "over",
+     "lazy",
+     "dog"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h45",
+   "input": {
+    "s": "solutionsarefun",
+    "wordDict": [
+     "solution",
+     "solutions",
+     "are",
+     "fun",
+     "solu",
+     "tions",
+     "sol",
+     "u",
+     "n"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h46",
+   "input": {
+    "s": "thelongestword",
+    "wordDict": [
+     "the",
+     "long",
+     "longest",
+     "word",
+     "lon",
+     "gest",
+     "longes",
+     "estword",
+     "longestwo",
+     "longestwo",
+     "longes",
+     "gestwo",
+     "est",
+     "wordwo",
+     "rdwo",
+     "rdo",
+     "wo",
+     "o"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h47",
+   "input": {
+    "s": "bcbcbc",
+    "wordDict": [
+     "b",
+     "c",
+     "bc",
+     "cb"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h48",
+   "input": {
+    "s": "programming",
+    "wordDict": [
+     "pro",
+     "gram",
+     "ming",
+     "gramm",
+     "ing",
+     "program"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h49",
+   "input": {
+    "s": "xyzzyzyxzyzyzyzyxzyz",
+    "wordDict": [
+     "xyz",
+     "zyz",
+     "zx",
+     "zyxzy",
+     "zyzyz",
+     "zyzyzy"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h50",
+   "input": {
+    "s": "theskyisblue",
+    "wordDict": [
+     "the",
+     "sky",
+     "is",
+     "blue",
+     "thesky",
+     "isblue",
+     "theskyisblue",
+     "theblue",
+     "theskyblue",
+     "blueis",
+     "isblue",
+     "blueisblue",
+     "theskyis"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h51",
+   "input": {
+    "s": "mississippi",
+    "wordDict": [
+     "miss",
+     "issi",
+     "ssippi",
+     "ppi",
+     "ipi",
+     "i"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h52",
+   "input": {
+    "s": "sheisbeautiful",
+    "wordDict": [
+     "she",
+     "is",
+     "beau",
+     "tiful",
+     "beauti",
+     "ful",
+     "be",
+     "auti",
+     "ful",
+     "ti",
+     "ful",
+     "shi",
+     "bea",
+     "autiful",
+     "sheis"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h53",
+   "input": {
+    "s": "exampleexampleexampleexample",
+    "wordDict": [
+     "ex",
+     "ample",
+     "example",
+     "pleexam",
+     "ampleex"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h54",
+   "input": {
+    "s": "abcdefgh",
+    "wordDict": [
+     "ab",
+     "abc",
+     "cd",
+     "efgh",
+     "abcd"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h55",
+   "input": {
+    "s": "abcdefghijklmnopqrstuvwxyz",
+    "wordDict": [
+     "abcdefgh",
+     "ijklmnop",
+     "qrstuvwx",
+     "yz",
+     "mnopqr",
+     "stuvwx",
+     "yzab",
+     "cdefghijklmnop",
+     "qrstuvwxyza",
+     "bcdefghijklmnopq",
+     "rstuvwxyzabcde"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h56",
+   "input": {
+    "s": "supercalifragilisticexpialidocious",
+    "wordDict": [
+     "super",
+     "cali",
+     "fragilistic",
+     "expiali",
+     "docious",
+     "superfragilistic"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h57",
+   "input": {
+    "s": "ababababab",
+    "wordDict": [
+     "a",
+     "ab",
+     "aba",
+     "ababa"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h58",
+   "input": {
+    "s": "thisisaverylongwordthatcanbebrokenintomultiplesubwords",
+    "wordDict": [
+     "this",
+     "is",
+     "a",
+     "very",
+     "long",
+     "word",
+     "that",
+     "can",
+     "be",
+     "broken",
+     "into",
+     "multiple",
+     "sub",
+     "words",
+     "averylong",
+     "bebroken"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h59",
+   "input": {
+    "s": "interview",
+    "wordDict": [
+     "in",
+     "ter",
+     "view",
+     "int",
+     "ent",
+     "rview",
+     "terview",
+     "erview"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h60",
+   "input": {
+    "s": "abcdefghij",
+    "wordDict": [
+     "ab",
+     "abc",
+     "cd",
+     "efg",
+     "hij",
+     "abcdefghij"
+    ]
+   },
+   "expected": true
+  }
+ ]
+}

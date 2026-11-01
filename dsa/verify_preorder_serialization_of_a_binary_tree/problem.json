@@ -1,0 +1,31 @@
+{
+ "id": "verify_preorder_serialization_of_a_binary_tree",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "stack",
+  "strings",
+  "trees"
+ ],
+ "entry_point": "is_valid_serialization",
+ "signature": {
+  "params": [
+   {
+    "name": "preorder",
+    "type": "str"
+   }
+  ],
+  "returns": "bool"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "verify-preorder-serialization-of-a-binary-tree",
+  "question_id": 331
+ }
+}

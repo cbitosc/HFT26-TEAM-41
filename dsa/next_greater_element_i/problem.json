@@ -1,0 +1,35 @@
+{
+ "id": "next_greater_element_i",
+ "difficulty": "easy",
+ "tiers": [
+  "novice"
+ ],
+ "tags": [
+  "arrays",
+  "hashing",
+  "stack"
+ ],
+ "entry_point": "next_greater_element",
+ "signature": {
+  "params": [
+   {
+    "name": "nums1",
+    "type": "list[int]"
+   },
+   {
+    "name": "nums2",
+    "type": "list[int]"
+   }
+  ],
+  "returns": "list[int]"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "next-greater-element-i",
+  "question_id": 496
+ },
+ "practice_only": true
+}

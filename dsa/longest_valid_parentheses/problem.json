@@ -1,0 +1,30 @@
+{
+ "id": "longest_valid_parentheses",
+ "difficulty": "hard",
+ "tiers": [
+  "master"
+ ],
+ "tags": [
+  "dp",
+  "stack",
+  "strings"
+ ],
+ "entry_point": "longest_valid_parentheses",
+ "signature": {
+  "params": [
+   {
+    "name": "s",
+    "type": "str"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "longest-valid-parentheses",
+  "question_id": 32
+ }
+}

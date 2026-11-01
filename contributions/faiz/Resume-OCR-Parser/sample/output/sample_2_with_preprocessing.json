@@ -1,0 +1,114 @@
+{
+  "personal_info": {
+    "name": "ANDREW NICOLAS",
+    "phone": "+1 (555) 1345489",
+    "address": "609 VANNESA BRANCH, CHICAGO, IL"
+  },
+  "summary_objective": "",
+  "experience": [
+    {
+      "title": "Senior Python Developer",
+      "company": "JOHNS, BATZ AND O'HARA",
+      "location": "Chicago, IL",
+      "start_date": "07/2018",
+      "end_date": "present",
+      "description": [
+        "Experience in database architecture, data modeling and data warehousing, experience in using agile tools JIRA, Git, Team City, Agile Central",
+        "Previous experience in using Git/Stash for source and version control, Autosys for batch control and Team City/ Nexus for build/deployment",
+        "Experience in DevOps, source control, unit and integration testing, continuous integration, release management, and other software development practices",
+        "Exposure to any of Business Visualization tools like Qlikview, Qliksense, Tableau",
+        "Excellent collaborator and fantastic teammate with solid leadership skills",
+        "Experience in Project delivery and software engineering projects in a corporate or enterprise environment using Java and Python"
+      ]
+    },
+    {
+      "title": "Python Developer",
+      "company": "RITCHIE-WARD",
+      "location": "Chicago, IL",
+      "start_date": "07/2013",
+      "end_date": "06/2018",
+      "description": [
+        "Skilled in software solution design and problem-solving techniques",
+        "Hands-on experience developing web services",
+        "Experience with data analytics - both tools impact to data structures and implementation",
+        "Design and implementation of software using Python",
+        "Frontend development using JavaScript, HTML and CSS",
+        "CI/CD support for the project",
+        "Assuring code quality and adherence to coding standards on projects",
+        "Excellent verbal and written communications, comfortable working with different levels of management, high attention to detail"
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "Bachelor's in Computer Science",
+      "major": "Computer Science",
+      "institution": "COLUMBUS COLLEGE OF ART AND DESIGN",
+      "location": "",
+      "start_date": "",
+      "end_date": "",
+      "gpa": "",
+      "description": []
+    }
+  ],
+  "skills": {
+    "programming_languages": [
+      "Java",
+      "Python",
+      "JavaScript"
+    ],
+    "frameworks_libraries": [],
+    "databases": [],
+    "tools_technologies": [
+      "JIRA",
+      "Git",
+      "Team City",
+      "Agile Central",
+      "Git/Stash",
+      "Autosys",
+      "Nexus",
+      "Qlikview",
+      "Qliksense",
+      "Tableau",
+      "HTML",
+      "CSS",
+      "Test Traffic Generating tools"
+    ],
+    "soft_skills": [
+      "problem-solving abilities",
+      "trouble-shooting",
+      "diagnostics capabilities",
+      "leadership skills",
+      "communications"
+    ],
+    "other_skills": [
+      "database architecture",
+      "data modeling",
+      "data warehousing",
+      "agile tools",
+      "test automation",
+      "Performance, Load and Functional Testing",
+      "Design and Development",
+      "software solution design",
+      "data analytics",
+      "software engineering",
+      "server-side Java",
+      "DevOps",
+      "source control",
+      "unit testing",
+      "integration testing",
+      "continuous integration",
+      "release management",
+      "CI/CD",
+      "full life cycle projects"
+    ]
+  },
+  "projects": [],
+  "awards_certifications": [],
+  "publications": [],
+  "references": [],
+  "languages": [],
+  "interests": [],
+  "declaration": "",
+  "links": []
+}

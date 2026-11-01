@@ -1,0 +1,38 @@
+{
+ "id": "find_k_pairs_with_smallest_sums",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "heaps"
+ ],
+ "entry_point": "k_smallest_pairs",
+ "signature": {
+  "params": [
+   {
+    "name": "nums1",
+    "type": "list[int]"
+   },
+   {
+    "name": "nums2",
+    "type": "list[int]"
+   },
+   {
+    "name": "k",
+    "type": "int"
+   }
+  ],
+  "returns": "list[list[int]]"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "find-k-pairs-with-smallest-sums",
+  "question_id": 373
+ }
+}

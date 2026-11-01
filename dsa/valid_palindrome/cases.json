@@ -1,0 +1,139 @@
+{
+ "visible": [
+  {
+   "id": "v1",
+   "input": {
+    "s": "0P"
+   },
+   "expected": false
+  },
+  {
+   "id": "v2",
+   "input": {
+    "s": "_a!a_"
+   },
+   "expected": true
+  },
+  {
+   "id": "v3",
+   "input": {
+    "s": "12321"
+   },
+   "expected": true
+  },
+  {
+   "id": "v4",
+   "input": {
+    "s": "123abcba321"
+   },
+   "expected": true
+  },
+  {
+   "id": "v5",
+   "input": {
+    "s": "__^_^__"
+   },
+   "expected": true
+  }
+ ],
+ "hidden": [
+  {
+   "id": "h01",
+   "input": {
+    "s": "Able was I ere I saw Elba"
+   },
+   "expected": true
+  },
+  {
+   "id": "h02",
+   "input": {
+    "s": "__Level__, __level__"
+   },
+   "expected": true
+  },
+  {
+   "id": "h03",
+   "input": {
+    "s": "No lemon, no melon"
+   },
+   "expected": true
+  },
+  {
+   "id": "h04",
+   "input": {
+    "s": "Never odd or even"
+   },
+   "expected": true
+  },
+  {
+   "id": "h05",
+   "input": {
+    "s": "12345678987654321"
+   },
+   "expected": true
+  },
+  {
+   "id": "h06",
+   "input": {
+    "s": "Was it a car or a cat I saw?"
+   },
+   "expected": true
+  },
+  {
+   "id": "h07",
+   "input": {
+    "s": "No 'x' in Nixon"
+   },
+   "expected": true
+  },
+  {
+   "id": "h08",
+   "input": {
+    "s": "Able was I, I saw Elba"
+   },
+   "expected": true
+  },
+  {
+   "id": "h09",
+   "input": {
+    "s": "Not a palindrome"
+   },
+   "expected": false
+  },
+  {
+   "id": "h10",
+   "input": {
+    "s": "Able was I, ere I saw Elba"
+   },
+   "expected": true
+  },
+  {
+   "id": "h11",
+   "input": {
+    "s": "Step on no pets"
+   },
+   "expected": true
+  },
+  {
+   "id": "h12",
+   "input": {
+    "s": "A man, a plan, a canal: Panama"
+   },
+   "expected": true
+  },
+  {
+   "id": "h13",
+   "input": {
+    "s": "Madam, in Eden, I'm Adam"
+   },
+   "expected": true
+  },
+  {
+   "id": "h14",
+   "input": {
+    "s": "123abccba321"
+   },
+   "expected": true
+  }
+ ]
+}

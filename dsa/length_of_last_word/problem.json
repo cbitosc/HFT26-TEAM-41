@@ -1,0 +1,28 @@
+{
+ "id": "length_of_last_word",
+ "difficulty": "easy",
+ "tiers": [
+  "novice"
+ ],
+ "tags": [
+  "strings"
+ ],
+ "entry_point": "length_of_last_word",
+ "signature": {
+  "params": [
+   {
+    "name": "s",
+    "type": "str"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "length-of-last-word",
+  "question_id": 58
+ }
+}

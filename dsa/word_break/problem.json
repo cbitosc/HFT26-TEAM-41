@@ -1,0 +1,37 @@
+{
+ "id": "word_break",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "dp",
+  "hashing",
+  "strings",
+  "tries"
+ ],
+ "entry_point": "word_break",
+ "signature": {
+  "params": [
+   {
+    "name": "s",
+    "type": "str"
+   },
+   {
+    "name": "wordDict",
+    "type": "list[str]"
+   }
+  ],
+  "returns": "bool"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "word-break",
+  "question_id": 139
+ }
+}

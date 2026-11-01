@@ -1,0 +1,34 @@
+{
+ "id": "find_first_and_last_position_of_element_in_sorted_array",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "binary_search"
+ ],
+ "entry_point": "search_range",
+ "signature": {
+  "params": [
+   {
+    "name": "nums",
+    "type": "list[int]"
+   },
+   {
+    "name": "target",
+    "type": "int"
+   }
+  ],
+  "returns": "list[int]"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "find-first-and-last-position-of-element-in-sorted-array",
+  "question_id": 34
+ }
+}

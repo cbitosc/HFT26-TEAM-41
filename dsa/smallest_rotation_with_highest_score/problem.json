@@ -1,0 +1,28 @@
+{
+ "id": "smallest_rotation_with_highest_score",
+ "difficulty": "hard",
+ "tiers": [
+  "master"
+ ],
+ "tags": [
+  "arrays"
+ ],
+ "entry_point": "best_rotation",
+ "signature": {
+  "params": [
+   {
+    "name": "nums",
+    "type": "list[int]"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "smallest-rotation-with-highest-score",
+  "question_id": 798
+ }
+}

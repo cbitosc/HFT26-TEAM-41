@@ -1,0 +1,1013 @@
+{
+ "visible": [
+  {
+   "id": "v1",
+   "input": {
+    "words": [
+     "abc",
+     "b"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "v2",
+   "input": {
+    "words": [
+     "abc",
+     "bdf"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "v3",
+   "input": {
+    "words": [
+     "ab",
+     "ba"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "v4",
+   "input": {
+    "words": [
+     "a"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "v5",
+   "input": {
+    "words": [
+     "ab",
+     "b"
+    ]
+   },
+   "expected": true
+  }
+ ],
+ "hidden": [
+  {
+   "id": "h01",
+   "input": {
+    "words": [
+     "abc",
+     "b",
+     "cde"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h02",
+   "input": {
+    "words": [
+     "abcd",
+     "bnrt",
+     "crm",
+     "dte",
+     "e"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h03",
+   "input": {
+    "words": [
+     "abcd",
+     "bnrt",
+     "crmy",
+     "dtye"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h04",
+   "input": {
+    "words": [
+     "a",
+     "b",
+     "c"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h05",
+   "input": {
+    "words": [
+     "aaaa",
+     "aaaa",
+     "aaaa",
+     "aaaa"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h06",
+   "input": {
+    "words": [
+     "abcd",
+     "b",
+     "cd",
+     "d"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h07",
+   "input": {
+    "words": [
+     "abc",
+     "bde",
+     "cef"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h08",
+   "input": {
+    "words": [
+     "abcd",
+     "bnrt",
+     "crm",
+     "dt",
+     "e"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h09",
+   "input": {
+    "words": [
+     "a",
+     "b",
+     "c",
+     "d"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h10",
+   "input": {
+    "words": [
+     "abc",
+     "bde",
+     "cefg",
+     "dhij",
+     "e"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h11",
+   "input": {
+    "words": [
+     "abat",
+     "baba",
+     "atan",
+     "atal"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h12",
+   "input": {
+    "words": [
+     "ball",
+     "area",
+     "read",
+     "lady"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h13",
+   "input": {
+    "words": [
+     "abcd",
+     "bnrt",
+     "crm",
+     "dte"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h14",
+   "input": {
+    "words": [
+     "abc",
+     "bde",
+     "cef",
+     "dgg"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h15",
+   "input": {
+    "words": [
+     "abcd",
+     "bnrt",
+     "crm",
+     "dt"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h16",
+   "input": {
+    "words": [
+     "ab",
+     "cde",
+     "fgh",
+     "ijk"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h17",
+   "input": {
+    "words": [
+     "ab",
+     "bc",
+     "ca"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h18",
+   "input": {
+    "words": [
+     "short",
+     "or",
+     "r",
+     "t"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h19",
+   "input": {
+    "words": [
+     "abcde",
+     "bcdef",
+     "cdefg",
+     "defgh",
+     "efghi"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h20",
+   "input": {
+    "words": [
+     "apple",
+     "plea",
+     "pear",
+     "leap"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h21",
+   "input": {
+    "words": [
+     "abcd",
+     "bnrt",
+     "crm",
+     "dte",
+     "efgh",
+     "ijkl",
+     "mnop",
+     "qrst",
+     "uvwx",
+     "yzab",
+     "cdef",
+     "ghij",
+     "klmn",
+     "opqr",
+     "stuv",
+     "wxyz"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h22",
+   "input": {
+    "words": [
+     "abcdefghij",
+     "bcdefghijk",
+     "cdefghijkl",
+     "defghijklm",
+     "efghijklmn",
+     "fghijklmno",
+     "ghijklmnop",
+     "hijklmnopq",
+     "ijklmnopqr",
+     "jklmnopqrs"
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h23",
+   "input": {
+    "words": [
+     "abcdef",
+     "bghijk",
+     "ciklmn",
+     "djlopq",
+     "eqrtuv",
+     "fsuvwz",
+     "gtwx",
+     "hxyz",
+     "iz",
+     "j"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h24",
+   "input": {
+    "words": [
+     "abcdefghij",
+     "behgfedcba",
+     "cdefghijba",
+     "defghijbac",
+     "efghijbacd",
+     "fghijbacde",
+     "ghijbacdef",
+     "hijbacdefg",
+     "ijbacdefgh",
+     "jbacdefghi",
+     "kbcdefghij",
+     "lbcdefghij",
+     "mbcdefghij",
+     "nbcdefghij",
+     "obcdefghij",
+     "pbcdefghij",
+     "qbcdefghij",
+     "rbcdefghij",
+     "sbcdefghij",
+     "tbcdefghij"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h25",
+   "input": {
+    "words": [
+     "abcd",
+     "bnrt",
+     "crmy",
+     "dtye",
+     "eytf",
+     "fdsc",
+     "caer",
+     "rhap",
+     "plea",
+     "pear",
+     "leap",
+     "appl",
+     "bcde",
+     "cdef",
+     "defg",
+     "efgh",
+     "fghi",
+     "ghij",
+     "hijk",
+     "ijkl",
+     "jklm",
+     "klmn",
+     "lmno",
+     "mnop",
+     "nopq",
+     "opqr",
+     "pqrs",
+     "qrst",
+     "rstu",
+     "stuv",
+     "tuvw",
+     "uvwx",
+     "vwxy",
+     "wxyz"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h26",
+   "input": {
+    "words": [
+     "a",
+     "b",
+     "c",
+     "d",
+     "e",
+     "f",
+     "g",
+     "h",
+     "i",
+     "j",
+     "k"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h27",
+   "input": {
+    "words": [
+     "abcde",
+     "bcefg",
+     "cdefg",
+     "dghij",
+     "efghij"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h28",
+   "input": {
+    "words": [
+     "abcd",
+     "bnrt",
+     "crmy",
+     "dtye",
+     "epzf",
+     "fuog",
+     "hvn",
+     "ie"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h29",
+   "input": {
+    "words": [
+     "abcd",
+     "bnrt",
+     "crm",
+     "dte",
+     "fgh",
+     "ijkl"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h30",
+   "input": {
+    "words": [
+     "mamma",
+     "apple",
+     "mango",
+     "mask",
+     "maple"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h31",
+   "input": {
+    "words": [
+     "ab",
+     "bc",
+     "ca",
+     "da"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h32",
+   "input": {
+    "words": [
+     "abcdefghij",
+     "bghij",
+     "cghij",
+     "dghij",
+     "eghij",
+     "fghij",
+     "ghij",
+     "hij",
+     "ij",
+     "j"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h33",
+   "input": {
+    "words": [
+     "apple",
+     "peach",
+     "plea",
+     "pair",
+     "pear"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h34",
+   "input": {
+    "words": [
+     "square",
+     "racecar",
+     "area",
+     "read",
+     "lady",
+     "bird"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h35",
+   "input": {
+    "words": [
+     "abcd",
+     "bnrt",
+     "crm",
+     "dtg",
+     "e"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h36",
+   "input": {
+    "words": [
+     "a",
+     "a",
+     "a",
+     "a",
+     "a",
+     "a",
+     "a",
+     "a",
+     "a",
+     "a"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h37",
+   "input": {
+    "words": [
+     "abcd",
+     "bnrt",
+     "crm",
+     "dte",
+     "e",
+     "fg",
+     "hi",
+     "jk"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h38",
+   "input": {
+    "words": [
+     "ab",
+     "ba",
+     "aa"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h39",
+   "input": {
+    "words": [
+     "a",
+     "ab",
+     "abc",
+     "abcd",
+     "abcde",
+     "abcdef",
+     "abcdefg",
+     "abcdefgh",
+     "abcdefghi",
+     "abcdefghij"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h40",
+   "input": {
+    "words": [
+     "ab",
+     "ba",
+     "a",
+     "b"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h41",
+   "input": {
+    "words": [
+     "a",
+     "abcd",
+     "abcde",
+     "abcdefg",
+     "abcdefgh",
+     "abcdefghi",
+     "abcdefghij"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h42",
+   "input": {
+    "words": [
+     "abcd",
+     "bnrt",
+     "crm",
+     "dt",
+     "r"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h43",
+   "input": {
+    "words": [
+     "abcd",
+     "bnrt",
+     "crm",
+     "dte",
+     "fg"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h44",
+   "input": {
+    "words": [
+     "abcd",
+     "bnrt",
+     "crm",
+     "dt",
+     "et",
+     "fg",
+     "hij",
+     "klm",
+     "nop",
+     "qrst",
+     "uvw",
+     "xyzz"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h45",
+   "input": {
+    "words": [
+     "aaaaa",
+     "abcde",
+     "fghij",
+     "klmno",
+     "pqrst"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h46",
+   "input": {
+    "words": [
+     "abcd",
+     "bnrt",
+     "crmy",
+     "dtye",
+     "e",
+     "fghij",
+     "hijkl",
+     "klmno",
+     "mnopq",
+     "nopqr",
+     "opqrs",
+     "pqrst",
+     "qrstu",
+     "rstuv",
+     "stuvw",
+     "tuvwx",
+     "uvwxy",
+     "vwxyz",
+     "wxyz",
+     "xyz",
+     "yz",
+     "z"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h47",
+   "input": {
+    "words": [
+     "abcde",
+     "bafii",
+     "cahid",
+     "digha",
+     "edhhh",
+     "fiiii",
+     "ghhhh",
+     "iiiii"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h48",
+   "input": {
+    "words": [
+     "abcd",
+     "bnrt",
+     "crm",
+     "dt",
+     "",
+     "wxyz"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h49",
+   "input": {
+    "words": [
+     "abcd",
+     "bnrt",
+     "crmy",
+     "dtye",
+     "efgh",
+     "fgij",
+     "ghkl",
+     "hijk"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h50",
+   "input": {
+    "words": [
+     "aaaa",
+     "aabb",
+     "aacc",
+     "aadd"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h51",
+   "input": {
+    "words": [
+     "a",
+     "",
+     "",
+     "",
+     ""
+    ]
+   },
+   "expected": true
+  },
+  {
+   "id": "h52",
+   "input": {
+    "words": [
+     "aabbcc",
+     "abbcc",
+     "bcc",
+     "cc",
+     "c"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h53",
+   "input": {
+    "words": [
+     "apple",
+     "peach",
+     "pear",
+     "er",
+     "e"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h54",
+   "input": {
+    "words": [
+     "abcde",
+     "bcdef",
+     "cdefg",
+     "defgh",
+     "efghi",
+     "fghij",
+     "ghijk",
+     "hijkl",
+     "ijklm",
+     "jklmn",
+     "klmno",
+     "lmnop",
+     "mnopq",
+     "nopqr",
+     "opqrs",
+     "pqrst",
+     "qrstu",
+     "rstuv",
+     "stuvw",
+     "tuvwx",
+     "uvwxy",
+     "vwxyz",
+     "wxyz",
+     "xyz",
+     "yz",
+     "z"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h55",
+   "input": {
+    "words": [
+     "abc",
+     "b",
+     "c",
+     "d",
+     "e",
+     "f",
+     "g",
+     "h",
+     "i",
+     "j",
+     "k",
+     "l",
+     "m",
+     "n",
+     "o",
+     "p",
+     "q",
+     "r",
+     "s",
+     "t",
+     "u",
+     "v",
+     "w",
+     "x",
+     "y",
+     "z"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h56",
+   "input": {
+    "words": [
+     "abcde",
+     "bqkkj",
+     "cdndl",
+     "dekjj",
+     "edefl",
+     "eepal",
+     "deall"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h57",
+   "input": {
+    "words": [
+     "abcdefghij",
+     "bcefhgijak",
+     "cdgijahklm",
+     "dehjklmnop",
+     "efijklmnopqr",
+     "fghklmnopqrs",
+     "ghijklmnopqrst",
+     "hijklmnopqrstu",
+     "ijklmnopqrstuvwx",
+     "jklmnopqrstuvwxy"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h58",
+   "input": {
+    "words": [
+     "abcd",
+     "bnrt",
+     "crm",
+     "dt",
+     "et",
+     "f"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h59",
+   "input": {
+    "words": [
+     "abcde",
+     "bcde",
+     "cde",
+     "de",
+     "efghijklmnopqrstuvwxyz"
+    ]
+   },
+   "expected": false
+  },
+  {
+   "id": "h60",
+   "input": {
+    "words": [
+     "abcd",
+     "bnrt",
+     "crm",
+     "dte",
+     "efgh",
+     "fgij",
+     "ghkl",
+     "hijk",
+     "ijkl",
+     "jklm",
+     "klno",
+     "lmop",
+     "mnop",
+     "nopq",
+     "opqr",
+     "pqrs",
+     "qrst",
+     "rstu",
+     "stuv",
+     "tuvw",
+     "uvwv",
+     "vwxy",
+     "wxyz",
+     "xyz",
+     "yz",
+     "z",
+     "abcde",
+     "fghij",
+     "klmno",
+     "pqrst",
+     "uvwxy"
+    ]
+   },
+   "expected": false
+  }
+ ]
+}

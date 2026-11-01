@@ -1,0 +1,36 @@
+{
+ "id": "maximum_average_subarray_i",
+ "difficulty": "easy",
+ "tiers": [
+  "novice"
+ ],
+ "tags": [
+  "arrays",
+  "sliding_window"
+ ],
+ "entry_point": "find_max_average",
+ "signature": {
+  "params": [
+   {
+    "name": "nums",
+    "type": "list[int]"
+   },
+   {
+    "name": "k",
+    "type": "int"
+   }
+  ],
+  "returns": "float"
+ },
+ "comparator": {
+  "kind": "float_tolerance",
+  "tolerance": 1e-05
+ },
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "maximum-average-subarray-i",
+  "question_id": 643
+ }
+}

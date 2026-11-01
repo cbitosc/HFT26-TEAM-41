@@ -1,0 +1,144 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ROG-user-0987/HFT26-TEAM-41/contracts/score_breakdown.schema.json",
+  "title": "ScoreBreakdown",
+  "description": "A session's score, computed by backend/scoring from stored runs and events only (no LLM). Stored in scores.breakdown and shown on the report. Holds counts and rates only: no test names, output or other hidden-test data. The same stored records always give the same breakdown.",
+  "type": "object",
+  "required": ["scoring_version", "tier", "final_score", "band", "mean_correctness", "ai_efficiency", "tasks"],
+  "properties": {
+    "scoring_version": {
+      "type": "string",
+      "minLength": 1,
+      "description": "Version of the formulas in backend/scoring that produced this breakdown."
+    },
+    "tier": { "type": "string", "enum": ["novice", "adept", "master"] },
+    "final_score": {
+      "type": "number",
+      "minimum": 0,
+      "maximum": 100,
+      "description": "Novice: mean correctness. Adept/Master: 0.8 × mean correctness + 20 × ai_efficiency."
+    },
+    "band": {
+      "type": "string",
+      "enum": ["strong", "pass", "borderline", "not_yet"],
+      "description": "strong ≥ 80, pass ≥ 60, borderline ≥ 45, not_yet below."
+    },
+    "mean_correctness": { "type": "number", "minimum": 0, "maximum": 100 },
+    "ai_efficiency": {
+      "type": ["number", "null"],
+      "minimum": 0,
+      "maximum": 1,
+      "description": "AI efficiency E (Adept/Master). Null for Novice, which has no assistant."
+    },
+    "tasks": {
+      "type": "array",
+      "description": "One entry per task, in task order.",
+      "items": { "$ref": "#/$defs/TaskScore" }
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "TestCounts": {
+      "type": "object",
+      "required": ["passed", "total"],
+      "properties": {
+        "passed": { "type": "integer", "minimum": 0 },
+        "total": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "TaskScore": {
+      "type": "object",
+      "required": [
+        "task_id",
+        "kind",
+        "visible",
+        "hidden",
+        "visible_rate",
+        "hidden_rate",
+        "perf_budget_ms",
+        "perf_ms",
+        "perf_factor",
+        "correctness",
+        "time_ms",
+        "runs"
+      ],
+      "properties": {
+        "task_id": { "type": "string", "minLength": 1 },
+        "kind": { "type": "string", "enum": ["domain", "dsa"] },
+        "visible": { "$ref": "#/$defs/TestCounts", "description": "Visible tests passed in the submission." },
+        "hidden": { "$ref": "#/$defs/TestCounts", "description": "Hidden tests passed in the submission." },
+        "visible_rate": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Share of the counted visible tests that pass: the fail_to_pass ones when rates_over is fail_to_pass, else all. Null when there are none; its weight then goes to the hidden rate."
+        },
+        "hidden_rate": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Same as visible_rate, for the hidden tests."
+        },
+        "perf_budget_ms": {
+          "type": ["integer", "null"],
+          "minimum": 1,
+          "description": "The task's time budget. Null when the task has no perf constraint."
+        },
+        "perf_ms": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "description": "Measured runtime on the perf input. Null when there is no perf constraint or nothing was measured."
+        },
+        "perf_factor": {
+          "type": "number",
+          "minimum": 0.5,
+          "maximum": 1,
+          "description": "1.0 within budget, linear down to 0.5 at 3× budget, 0.5 beyond."
+        },
+        "correctness": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 100,
+          "description": "100 × (0.3 × visible_rate + 0.7 × hidden_rate) × regression_factor × perf_factor."
+        },
+        "time_ms": {
+          "type": ["integer", "null"],
+          "minimum": 0,
+          "description": "First focus to last edit on this task. Null without a focus or an edit event."
+        },
+        "runs": { "type": "integer", "minimum": 0, "description": "Runs of this task during the session." },
+        "rates_over": {
+          "type": "string",
+          "enum": ["fail_to_pass", "all_tests"],
+          "description": "fail_to_pass: the rates count only the tests that fail on the starter (TaskSpec.fail_to_pass), SWE-bench style. all_tests: every test counts; DSA tasks (every case is something to solve) and domain tasks stored without fail_to_pass ids. Absent in breakdowns stored before scoring v2."
+        },
+        "visible_f2p": {
+          "oneOf": [{ "$ref": "#/$defs/TestCounts" }, { "type": "null" }],
+          "description": "Visible fail_to_pass tests passed in the submission. Null unless rates_over is fail_to_pass."
+        },
+        "hidden_f2p": {
+          "oneOf": [{ "$ref": "#/$defs/TestCounts" }, { "type": "null" }],
+          "description": "Same as visible_f2p, for the hidden tests."
+        },
+        "pass_to_pass": {
+          "oneOf": [{ "$ref": "#/$defs/TestCounts" }, { "type": "null" }],
+          "description": "pass_to_pass tests (visible + hidden) still passing in the submission. Null unless rates_over is fail_to_pass."
+        },
+        "regression_factor": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Share of pass_to_pass tests that still pass: breaking working code costs points. 1.0 without pass_to_pass tests or when rates_over is all_tests."
+        },
+        "mutation_score": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "maximum": 1,
+          "description": "The task certificate's mutation score: how well the task's tests catch bugs. Shown on the report, never affects the score. Null when not measured; absent in breakdowns stored before P2.7."
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ROG-user-0987/HFT26-TEAM-41/contracts/run_result.schema.json",
+  "title": "RunResult",
+  "description": "Result of one sandboxed test run, as reported by a runner container.",
+  "type": "object",
+  "required": ["status", "reason", "duration_ms", "tests", "summary", "stdout_tail", "stderr_tail"],
+  "properties": {
+    "status": {
+      "type": "string",
+      "enum": ["ok", "timeout", "error", "oom"],
+      "description": "ok: the test command ran to completion (tests may still have failed). timeout: killed at the time limit. oom: killed for exceeding the memory limit. error: tests could not be collected or run, or the test command crashed."
+    },
+    "reason": {
+      "type": ["string", "null"],
+      "description": "Why status is error, when the backend knows. test_set_mismatch: the collected test ids differed from the task's expected ids, so no test counts as passed. Null otherwise."
+    },
+    "duration_ms": { "type": "integer", "minimum": 0 },
+    "tests": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/TestResult" }
+    },
+    "summary": { "$ref": "#/$defs/Summary" },
+    "stdout_tail": { "type": "string", "description": "Last part of stdout, truncated by the runner." },
+    "stderr_tail": { "type": "string", "description": "Last part of stderr, truncated by the runner." }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "TestResult": {
+      "type": "object",
+      "required": ["id", "name", "outcome", "duration_ms", "message"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1, "description": "Runner test id, e.g. a pytest node id." },
+        "name": { "type": "string" },
+        "outcome": { "type": "string", "enum": ["passed", "failed", "error", "skipped"] },
+        "duration_ms": { "type": "integer", "minimum": 0 },
+        "message": {
+          "type": ["string", "null"],
+          "description": "Failure or error message. Null when the test passed."
+        }
+      },
+      "additionalProperties": false
+    },
+    "Summary": {
+      "type": "object",
+      "description": "failed counts both failed and error outcomes; total also counts skipped tests.",
+      "required": ["passed", "failed", "total"],
+      "properties": {
+        "passed": { "type": "integer", "minimum": 0 },
+        "failed": { "type": "integer", "minimum": 0 },
+        "total": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    }
+  }
+}

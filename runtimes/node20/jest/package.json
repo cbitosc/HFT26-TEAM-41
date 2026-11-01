@@ -1,0 +1,8 @@
+{
+  "name": "assess-node20-jest",
+  "private": true,
+  "description": "Test tooling preinstalled in the assess-node20 image; resolved offline from the image.",
+  "dependencies": {
+    "jest": "30.5.2"
+  }
+}

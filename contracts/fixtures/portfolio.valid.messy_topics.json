@@ -1,0 +1,48 @@
+{
+  "basics": {
+    "name": "Kavya Reddy",
+    "label": "Python Developer",
+    "summary": "Django developer building REST APIs with PostgreSQL."
+  },
+  "skills": [
+    {
+      "name": "Backend",
+      "keywords": [
+        "Python",
+        "Django",
+        "PostgreSQL"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Library API",
+      "description": "REST API for a lending library with paginated search.",
+      "keywords": [
+        "Python",
+        "Django",
+        "PostgreSQL"
+      ]
+    },
+    {
+      "name": "Expense Bot",
+      "description": "Telegram bot that sorts and reports expenses.",
+      "keywords": [
+        "Python"
+      ]
+    }
+  ],
+  "assessment": {
+    "dsaTopicsSolved": {
+      "dynamic_programming": 4,
+      "hash_map": 3,
+      "hashmap": 2,
+      "bfs": 6,
+      "dfs": 9,
+      "two_pointer": 5,
+      "linkedlist": 1,
+      "recursion": 3,
+      "segment_tree": 2
+    }
+  }
+}

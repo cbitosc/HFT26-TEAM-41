@@ -1,0 +1,29 @@
+{
+ "id": "super_washing_machines",
+ "difficulty": "hard",
+ "tiers": [
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "greedy"
+ ],
+ "entry_point": "find_min_moves",
+ "signature": {
+  "params": [
+   {
+    "name": "machines",
+    "type": "list[int]"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "super-washing-machines",
+  "question_id": 517
+ }
+}

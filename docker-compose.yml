@@ -1,0 +1,105 @@
+# DEVELOPMENT ONLY. Not for production use:
+#   - the worker mounts the host Docker socket, which grants root-equivalent
+#     access to the host;
+#   - source code is bind-mounted and servers run with auto-reload;
+#   - credentials come from a local .env file.
+
+x-backend: &backend
+  build: ./backend
+  env_file: .env
+  volumes:
+    - ./backend:/app
+    # Schemas + fixtures, at ../contracts relative to /app (same as on the host).
+    - ./contracts:/contracts:ro
+    - ./seeds:/seeds:ro
+    # DSA bank, incl. reference solutions and expected answers: backend only.
+    - ./dsa:/dsa:ro
+  depends_on:
+    postgres:
+      condition: service_healthy
+    redis:
+      condition: service_healthy
+
+services:
+  postgres:
+    image: postgres:16
+    env_file: .env
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U $${POSTGRES_USER} -d $${POSTGRES_DB}"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  redis:
+    image: redis:7
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 3s
+      retries: 10
+
+  api:
+    <<: *backend
+    command: uvicorn app.main:app --host 0.0.0.0 --port 8000 --reload
+    environment:
+      # Bind-mounted files from a Windows/macOS host don't emit inotify events.
+      WATCHFILES_FORCE_POLLING: "true"
+    ports:
+      - "8000:8000"
+
+  worker:
+    <<: *backend
+    command: celery -A app.worker worker --loglevel=info
+    volumes:
+      - ./backend:/app
+      - ./contracts:/contracts:ro
+      - ./seeds:/seeds:ro
+      - ./dsa:/dsa:ro
+      # Lets the worker start runner containers on the host Docker daemon.
+      # DEVELOPMENT ONLY: this is root-equivalent access to the host.
+      - /var/run/docker.sock:/var/run/docker.sock
+
+  # Celery beat: enqueues auto_submit_expired every 30 s (app/celery_app.py).
+  # Run exactly one beat process.
+  beat:
+    <<: *backend
+    command: celery -A app.worker beat --loglevel=info --schedule /tmp/celerybeat-schedule
+
+  frontend:
+    build: ./frontend
+    environment:
+      # Server-side fetches go over the compose network, not localhost.
+      API_URL: http://api:8000
+      WATCHPACK_POLLING: "true"
+      NEXT_TELEMETRY_DISABLED: "1"
+      # Nav links to the other parts of the platform (frontend/lib/site.ts).
+      NEXT_PUBLIC_SHOWCASE_URL: ${NEXT_PUBLIC_SHOWCASE_URL:-http://localhost:3001}
+      NEXT_PUBLIC_CODE_READING_URL: ${NEXT_PUBLIC_CODE_READING_URL:-http://localhost:3002}
+    volumes:
+      - ./frontend:/app
+      - ./contracts:/contracts:ro
+      # Keep the image's Linux node_modules and build cache instead of the host's.
+      - /app/node_modules
+      - /app/.next
+    ports:
+      - "3000:3000"
+    depends_on:
+      - api
+
+  # Headless Chromium for `make e2e` (e2e/run.sh); not started by `make up`. Shares the
+  # frontend's network namespace, so the browser opens http://localhost:3000 as a
+  # developer would (next dev serves its dev assets to localhost only).
+  e2e:
+    build: ./e2e
+    profiles: ["e2e"]
+    network_mode: "service:frontend"
+    environment:
+      BASE_URL: http://localhost:3000
+    volumes:
+      # Failure screenshots.
+      - ./e2e/artifacts:/e2e/artifacts
+
+volumes:
+  postgres-data:

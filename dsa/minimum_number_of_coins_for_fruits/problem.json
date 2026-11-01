@@ -1,0 +1,32 @@
+{
+ "id": "minimum_number_of_coins_for_fruits",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "dp",
+  "heaps",
+  "queue"
+ ],
+ "entry_point": "minimum_coins",
+ "signature": {
+  "params": [
+   {
+    "name": "prices",
+    "type": "list[int]"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "minimum-number-of-coins-for-fruits",
+  "question_id": 2944
+ }
+}

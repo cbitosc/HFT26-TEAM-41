@@ -1,0 +1,277 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ROG-user-0987/HFT26-TEAM-41/contracts/event.schema.json",
+  "title": "Event",
+  "description": "One entry in a session's event trail. `type` selects the payload shape.",
+  "oneOf": [
+    { "$ref": "#/$defs/RunEvent" },
+    { "$ref": "#/$defs/SubmitEvent" },
+    { "$ref": "#/$defs/HintRequestEvent" },
+    { "$ref": "#/$defs/HintResponseEvent" },
+    { "$ref": "#/$defs/GuardBlockEvent" },
+    { "$ref": "#/$defs/FocusEvent" },
+    { "$ref": "#/$defs/EditEvent" },
+    { "$ref": "#/$defs/PasteEvent" },
+    { "$ref": "#/$defs/BlurEvent" }
+  ],
+  "$defs": {
+    "SessionId": { "type": "string", "minLength": 1 },
+    "TaskId": { "type": "string", "minLength": 1 },
+    "Timestamp": {
+      "type": "integer",
+      "minimum": 0,
+      "description": "Unix epoch time in milliseconds."
+    },
+    "RelPath": {
+      "type": "string",
+      "description": "Relative POSIX path inside the task repo. No leading slash, no . or .. segments.",
+      "pattern": "^\\.?[A-Za-z0-9_-][A-Za-z0-9_.-]*(/\\.?[A-Za-z0-9_-][A-Za-z0-9_.-]*)*$"
+    },
+    "TestCounts": {
+      "type": "object",
+      "required": ["passed", "total"],
+      "properties": {
+        "passed": { "type": "integer", "minimum": 0 },
+        "total": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "HiddenSilentCounts": {
+      "type": "object",
+      "description": "Hidden-test results recorded on a run but not shown to the candidate.",
+      "required": ["passed", "total", "failing_ids"],
+      "properties": {
+        "passed": { "type": "integer", "minimum": 0 },
+        "total": { "type": "integer", "minimum": 0 },
+        "failing_ids": { "type": "array", "items": { "type": "string" } }
+      },
+      "additionalProperties": false
+    },
+
+    "HiddenSample": {
+      "type": "object",
+      "description": "Hidden cases sampled from the task's hidden pool for one session. Stored so a re-grade uses exactly the same cases.",
+      "required": ["seed", "case_ids"],
+      "properties": {
+        "seed": { "type": "integer", "minimum": 0 },
+        "case_ids": { "type": "array", "items": { "type": "string" }, "uniqueItems": true }
+      },
+      "additionalProperties": false
+    },
+    "RunPayload": {
+      "type": "object",
+      "required": ["visible", "hidden_silent"],
+      "properties": {
+        "visible": { "$ref": "#/$defs/TestCounts" },
+        "hidden_silent": { "$ref": "#/$defs/HiddenSilentCounts" }
+      },
+      "additionalProperties": false
+    },
+    "SubmitPayload": {
+      "type": "object",
+      "required": ["visible", "hidden", "perf_ms", "final"],
+      "properties": {
+        "visible": { "$ref": "#/$defs/TestCounts" },
+        "hidden": { "$ref": "#/$defs/TestCounts" },
+        "perf_ms": {
+          "type": ["number", "null"],
+          "minimum": 0,
+          "description": "Measured runtime on the perf input. Null when the task has no perf constraint."
+        },
+        "final": { "type": "boolean", "description": "True for the submission that gets scored." },
+        "hidden_sample": {
+          "oneOf": [{ "$ref": "#/$defs/HiddenSample" }, { "type": "null" }],
+          "description": "DSA tasks: the hidden cases this session was graded on. Absent or null for domain tasks."
+        }
+      },
+      "additionalProperties": false
+    },
+    "HintRequestPayload": {
+      "type": "object",
+      "required": ["level_allowed", "flagged_extraction"],
+      "properties": {
+        "level_allowed": {
+          "type": "integer",
+          "minimum": 0,
+          "description": "Highest hint level the guard allows for this request."
+        },
+        "flagged_extraction": {
+          "type": "boolean",
+          "description": "The request looked like an attempt to extract the solution."
+        }
+      },
+      "additionalProperties": false
+    },
+    "HintResponsePayload": {
+      "type": "object",
+      "required": ["level", "mentions", "similarity", "blocked"],
+      "properties": {
+        "level": { "type": "integer", "minimum": 0 },
+        "mentions": {
+          "type": "array",
+          "description": "Symbols or files the response mentions.",
+          "items": { "type": "string" }
+        },
+        "similarity": {
+          "type": "number",
+          "minimum": 0,
+          "maximum": 1,
+          "description": "Similarity of the response to the reference solution."
+        },
+        "blocked": { "type": "boolean", "description": "The guard withheld the response." }
+      },
+      "additionalProperties": false
+    },
+    "GuardBlockPayload": {
+      "type": "object",
+      "required": ["reason"],
+      "properties": {
+        "reason": { "type": "string", "minLength": 1 }
+      },
+      "additionalProperties": false
+    },
+    "FocusPayload": {
+      "type": "object",
+      "required": ["file", "line", "symbol"],
+      "properties": {
+        "file": { "$ref": "#/$defs/RelPath" },
+        "line": { "type": "integer", "minimum": 1 },
+        "symbol": { "type": ["string", "null"] }
+      },
+      "additionalProperties": false
+    },
+    "EditPayload": {
+      "type": "object",
+      "required": ["file", "symbol", "chars_added", "chars_removed"],
+      "properties": {
+        "file": { "$ref": "#/$defs/RelPath" },
+        "symbol": { "type": ["string", "null"] },
+        "chars_added": { "type": "integer", "minimum": 0 },
+        "chars_removed": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "PastePayload": {
+      "type": "object",
+      "required": ["chars"],
+      "properties": {
+        "chars": { "type": "integer", "minimum": 0 }
+      },
+      "additionalProperties": false
+    },
+    "BlurPayload": {
+      "type": "object",
+      "properties": {},
+      "additionalProperties": false
+    },
+
+    "RunEvent": {
+      "type": "object",
+      "required": ["session_id", "task_id", "ts", "type", "payload"],
+      "properties": {
+        "session_id": { "$ref": "#/$defs/SessionId" },
+        "task_id": { "$ref": "#/$defs/TaskId" },
+        "ts": { "$ref": "#/$defs/Timestamp" },
+        "type": { "const": "run" },
+        "payload": { "$ref": "#/$defs/RunPayload" }
+      },
+      "additionalProperties": false
+    },
+    "SubmitEvent": {
+      "type": "object",
+      "required": ["session_id", "task_id", "ts", "type", "payload"],
+      "properties": {
+        "session_id": { "$ref": "#/$defs/SessionId" },
+        "task_id": { "$ref": "#/$defs/TaskId" },
+        "ts": { "$ref": "#/$defs/Timestamp" },
+        "type": { "const": "submit" },
+        "payload": { "$ref": "#/$defs/SubmitPayload" }
+      },
+      "additionalProperties": false
+    },
+    "HintRequestEvent": {
+      "type": "object",
+      "required": ["session_id", "task_id", "ts", "type", "payload"],
+      "properties": {
+        "session_id": { "$ref": "#/$defs/SessionId" },
+        "task_id": { "$ref": "#/$defs/TaskId" },
+        "ts": { "$ref": "#/$defs/Timestamp" },
+        "type": { "const": "hint_request" },
+        "payload": { "$ref": "#/$defs/HintRequestPayload" }
+      },
+      "additionalProperties": false
+    },
+    "HintResponseEvent": {
+      "type": "object",
+      "required": ["session_id", "task_id", "ts", "type", "payload"],
+      "properties": {
+        "session_id": { "$ref": "#/$defs/SessionId" },
+        "task_id": { "$ref": "#/$defs/TaskId" },
+        "ts": { "$ref": "#/$defs/Timestamp" },
+        "type": { "const": "hint_response" },
+        "payload": { "$ref": "#/$defs/HintResponsePayload" }
+      },
+      "additionalProperties": false
+    },
+    "GuardBlockEvent": {
+      "type": "object",
+      "required": ["session_id", "task_id", "ts", "type", "payload"],
+      "properties": {
+        "session_id": { "$ref": "#/$defs/SessionId" },
+        "task_id": { "$ref": "#/$defs/TaskId" },
+        "ts": { "$ref": "#/$defs/Timestamp" },
+        "type": { "const": "guard_block" },
+        "payload": { "$ref": "#/$defs/GuardBlockPayload" }
+      },
+      "additionalProperties": false
+    },
+    "FocusEvent": {
+      "type": "object",
+      "required": ["session_id", "task_id", "ts", "type", "payload"],
+      "properties": {
+        "session_id": { "$ref": "#/$defs/SessionId" },
+        "task_id": { "$ref": "#/$defs/TaskId" },
+        "ts": { "$ref": "#/$defs/Timestamp" },
+        "type": { "const": "focus" },
+        "payload": { "$ref": "#/$defs/FocusPayload" }
+      },
+      "additionalProperties": false
+    },
+    "EditEvent": {
+      "type": "object",
+      "required": ["session_id", "task_id", "ts", "type", "payload"],
+      "properties": {
+        "session_id": { "$ref": "#/$defs/SessionId" },
+        "task_id": { "$ref": "#/$defs/TaskId" },
+        "ts": { "$ref": "#/$defs/Timestamp" },
+        "type": { "const": "edit" },
+        "payload": { "$ref": "#/$defs/EditPayload" }
+      },
+      "additionalProperties": false
+    },
+    "PasteEvent": {
+      "type": "object",
+      "required": ["session_id", "task_id", "ts", "type", "payload"],
+      "properties": {
+        "session_id": { "$ref": "#/$defs/SessionId" },
+        "task_id": { "$ref": "#/$defs/TaskId" },
+        "ts": { "$ref": "#/$defs/Timestamp" },
+        "type": { "const": "paste" },
+        "payload": { "$ref": "#/$defs/PastePayload" }
+      },
+      "additionalProperties": false
+    },
+    "BlurEvent": {
+      "type": "object",
+      "required": ["session_id", "task_id", "ts", "type", "payload"],
+      "properties": {
+        "session_id": { "$ref": "#/$defs/SessionId" },
+        "task_id": { "$ref": "#/$defs/TaskId" },
+        "ts": { "$ref": "#/$defs/Timestamp" },
+        "type": { "const": "blur" },
+        "payload": { "$ref": "#/$defs/BlurPayload" }
+      },
+      "additionalProperties": false
+    }
+  }
+}

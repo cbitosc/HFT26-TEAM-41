@@ -1,0 +1,30 @@
+{
+ "id": "first_unique_character_in_a_string",
+ "difficulty": "easy",
+ "tiers": [
+  "novice"
+ ],
+ "tags": [
+  "hashing",
+  "queue",
+  "strings"
+ ],
+ "entry_point": "first_uniq_char",
+ "signature": {
+  "params": [
+   {
+    "name": "s",
+    "type": "str"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "first-unique-character-in-a-string",
+  "question_id": 387
+ }
+}

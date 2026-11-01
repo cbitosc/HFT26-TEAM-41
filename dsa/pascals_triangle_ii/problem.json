@@ -1,0 +1,30 @@
+{
+ "id": "pascals_triangle_ii",
+ "difficulty": "easy",
+ "tiers": [
+  "novice"
+ ],
+ "tags": [
+  "arrays",
+  "dp"
+ ],
+ "entry_point": "get_row",
+ "signature": {
+  "params": [
+   {
+    "name": "rowIndex",
+    "type": "int"
+   }
+  ],
+  "returns": "list[int]"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "pascals-triangle-ii",
+  "question_id": 119
+ },
+ "practice_only": true
+}

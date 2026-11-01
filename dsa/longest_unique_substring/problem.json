@@ -1,0 +1,11 @@
+{
+ "id": "longest_unique_substring",
+ "difficulty": "medium",
+ "tiers": ["novice"],
+ "tags": ["sliding_window"],
+ "entry_point": "length_of_longest_substring",
+ "signature": {"params": [{"name": "s", "type": "str"}], "returns": "int"},
+ "comparator": null,
+ "own_statement": true,
+ "source": {"written_for": "P1.3 demo", "task_id": "longest-substring-without-repeating-characters"}
+}

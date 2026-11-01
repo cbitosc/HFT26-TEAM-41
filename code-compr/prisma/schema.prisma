@@ -1,0 +1,104 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "sqlite"
+  url      = env("DATABASE_URL")
+}
+
+model Repo {
+  id          String    @id @default(cuid())
+  owner       String
+  name        String
+  language    String    @default("")
+  stars       Int       @default(0)
+  openIssues  Int       @default(0)
+  pushedAt    DateTime?
+  description String    @default("")
+  issues      Issue[]
+
+  @@unique([owner, name])
+}
+
+model Issue {
+  id      String @id @default(cuid())
+  repoId  String
+  repo    Repo   @relation(fields: [repoId], references: [id])
+  number  Int
+  title   String
+  body    String
+  htmlUrl String
+  state   String
+  labels  String
+  task    Task?
+
+  @@unique([repoId, number])
+}
+
+model Task {
+  id              String    @id @default(cuid())
+  issueId         String    @unique
+  issue           Issue     @relation(fields: [issueId], references: [id])
+  baseSha         String
+  prNumber        Int
+  prUrl           String
+  groundTruthDiff String
+  filesTouched    String
+  difficulty      String
+  readmeExcerpt   String
+  questions       String
+  snapshot        String
+  sessions        Session[]
+}
+
+model Session {
+  id                     String        @id @default(cuid())
+  taskId                 String
+  task                   Task          @relation(fields: [taskId], references: [id])
+  startedAt              DateTime      @default(now())
+  submittedAt            DateTime?
+  status                 String        @default("active")
+  phase                  String        @default("read")
+  comprehensionAnswers   String        @default("[]")
+  efficiencyWriteup      String        @default("")
+  files                  SessionFile[]
+  messages               LlmMessage[]
+  score                  Score?
+}
+
+model SessionFile {
+  id        String  @id @default(cuid())
+  sessionId String
+  session   Session @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  path      String
+  content   String
+  original  String
+
+  @@unique([sessionId, path])
+}
+
+model LlmMessage {
+  id        String   @id @default(cuid())
+  sessionId String
+  session   Session  @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  role      String
+  content   String
+  model     String   @default("")
+  createdAt DateTime @default(now())
+}
+
+model Score {
+  id                      String   @id @default(cuid())
+  sessionId               String   @unique
+  session                 Session  @relation(fields: [sessionId], references: [id], onDelete: Cascade)
+  comprehension           Int
+  fix                     Int
+  efficiency              Int
+  aiFluency               Int
+  comprehensionEvidence   String
+  fixEvidence             String
+  efficiencyEvidence      String
+  aiFluencyEvidence       String
+  createdAt               DateTime @default(now())
+}

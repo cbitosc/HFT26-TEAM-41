@@ -1,0 +1,2 @@
+# Files are bind-mounted into Linux containers and some are generated there; keep LF everywhere.
+* text=auto eol=lf

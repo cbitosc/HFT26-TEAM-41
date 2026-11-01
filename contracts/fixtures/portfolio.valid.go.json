@@ -1,0 +1,55 @@
+{
+  "basics": {
+    "name": "Vikram Singh",
+    "label": "Backend Engineer (Go)",
+    "summary": "Backend engineer writing Go microservices with gRPC and PostgreSQL."
+  },
+  "skills": [
+    {
+      "name": "Languages",
+      "keywords": [
+        "Go",
+        "SQL"
+      ]
+    },
+    {
+      "name": "Infrastructure",
+      "keywords": [
+        "gRPC",
+        "PostgreSQL",
+        "Redis",
+        "Kubernetes"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Order Service",
+      "description": "gRPC microservice for order processing with JWT authentication.",
+      "highlights": [
+        "Rate limiting and response caching with Redis"
+      ],
+      "keywords": [
+        "Go",
+        "gRPC",
+        "PostgreSQL",
+        "Redis"
+      ]
+    },
+    {
+      "name": "Log Shipper",
+      "description": "Agent that filters and batches logs to a central store.",
+      "keywords": [
+        "Go",
+        "Kafka"
+      ]
+    }
+  ],
+  "assessment": {
+    "dsaTopicsSolved": {
+      "arrays": 25,
+      "hashing": 18,
+      "graphs_bfs_dfs": 8
+    }
+  }
+}

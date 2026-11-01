@@ -1,0 +1,30 @@
+{
+ "id": "distribute_candies",
+ "difficulty": "easy",
+ "tiers": [
+  "novice"
+ ],
+ "tags": [
+  "arrays",
+  "hashing"
+ ],
+ "entry_point": "distribute_candies",
+ "signature": {
+  "params": [
+   {
+    "name": "candyType",
+    "type": "list[int]"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "distribute-candies",
+  "question_id": 575
+ },
+ "practice_only": true
+}

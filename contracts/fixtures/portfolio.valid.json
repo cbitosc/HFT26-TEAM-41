@@ -1,0 +1,138 @@
+{
+  "$schema": "https://raw.githubusercontent.com/jsonresume/resume-schema/v1.0.0/schema.json",
+  "basics": {
+    "name": "Ananya Rao",
+    "label": "Backend Developer (Python)",
+    "email": "ananya.rao@example.com",
+    "url": "https://ananyarao.example.com",
+    "summary": "Backend developer with three years of experience building REST APIs in Python and FastAPI, with a focus on PostgreSQL data modelling, background jobs and test coverage.",
+    "location": {
+      "city": "Hyderabad",
+      "countryCode": "IN",
+      "region": "Telangana"
+    },
+    "profiles": [
+      {
+        "network": "GitHub",
+        "username": "ananyarao-example",
+        "url": "https://github.com/ananyarao-example"
+      }
+    ]
+  },
+  "skills": [
+    {
+      "name": "Backend",
+      "level": "Advanced",
+      "keywords": [
+        "Python",
+        "FastAPI",
+        "Pydantic",
+        "SQLAlchemy",
+        "Alembic"
+      ]
+    },
+    {
+      "name": "Data",
+      "level": "Intermediate",
+      "keywords": [
+        "PostgreSQL",
+        "Redis"
+      ]
+    },
+    {
+      "name": "Infrastructure",
+      "level": "Intermediate",
+      "keywords": [
+        "Docker",
+        "GitHub Actions",
+        "Celery"
+      ]
+    },
+    {
+      "name": "Testing",
+      "level": "Advanced",
+      "keywords": [
+        "pytest",
+        "httpx",
+        "Hypothesis"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Inventory Service",
+      "description": "REST API for tracking stock across warehouses for a small electronics retailer.",
+      "highlights": [
+        "Designed the PostgreSQL schema and Alembic migrations for products, warehouses and stock movements",
+        "Cut the low-stock report from 9 s to 60 ms by replacing per-product queries with one aggregate query",
+        "Kept test coverage above 90% with pytest and a disposable Postgres container in CI"
+      ],
+      "keywords": [
+        "Python",
+        "FastAPI",
+        "SQLAlchemy",
+        "PostgreSQL",
+        "Alembic",
+        "pytest",
+        "Docker"
+      ],
+      "startDate": "2024-03",
+      "endDate": "2025-01",
+      "url": "https://github.com/ananyarao-example/inventory-service",
+      "roles": [
+        "Backend Developer"
+      ]
+    },
+    {
+      "name": "Async Report Builder",
+      "description": "Background job system that renders CSV and PDF reports on demand.",
+      "highlights": [
+        "Moved report generation off the request path with Celery workers and Redis",
+        "Added idempotency keys so retried jobs never produce duplicate reports"
+      ],
+      "keywords": [
+        "Python",
+        "Celery",
+        "Redis",
+        "FastAPI",
+        "Docker"
+      ],
+      "startDate": "2025-02",
+      "url": "https://github.com/ananyarao-example/report-builder"
+    },
+    {
+      "name": "Link Shortener",
+      "description": "Personal URL shortener with click analytics.",
+      "highlights": [
+        "Base62 short codes with collision checks",
+        "Rate limiting backed by Redis"
+      ],
+      "keywords": [
+        "Python",
+        "FastAPI",
+        "Redis",
+        "SQLite"
+      ],
+      "url": "https://github.com/ananyarao-example/shortly"
+    }
+  ],
+  "meta": {
+    "version": "v1.0.0",
+    "lastModified": "2026-10-01T09:30:00"
+  },
+  "assessment": {
+    "dsaTopicsSolved": {
+      "arrays": 48,
+      "hashing": 35,
+      "two_pointers": 22,
+      "sliding_window": 14,
+      "trees": 19,
+      "graphs_bfs_dfs": 16,
+      "dp": 11
+    },
+    "githubUrls": [
+      "https://github.com/ananyarao-example/inventory-service",
+      "https://github.com/ananyarao-example/report-builder"
+    ]
+  }
+}

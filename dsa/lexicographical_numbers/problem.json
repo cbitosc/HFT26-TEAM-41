@@ -1,0 +1,30 @@
+{
+ "id": "lexicographical_numbers",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "graphs_bfs_dfs",
+  "tries"
+ ],
+ "entry_point": "lexical_order",
+ "signature": {
+  "params": [
+   {
+    "name": "n",
+    "type": "int"
+   }
+  ],
+  "returns": "list[int]"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "lexicographical-numbers",
+  "question_id": 386
+ }
+}

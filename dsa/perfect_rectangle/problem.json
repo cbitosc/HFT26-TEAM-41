@@ -1,0 +1,29 @@
+{
+ "id": "perfect_rectangle",
+ "difficulty": "hard",
+ "tiers": [
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "intervals"
+ ],
+ "entry_point": "is_rectangle_cover",
+ "signature": {
+  "params": [
+   {
+    "name": "rectangles",
+    "type": "list[list[int]]"
+   }
+  ],
+  "returns": "bool"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "perfect-rectangle",
+  "question_id": 391
+ }
+}

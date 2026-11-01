@@ -1,0 +1,32 @@
+{
+ "id": "majority_element_ii",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "hashing",
+  "sorting"
+ ],
+ "entry_point": "majority_element",
+ "signature": {
+  "params": [
+   {
+    "name": "nums",
+    "type": "list[int]"
+   }
+  ],
+  "returns": "list[int]"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "majority-element-ii",
+  "question_id": 229
+ },
+ "practice_only": true
+}

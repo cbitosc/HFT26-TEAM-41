@@ -1,0 +1,91 @@
+{
+  "task_id": "fastapi-inventory-low-stock",
+  "version": 2,
+  "tier": "master",
+  "kind": "domain",
+  "mode": "seed",
+  "seed_id": "fastapi-inventory",
+  "runtime": "python311",
+  "dsa_tags": [],
+  "statement_md": "# Low-stock report is wrong and slow\n\nSupport reports that `GET /products/low-stock` misses products that are completely out of stock, and that the `threshold` query parameter seems to be off by one.\n\nOn production-sized data (50k products, 200k stock rows) the endpoint also takes several seconds.\n\nFix both problems. The endpoint must respond within **200 ms** on the large dataset.\n",
+  "repo_tour_md": "- `app/main.py`: FastAPI app setup.\n- `app/routes/products.py`: the `/products/low-stock` endpoint.\n- `app/services/stock.py`: stock calculations used by the routes.\n- `app/data.py`: in-memory sample data loaders.\n- `app/models.py`: Pydantic models.\n- `tests/`: run with `pytest`.\n",
+  "starter_files": {
+    "app/__init__.py": "",
+    "app/main.py": "from fastapi import FastAPI\n\nfrom app.routes.products import router\n\napp = FastAPI()\napp.include_router(router)\n",
+    "app/models.py": "from pydantic import BaseModel\n\n\nclass Product(BaseModel):\n    id: int\n    name: str\n\n\nclass StockRow(BaseModel):\n    product_id: int\n    warehouse: str\n    quantity: int\n",
+    "app/data.py": "from app.models import Product, StockRow\n\n\ndef load_products() -> list[Product]:\n    return [\n        Product(id=1, name=\"Keyboard\"),\n        Product(id=2, name=\"Mouse\"),\n        Product(id=3, name=\"Monitor\"),\n    ]\n\n\ndef load_stock_rows() -> list[StockRow]:\n    return [\n        StockRow(product_id=1, warehouse=\"HYD\", quantity=2),\n        StockRow(product_id=1, warehouse=\"BLR\", quantity=1),\n        StockRow(product_id=2, warehouse=\"HYD\", quantity=40),\n    ]\n",
+    "app/routes/__init__.py": "",
+    "app/routes/products.py": "from fastapi import APIRouter\n\nfrom app.data import load_products, load_stock_rows\nfrom app.services.stock import low_stock_products\n\nrouter = APIRouter()\n\n\n@router.get(\"/products/low-stock\")\ndef get_low_stock(threshold: int = 5) -> list[dict]:\n    products = load_products()\n    rows = load_stock_rows()\n    return [p.model_dump() for p in low_stock_products(products, rows, threshold - 1)]\n",
+    "app/services/__init__.py": "",
+    "app/services/stock.py": "from app.models import Product, StockRow\n\n\ndef low_stock_products(\n    products: list[Product], rows: list[StockRow], threshold: int\n) -> list[Product]:\n    \"\"\"Products whose total stock across all warehouses is below `threshold`.\"\"\"\n    result = []\n    for product in products:\n        total = 0\n        for row in rows:\n            if row.product_id == product.id:\n                total += row.quantity\n        if 0 < total < threshold:\n            result.append(product)\n    return result\n",
+    "requirements.txt": "fastapi==0.162.0\nhttpx2==2.16.0\npytest==9.2.0\n"
+  },
+  "reference_ref": "seeds/fastapi-inventory/references/low-stock@v2",
+  "target_symbols": [
+    "app/services/stock.py::low_stock_products",
+    "app/routes/products.py::get_low_stock"
+  ],
+  "entry_symbols": [
+    "app/routes/products.py::get_low_stock"
+  ],
+  "visible_tests": [
+    {
+      "path": "tests/test_low_stock_visible.py",
+      "content": "from fastapi.testclient import TestClient\n\nfrom app.main import app\n\nclient = TestClient(app)\n\n\ndef test_low_stock_lists_products_below_threshold():\n    response = client.get(\"/products/low-stock\", params={\"threshold\": 5})\n\n    assert response.status_code == 200\n    assert [p[\"name\"] for p in response.json()] == [\"Keyboard\", \"Monitor\"]\n"
+    }
+  ],
+  "hidden_tests": [
+    {
+      "path": "tests/test_low_stock_hidden.py",
+      "content": "from fastapi.testclient import TestClient\n\nfrom app.main import app\nfrom app.models import Product, StockRow\nfrom app.services.stock import low_stock_products\n\nclient = TestClient(app)\n\n\ndef test_threshold_is_exclusive():\n    products = [Product(id=1, name=\"A\")]\n    rows = [StockRow(product_id=1, warehouse=\"HYD\", quantity=5)]\n\n    assert low_stock_products(products, rows, threshold=5) == []\n\n\ndef test_product_without_stock_rows_is_low_stock():\n    products = [Product(id=1, name=\"A\")]\n\n    assert low_stock_products(products, [], threshold=1) == products\n\n\ndef test_route_passes_threshold_through():\n    response = client.get(\"/products/low-stock\", params={\"threshold\": 4})\n\n    assert [p[\"name\"] for p in response.json()] == [\"Keyboard\", \"Monitor\"]\n"
+    }
+  ],
+  "visible_test_ids": [
+    "tests/test_low_stock_visible.py::test_low_stock_lists_products_below_threshold"
+  ],
+  "hidden_test_ids": [
+    "tests/test_low_stock_hidden.py::test_threshold_is_exclusive",
+    "tests/test_low_stock_hidden.py::test_product_without_stock_rows_is_low_stock",
+    "tests/test_low_stock_hidden.py::test_route_passes_threshold_through"
+  ],
+  "fail_to_pass": {
+    "visible": [
+      "tests/test_low_stock_visible.py::test_low_stock_lists_products_below_threshold"
+    ],
+    "hidden": [
+      "tests/test_low_stock_hidden.py::test_threshold_is_exclusive",
+      "tests/test_low_stock_hidden.py::test_product_without_stock_rows_is_low_stock"
+    ]
+  },
+  "pass_to_pass": {
+    "visible": [],
+    "hidden": [
+      "tests/test_low_stock_hidden.py::test_route_passes_threshold_through"
+    ]
+  },
+  "dsa_cases": null,
+  "perf": {
+    "budget_ms": 200,
+    "input_gen": "inventory_large"
+  },
+  "time_budget_min": 35,
+  "random_seeds": [
+    1337,
+    4242
+  ],
+  "certificate": {
+    "reference_pass": "4/4 x3",
+    "starter_fail": "1/1 visible",
+    "mutation_score": 0.86,
+    "perf_ref_ms": 41.7,
+    "perf_naive_ms": 9310.0,
+    "budget_ms": 200,
+    "scope_files": [
+      "app/services/stock.py",
+      "app/routes/products.py"
+    ],
+    "changed_lines": 14
+  },
+  "ai_solve_rate": 0.25,
+  "difficulty_index": 0.72
+}

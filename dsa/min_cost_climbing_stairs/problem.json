@@ -1,0 +1,29 @@
+{
+ "id": "min_cost_climbing_stairs",
+ "difficulty": "easy",
+ "tiers": [
+  "novice"
+ ],
+ "tags": [
+  "arrays",
+  "dp"
+ ],
+ "entry_point": "min_cost_climbing_stairs",
+ "signature": {
+  "params": [
+   {
+    "name": "cost",
+    "type": "list[int]"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "min-cost-climbing-stairs",
+  "question_id": 746
+ }
+}

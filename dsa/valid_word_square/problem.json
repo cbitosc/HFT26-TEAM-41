@@ -1,0 +1,28 @@
+{
+ "id": "valid_word_square",
+ "difficulty": "easy",
+ "tiers": [
+  "novice"
+ ],
+ "tags": [
+  "arrays"
+ ],
+ "entry_point": "valid_word_square",
+ "signature": {
+  "params": [
+   {
+    "name": "words",
+    "type": "list[str]"
+   }
+  ],
+  "returns": "bool"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "valid-word-square",
+  "question_id": 422
+ }
+}

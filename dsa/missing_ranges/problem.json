@@ -1,0 +1,37 @@
+{
+ "id": "missing_ranges",
+ "difficulty": "easy",
+ "tiers": [
+  "novice"
+ ],
+ "tags": [
+  "arrays"
+ ],
+ "entry_point": "find_missing_ranges",
+ "signature": {
+  "params": [
+   {
+    "name": "nums",
+    "type": "list[int]"
+   },
+   {
+    "name": "lower",
+    "type": "int"
+   },
+   {
+    "name": "upper",
+    "type": "int"
+   }
+  ],
+  "returns": "list[list[int]]"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "missing-ranges",
+  "question_id": 163
+ },
+ "practice_only": true
+}

@@ -1,0 +1,43 @@
+{
+ "id": "evaluate_division",
+ "difficulty": "medium",
+ "tiers": [
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "graphs_bfs_dfs",
+  "shortest_paths",
+  "strings",
+  "union_find"
+ ],
+ "entry_point": "calc_equation",
+ "signature": {
+  "params": [
+   {
+    "name": "equations",
+    "type": "list[list[str]]"
+   },
+   {
+    "name": "values",
+    "type": "list[float]"
+   },
+   {
+    "name": "queries",
+    "type": "list[list[str]]"
+   }
+  ],
+  "returns": "list[float]"
+ },
+ "comparator": {
+  "kind": "float_tolerance",
+  "tolerance": 1e-05
+ },
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "evaluate-division",
+  "question_id": 399
+ }
+}

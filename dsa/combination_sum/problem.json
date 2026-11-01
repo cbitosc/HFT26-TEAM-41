@@ -1,0 +1,38 @@
+{
+ "id": "combination_sum",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "backtracking"
+ ],
+ "entry_point": "combination_sum",
+ "signature": {
+  "params": [
+   {
+    "name": "candidates",
+    "type": "list[int]"
+   },
+   {
+    "name": "target",
+    "type": "int"
+   }
+  ],
+  "returns": "list[list[int]]"
+ },
+ "comparator": {
+  "kind": "unordered_list",
+  "tolerance": null
+ },
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "combination-sum",
+  "question_id": 39
+ },
+ "practice_only": true
+}

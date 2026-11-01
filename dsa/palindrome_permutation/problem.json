@@ -1,0 +1,30 @@
+{
+ "id": "palindrome_permutation",
+ "difficulty": "easy",
+ "tiers": [
+  "novice"
+ ],
+ "tags": [
+  "bit_manipulation",
+  "hashing",
+  "strings"
+ ],
+ "entry_point": "can_permute_palindrome",
+ "signature": {
+  "params": [
+   {
+    "name": "s",
+    "type": "str"
+   }
+  ],
+  "returns": "bool"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "palindrome-permutation",
+  "question_id": 266
+ }
+}

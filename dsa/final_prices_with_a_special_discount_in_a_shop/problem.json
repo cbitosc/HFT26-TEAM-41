@@ -1,0 +1,29 @@
+{
+ "id": "final_prices_with_a_special_discount_in_a_shop",
+ "difficulty": "easy",
+ "tiers": [
+  "novice"
+ ],
+ "tags": [
+  "arrays",
+  "stack"
+ ],
+ "entry_point": "final_prices",
+ "signature": {
+  "params": [
+   {
+    "name": "prices",
+    "type": "list[int]"
+   }
+  ],
+  "returns": "list[int]"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "final-prices-with-a-special-discount-in-a-shop",
+  "question_id": 1475
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "id": "sliding_window_maximum",
+ "difficulty": "hard",
+ "tiers": [
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "heaps",
+  "queue",
+  "sliding_window"
+ ],
+ "entry_point": "max_sliding_window",
+ "signature": {
+  "params": [
+   {
+    "name": "nums",
+    "type": "list[int]"
+   },
+   {
+    "name": "k",
+    "type": "int"
+   }
+  ],
+  "returns": "list[int]"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "sliding-window-maximum",
+  "question_id": 239
+ }
+}

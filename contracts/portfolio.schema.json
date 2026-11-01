@@ -1,0 +1,137 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ROG-user-0987/HFT26-TEAM-41/contracts/portfolio.schema.json",
+  "title": "Portfolio",
+  "description": "A candidate portfolio. Compatible with the JSON Resume schema (https://jsonresume.org/schema): every valid portfolio is also a valid JSON Resume document. Adds the required `assessment` extension.",
+  "type": "object",
+  "required": ["basics", "assessment"],
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Link to the schema version the document follows."
+    },
+    "basics": { "$ref": "#/$defs/Basics" },
+    "skills": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/Skill" }
+    },
+    "projects": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/Project" }
+    },
+    "meta": { "$ref": "#/$defs/Meta" },
+    "assessment": { "$ref": "#/$defs/Assessment" }
+  },
+  "additionalProperties": true,
+  "$defs": {
+    "Iso8601": {
+      "type": "string",
+      "description": "A date where each section after the year is optional, e.g. 2014-06-29 or 2023-04 (JSON Resume convention).",
+      "pattern": "^([1-2][0-9]{3}-[0-1][0-9]-[0-3][0-9]|[1-2][0-9]{3}-[0-1][0-9]|[1-2][0-9]{3})$"
+    },
+    "Location": {
+      "type": "object",
+      "properties": {
+        "address": { "type": "string" },
+        "postalCode": { "type": "string" },
+        "city": { "type": "string" },
+        "countryCode": { "type": "string", "description": "ISO-3166-1 ALPHA-2 code, e.g. IN, US." },
+        "region": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "Profile": {
+      "type": "object",
+      "properties": {
+        "network": { "type": "string" },
+        "username": { "type": "string" },
+        "url": { "type": "string", "format": "uri" }
+      },
+      "additionalProperties": true
+    },
+    "Basics": {
+      "type": "object",
+      "required": ["name"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "label": { "type": "string" },
+        "image": { "type": "string" },
+        "email": { "type": "string", "format": "email" },
+        "phone": { "type": "string" },
+        "url": { "type": "string", "format": "uri" },
+        "summary": { "type": "string" },
+        "location": { "$ref": "#/$defs/Location" },
+        "profiles": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/Profile" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "Skill": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "level": { "type": "string" },
+        "keywords": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      },
+      "additionalProperties": true
+    },
+    "Project": {
+      "type": "object",
+      "properties": {
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "highlights": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "keywords": {
+          "type": "array",
+          "description": "The project's tech stack (languages, frameworks, datastores, tools). Used to choose the domain task's runtime and seed.",
+          "items": { "type": "string" }
+        },
+        "startDate": { "$ref": "#/$defs/Iso8601" },
+        "endDate": { "$ref": "#/$defs/Iso8601" },
+        "url": { "type": "string", "format": "uri" },
+        "roles": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "entity": { "type": "string" },
+        "type": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "Meta": {
+      "type": "object",
+      "properties": {
+        "canonical": { "type": "string", "format": "uri" },
+        "version": { "type": "string" },
+        "lastModified": { "type": "string" }
+      },
+      "additionalProperties": true
+    },
+    "Assessment": {
+      "type": "object",
+      "description": "Extension to JSON Resume: what the candidate claims, used to build the assessment.",
+      "required": ["dsaTopicsSolved"],
+      "properties": {
+        "dsaTopicsSolved": {
+          "type": "object",
+          "description": "DSA topic name (snake_case, e.g. two_pointers) -> number of problems solved.",
+          "propertyNames": { "pattern": "^[a-z0-9]+(_[a-z0-9]+)*$" },
+          "additionalProperties": { "type": "integer", "minimum": 0 }
+        },
+        "githubUrls": {
+          "type": "array",
+          "items": { "type": "string", "format": "uri" }
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}

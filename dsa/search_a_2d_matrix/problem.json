@@ -1,0 +1,34 @@
+{
+ "id": "search_a_2d_matrix",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "binary_search"
+ ],
+ "entry_point": "search_matrix",
+ "signature": {
+  "params": [
+   {
+    "name": "matrix",
+    "type": "list[list[int]]"
+   },
+   {
+    "name": "target",
+    "type": "int"
+   }
+  ],
+  "returns": "bool"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "search-a-2d-matrix",
+  "question_id": 74
+ }
+}

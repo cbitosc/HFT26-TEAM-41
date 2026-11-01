@@ -1,0 +1,309 @@
+{
+  "personal_info": {
+    "name": "Byungjin Park",
+    "email": "posquit0.bj@gmail.com",
+    "phone": "+82) 10-9030-1843",
+    "linkedin": "posquit0",
+    "github": "posquit0",
+    "portfolio": "www.posquit0.com",
+    "address": "235, World Cup buk-ro, Mapo-gu, Seoul, 03936, Republic of Korea"
+  },
+  "summary_objective": "DevOps Engineer at fintech & blockchain company Dunamu which is known for operating Upbit, the largest cryptocurrency exchange in Korea. Have led growth at infrastructure departments in two fintech companies as lead engineer and founding member. 12+ years of diverse software engineeringexperiencewithspecialties insoftwarearchitecturedesign, infrastructureoperation, backenddevelopment, and security engineering. Love to contribute to open sources and tech communities by sharing knowledge and experience. Prefers a command line interface environment as a big fan of Vim, Linux, and macOS. Always trying to customize to find the most optimal environment. Interested in devising a better problem\u2011solving method for challenging tasks, and learning new technologies and tools.",
+  "experience": [
+    {
+      "title": "DEVOPS ENGiNEER",
+      "company": "Dunamu Inc.",
+      "location": "Seoul, S.Korea",
+      "start_date": "Sep. 2023",
+      "end_date": "Present",
+      "description": []
+    },
+    {
+      "title": "FOUNDiNG MEMBER & SiTE RELiABiLiTY ENGiNEER & INFRASTRUCTURE TEAM LEAD",
+      "company": "Danggeun Pay Inc. (KarrotPay)",
+      "location": "Seoul, S.Korea",
+      "start_date": "Mar. 2021",
+      "end_date": "Jun. 2023",
+      "description": [
+        "Everything that matters.",
+        "Designed and provisioned the entire infrastructure on the AWS cloud to meet security compliance and acquire a business license for financial services in Korea.",
+        "Continuously improved the infrastructure architecture since launching the service. (currently 3.6 million users)",
+        "Established a standardized base for declarative management of infrastructures and service deployments, enabling operational efficiency and consistency. Over 90% of AWS resources were all managed through standardized terraform modules. All add\u2011ons and service workloads on the Kubernetes cluster were managed on a GitOps basis with Kustomize and ArgoCD.",
+        "Saved over 30% of the overall AWS costs by establishing a quarterly purchasing strategiy for RI (Reserved Instance) and SP (Savings Plan) and by introducing Graviton instances.",
+        "Established a core architecture for regulating of outbound DNS traffic in multi\u2011account and multi\u2011VPC environments utilizing AWS Route53 DNS Firewall and FMS. This significantly increased the level of security confidence in the financial sector\u2019s segregated environment.",
+        "Introduced Okta employee identity solution in the company, establishing security policies and configuring SSO integration with over 20 en\u2011 terprise systems including AWS, GitHub, Slack, Google Workspace. Set up a Hub and Spoke architecture, enabling a collaborative account structure with the parent company, Daangn Market."
+      ]
+    },
+    {
+      "title": "SiTE RELiABiLiTY ENGiNEER",
+      "company": "Danggeun Market Inc.",
+      "location": "Seoul, S.Korea",
+      "start_date": "Feb. 2021",
+      "end_date": "Mar. 2021",
+      "description": []
+    },
+    {
+      "title": "FOUNDiNG MEMBER & DiRECTOR OF INFRASTRUCTURE DiViSiON",
+      "company": "Kasa",
+      "location": "Seoul, S.Korea",
+      "start_date": "Jun. 2018",
+      "end_date": "Jan. 2021",
+      "description": [
+        "Designed on\u2011boarding process to guide new engineers, help them to focus on the right tasks, and set expectations to help them be successful at Infrastructure team.",
+        "Migrated the orchestration system from DC/OS to Kubernetes which is based on AWS EKS. Managed 3 Kubernetes clusters and 300+ pods. Managed all Kubernetes manifests declaratively with Kustomize and ArgoCD.",
+        "Designed and managed complex network configurations on AWS with 4 VPC and 100+ subnets. Separated the development network and oper\u2011 ation network according to financial regulations. Established dedicated network connections from AWS VPC to partners\u2019 on\u2011premise network based on AWS Direct Connect with secure connection using IPsec VPN. Provisioned OpenVPN servers with LDAP integration.",
+        "Provisioned a observability system with Kafka, Elastic Stack(Filebeat, Heartbeat, APM Server, Logstash, Elasticsearch, Kibana). Collected log, uptime, tracing data from hosts, containers, pods and more. The ES cluster which has 9 nodes processed more than 1 billion documents per month. Wrote Terraform module to easily provision ES cluster on AWS EC2 instances.",
+        "Provisioned a monitoring system with Kafka, Telegraf, InfluxDB, Grafana. Collected metrics from hosts, containers, pods and more. Wrote Terraform module to easily provision InfluxDB with HA on AWS EC2 instances.",
+        "Introduced Kong API Gateway to easily connect all API microservices with a declarative management method based on Terraform and Atlantis to collaborate and audit change history.",
+        "Provisioned the Directory Service for employee identity management based on OpenLDAP which guarantees HA with multi\u2011master replication.",
+        "Implemented Worker microservices consuming Kafka event topics for email, SMS, Kakaotalk and Slack notification. Developed in\u2011house frame\u2011work to easily build Kafka consumer microservice with common features including retry on failure, DLQ(Dead Letter Queue), event routing and more.",
+        "Introduced Elastic APM to help distributed tracing, trouble\u2011shooting and performance testing in MSA."
+      ]
+    },
+    {
+      "title": "SOFTWARE ARCHiTECT",
+      "company": "Omnious. Co., Ltd.",
+      "location": "Seoul, S.Korea",
+      "start_date": "Jun. 2017",
+      "end_date": "May. 2018",
+      "description": [
+        "Provisioned an easily managable hybrid infrastructure(Amazon AWS + On\u2011premise) utilizing IaC(Infrastructure as Code) tools like Ansible, Packer and Terraform.",
+        "Built fully automated CI/CD pipelines on CircleCI for containerized applications using Docker, AWS ECR and Rancher.",
+        "Designed an overall service architecture and pipelines of the Machine Learning based Fashion Tagging API SaaS product with the micro\u2011services architecture.",
+        "Implemented several API microservices in Node.js Koa and in the serverless AWS Lambda functions.",
+        "Deployed a centralized logging environment(ELK, Filebeat, CloudWatch, S3) which gather log data from docker containers and AWS resources.",
+        "Deployed a centralized monitoring environment(Grafana, InfluxDB, CollectD) which gather system metrics as well as docker run\u2011time metrics."
+      ]
+    },
+    {
+      "title": "CO\u2011FOUNDER & SOFTWARE ENGiNEER",
+      "company": "PLAT Corp.",
+      "location": "Seoul, S.Korea",
+      "start_date": "Jan. 2016",
+      "end_date": "Jun. 2017",
+      "description": [
+        "Implemented RESTful API server for car rental booking application(CARPLAT in Google Play).",
+        "Built and deployed overall service infrastructure utilizing Docker container, CircleCI, and several AWS stack(Including EC2, ECS, Route 53, S3, CloudFront, RDS, ElastiCache, IAM), focusing on high\u2011availability, fault tolerance, and auto\u2011scaling.",
+        "Developed an easy\u2011to\u2011use Payment module which connects to major PG(Payment Gateway) companies in Korea."
+      ]
+    },
+    {
+      "title": "SOFTWARE ENGiNEER & SECURiTY RESEARCHER (COMPULSORY MiLiTARY SERViCE)",
+      "company": "R.O.K Cyber Command, MND",
+      "location": "Seoul, S.Korea",
+      "start_date": "Aug. 2014",
+      "end_date": "Apr. 2016",
+      "description": [
+        "Lead engineer on agent\u2011less backtracking system that can discover client device\u2019s fingerprint(including public and private IP) independently of the Proxy, VPN and NAT."
+      ]
+    },
+    {
+      "title": "SOFTWARE ENGiNEER",
+      "company": "ShitOne Corp.",
+      "location": "Seoul, S.Korea",
+      "start_date": "Dec. 2011",
+      "end_date": "Feb. 2012",
+      "description": [
+        "Developed a proxy drive smartphone application which connects proxy driver and customer.",
+        "Implemented overall Android application logic and wrote API server for community service, along with lead engineer who designed bidding protocol on raw socket and implemented API server for bidding."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "B.S.",
+      "major": "COMPUTER SCiENCE AND ENGiNEERiNG",
+      "institution": "POSTECH(Pohang University of Science and Technology)",
+      "location": "Pohang, S.Korea",
+      "start_date": "Mar. 2010",
+      "end_date": "Aug. 2017",
+      "gpa": "",
+      "description": [
+        "Got a Chun Shin\u2011Il Scholarship which is given to promising students in CSE Dept."
+      ]
+    }
+  ],
+  "skills": {
+    "programming_languages": [],
+    "frameworks_libraries": [],
+    "databases": [],
+    "tools_technologies": [
+      "AWS",
+      "Kubernetes",
+      "Terraform",
+      "GitOps",
+      "Kustomize",
+      "ArgoCD",
+      "AWS Route53 DNS Firewall",
+      "FMS",
+      "Okta",
+      "GitHub",
+      "Slack",
+      "Google Workspace",
+      "AWS Direct Connect",
+      "IPsec VPN",
+      "OpenVPN",
+      "Kafka",
+      "Elastic Stack",
+      "Filebeat",
+      "Heartbeat",
+      "APM Server",
+      "Logstash",
+      "Elasticsearch",
+      "Kibana",
+      "Telegraf",
+      "InfluxDB",
+      "Grafana",
+      "Kong API Gateway",
+      "Atlantis",
+      "OpenLDAP",
+      "Elastic APM",
+      "Ansible",
+      "Packer",
+      "CircleCI",
+      "Docker",
+      "AWS ECR",
+      "Rancher",
+      "Node.js Koa",
+      "AWS Lambda",
+      "CloudWatch",
+      "S3",
+      "EC2",
+      "ECS",
+      "Route 53",
+      "CloudFront",
+      "RDS",
+      "ElastiCache",
+      "IAM"
+    ],
+    "soft_skills": [],
+    "other_skills": []
+  },
+  "projects": [],
+  "awards_certifications": [
+    {
+      "name": "2nd Place, AWS ASEAN AI/ML GameDay",
+      "issuer": "Online",
+      "date": "2021"
+    },
+    {
+      "name": "Finalist, DEFCON 28th CTF Hacking Competition World Final",
+      "issuer": "Las Vegas, U.S.A",
+      "date": "2020"
+    },
+    {
+      "name": "Finalist, DEFCON 26th CTF Hacking Competition World Final",
+      "issuer": "Las Vegas, U.S.A",
+      "date": "2018"
+    },
+    {
+      "name": "Finalist, DEFCON 25th CTF Hacking Competition World Final",
+      "issuer": "Las Vegas, U.S.A",
+      "date": "2017"
+    },
+    {
+      "name": "Finalist, DEFCON 22nd CTF Hacking Competition World Final",
+      "issuer": "Las Vegas, U.S.A",
+      "date": "2014"
+    },
+    {
+      "name": "Finalist, DEFCON 21st CTF Hacking Competition World Final",
+      "issuer": "Las Vegas, U.S.A",
+      "date": "2013"
+    },
+    {
+      "name": "Finalist, DEFCON 19th CTF Hacking Competition World Final",
+      "issuer": "Las Vegas, U.S.A",
+      "date": "2011"
+    },
+    {
+      "name": "2nd Place, AWS Korea GameDay",
+      "issuer": "Seoul, S.Korea",
+      "date": "2021"
+    },
+    {
+      "name": "3rd Place, WITHCON Hacking Competition Final",
+      "issuer": "Seoul, S.Korea",
+      "date": "2015"
+    },
+    {
+      "name": "Silver Prize, KISA HDCON Hacking Competition Final",
+      "issuer": "Seoul, S.Korea",
+      "date": "2017"
+    },
+    {
+      "name": "Silver Prize, KISA HDCON Hacking Competition Final",
+      "issuer": "Seoul, S.Korea",
+      "date": "2013"
+    },
+    {
+      "name": "AWS Community Builder (Container)",
+      "issuer": "Amazon Web Services (AWS)",
+      "date": "2022"
+    },
+    {
+      "name": "HashiCorp Ambassador",
+      "issuer": "HashiCorp",
+      "date": "2022"
+    },
+    {
+      "name": "Organizer of HashiCorp Korea User Group",
+      "issuer": "HashiCorp",
+      "date": "2018"
+    },
+    {
+      "name": "AWS Certified Advanced Networking \u2011 Specialty",
+      "issuer": "Amazon Web Services (AWS)",
+      "date": "2023"
+    },
+    {
+      "name": "AWS Certified Security \u2011 Specialty",
+      "issuer": "Amazon Web Services (AWS)",
+      "date": "2022"
+    },
+    {
+      "name": "AWS Certified Solutions Architect \u2013 Professional",
+      "issuer": "Amazon Web Services (AWS)",
+      "date": "2022"
+    },
+    {
+      "name": "AWS Certified SysOps Administrator \u2013 Associate",
+      "issuer": "Amazon Web Services (AWS)",
+      "date": "2021"
+    },
+    {
+      "name": "Certified Kubernetes Application Developer (CKAD)",
+      "issuer": "The Linux Foundation",
+      "date": "2020"
+    },
+    {
+      "name": "HashiCorp Certified: Consul Associate (002)",
+      "issuer": "HashiCorp",
+      "date": "2023"
+    },
+    {
+      "name": "HashiCorp Certified: Terraform Associate (003)",
+      "issuer": "HashiCorp",
+      "date": "2023"
+    }
+  ],
+  "publications": [],
+  "references": [],
+  "languages": [],
+  "interests": [],
+  "declaration": "\u201cBe the change that you want to see in the world.\u201d",
+  "links": [
+    {
+      "text": "u www.posquit0.com",
+      "url": "http://www.posquit0.com"
+    },
+    {
+      "text": "^ posquit0",
+      "url": "https://github.com/posquit0"
+    },
+    {
+      "text": "] posquit0",
+      "url": "https://www.linkedin.com/in/posquit0"
+    }
+  ]
+}

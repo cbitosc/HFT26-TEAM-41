@@ -1,0 +1,30 @@
+{
+ "id": "valid_sudoku",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "hashing"
+ ],
+ "entry_point": "is_valid_sudoku",
+ "signature": {
+  "params": [
+   {
+    "name": "board",
+    "type": "list[list[str]]"
+   }
+  ],
+  "returns": "bool"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "valid-sudoku",
+  "question_id": 36
+ }
+}

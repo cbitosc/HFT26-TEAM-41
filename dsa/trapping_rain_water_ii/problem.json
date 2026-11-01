@@ -1,0 +1,31 @@
+{
+ "id": "trapping_rain_water_ii",
+ "difficulty": "hard",
+ "tiers": [
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "graphs_bfs_dfs",
+  "heaps"
+ ],
+ "entry_point": "trap_rain_water",
+ "signature": {
+  "params": [
+   {
+    "name": "heightMap",
+    "type": "list[list[int]]"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "trapping-rain-water-ii",
+  "question_id": 407
+ },
+ "practice_only": true
+}

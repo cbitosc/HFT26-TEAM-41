@@ -1,0 +1,29 @@
+{
+ "id": "find_all_numbers_disappeared_in_an_array",
+ "difficulty": "easy",
+ "tiers": [
+  "novice"
+ ],
+ "tags": [
+  "arrays",
+  "hashing"
+ ],
+ "entry_point": "find_disappeared_numbers",
+ "signature": {
+  "params": [
+   {
+    "name": "nums",
+    "type": "list[int]"
+   }
+  ],
+  "returns": "list[int]"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "find-all-numbers-disappeared-in-an-array",
+  "question_id": 448
+ }
+}

@@ -1,0 +1,1602 @@
+{
+ "visible": [
+  {
+   "id": "v1",
+   "input": {
+    "s": "aaaaaaa",
+    "wordDict": [
+     "aa",
+     "aaa"
+    ]
+   },
+   "expected": [
+    "aa aa aaa",
+    "aa aaa aa",
+    "aaa aa aa"
+   ]
+  },
+  {
+   "id": "v2",
+   "input": {
+    "s": "a",
+    "wordDict": [
+     "a"
+    ]
+   },
+   "expected": [
+    "a"
+   ]
+  },
+  {
+   "id": "v3",
+   "input": {
+    "s": "catsandog",
+    "wordDict": [
+     "cats",
+     "dog",
+     "sand",
+     "and",
+     "cat"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "v4",
+   "input": {
+    "s": "abcd",
+    "wordDict": [
+     "a",
+     "abc",
+     "b",
+     "cd"
+    ]
+   },
+   "expected": [
+    "a b cd"
+   ]
+  },
+  {
+   "id": "v5",
+   "input": {
+    "s": "leetcodeleet",
+    "wordDict": [
+     "leet",
+     "code"
+    ]
+   },
+   "expected": [
+    "leet code leet"
+   ]
+  }
+ ],
+ "hidden": [
+  {
+   "id": "h01",
+   "input": {
+    "s": "pineapplepenapple",
+    "wordDict": [
+     "apple",
+     "pen",
+     "applepen",
+     "pine",
+     "pineapple"
+    ]
+   },
+   "expected": [
+    "pine apple pen apple",
+    "pine applepen apple",
+    "pineapple pen apple"
+   ]
+  },
+  {
+   "id": "h02",
+   "input": {
+    "s": "catsanddog",
+    "wordDict": [
+     "cat",
+     "cats",
+     "and",
+     "sand",
+     "dog"
+    ]
+   },
+   "expected": [
+    "cat sand dog",
+    "cats and dog"
+   ]
+  },
+  {
+   "id": "h03",
+   "input": {
+    "s": "nevergonnagiveyouup",
+    "wordDict": [
+     "never",
+     "gonna",
+     "give",
+     "you",
+     "up",
+     "nevergonna",
+     "gonnagive",
+     "onnagive",
+     "nnagive",
+     "nagive",
+     "agive",
+     "giveu",
+     "giveyo",
+     "giveyou",
+     "giveyoup",
+     "giveyoupu",
+     "giveyoupup",
+     "youpup",
+     "oupup",
+     "pupup",
+     "upup",
+     "pup",
+     "up"
+    ]
+   },
+   "expected": [
+    "never gonna give you up",
+    "never gonna giveyou up",
+    "never gonnagive you up",
+    "nevergonna give you up",
+    "nevergonna giveyou up"
+   ]
+  },
+  {
+   "id": "h04",
+   "input": {
+    "s": "thisproblemisverydifficult",
+    "wordDict": [
+     "this",
+     "problem",
+     "is",
+     "very",
+     "difficult",
+     "difficul",
+     "icult"
+    ]
+   },
+   "expected": [
+    "this problem is very difficult"
+   ]
+  },
+  {
+   "id": "h05",
+   "input": {
+    "s": "exampleofquestion",
+    "wordDict": [
+     "example",
+     "of",
+     "question",
+     "ex",
+     "ample",
+     "que",
+     "stion",
+     "exam",
+     "ple",
+     "quest",
+     "uest",
+     "ion"
+    ]
+   },
+   "expected": [
+    "ex ample of que stion",
+    "ex ample of quest ion",
+    "ex ample of question",
+    "exam ple of que stion",
+    "exam ple of quest ion",
+    "exam ple of question",
+    "example of que stion",
+    "example of quest ion",
+    "example of question"
+   ]
+  },
+  {
+   "id": "h06",
+   "input": {
+    "s": "amazingrace",
+    "wordDict": [
+     "amazing",
+     "race",
+     "amaz",
+     "ing",
+     "zing",
+     "ace",
+     "rac"
+    ]
+   },
+   "expected": [
+    "amaz ing race",
+    "amazing race"
+   ]
+  },
+  {
+   "id": "h07",
+   "input": {
+    "s": "wordbreakproblem",
+    "wordDict": [
+     "word",
+     "break",
+     "problem",
+     "wordbreak",
+     "breakprob",
+     "lem",
+     "pro",
+     "b",
+     "reak",
+     "prob",
+     "lem",
+     "wordbreakprob"
+    ]
+   },
+   "expected": [
+    "word b reak pro b lem",
+    "word b reak prob lem",
+    "word b reak problem",
+    "word break pro b lem",
+    "word break prob lem",
+    "word break problem",
+    "word breakprob lem",
+    "wordbreak pro b lem",
+    "wordbreak prob lem",
+    "wordbreak problem",
+    "wordbreakprob lem"
+   ]
+  },
+  {
+   "id": "h08",
+   "input": {
+    "s": "skyscraper",
+    "wordDict": [
+     "sky",
+     "scraper",
+     "sky",
+     "scrap",
+     "er"
+    ]
+   },
+   "expected": [
+    "sky scrap er",
+    "sky scraper"
+   ]
+  },
+  {
+   "id": "h09",
+   "input": {
+    "s": "wordbreakproblem",
+    "wordDict": [
+     "word",
+     "break",
+     "problem",
+     "wordbreak",
+     "prob",
+     "lem"
+    ]
+   },
+   "expected": [
+    "word break prob lem",
+    "word break problem",
+    "wordbreak prob lem",
+    "wordbreak problem"
+   ]
+  },
+  {
+   "id": "h10",
+   "input": {
+    "s": "abcdefgabcdefgabcdefgabcdefgabcdefg",
+    "wordDict": [
+     "abc",
+     "defg",
+     "abcd",
+     "efgabc",
+     "abcdefg",
+     "fgabcde",
+     "abcde",
+     "bcdefg",
+     "def",
+     "abcfg"
+    ]
+   },
+   "expected": [
+    "abc defg abc defg abc defg abc defg abc defg",
+    "abc defg abc defg abc defg abc defg abcdefg",
+    "abc defg abc defg abc defg abcd efgabc defg",
+    "abc defg abc defg abc defg abcdefg abc defg",
+    "abc defg abc defg abc defg abcdefg abcdefg",
+    "abc defg abc defg abcd efgabc defg abc defg",
+    "abc defg abc defg abcd efgabc defg abcdefg",
+    "abc defg abc defg abcdefg abc defg abc defg",
+    "abc defg abc defg abcdefg abc defg abcdefg",
+    "abc defg abc defg abcdefg abcd efgabc defg",
+    "abc defg abc defg abcdefg abcdefg abc defg",
+    "abc defg abc defg abcdefg abcdefg abcdefg",
+    "abc defg abcd efgabc defg abc defg abc defg",
+    "abc defg abcd efgabc defg abc defg abcdefg",
+    "abc defg abcd efgabc defg abcd efgabc defg",
+    "abc defg abcd efgabc defg abcdefg abc defg",
+    "abc defg abcd efgabc defg abcdefg abcdefg",
+    "abc defg abcdefg abc defg abc defg abc defg",
+    "abc defg abcdefg abc defg abc defg abcdefg",
+    "abc defg abcdefg abc defg abcd efgabc defg",
+    "abc defg abcdefg abc defg abcdefg abc defg",
+    "abc defg abcdefg abc defg abcdefg abcdefg",
+    "abc defg abcdefg abcd efgabc defg abc defg",
+    "abc defg abcdefg abcd efgabc defg abcdefg",
+    "abc defg abcdefg abcdefg abc defg abc defg",
+    "abc defg abcdefg abcdefg abc defg abcdefg",
+    "abc defg abcdefg abcdefg abcd efgabc defg",
+    "abc defg abcdefg abcdefg abcdefg abc defg",
+    "abc defg abcdefg abcdefg abcdefg abcdefg",
+    "abcd efgabc defg abc defg abc defg abc defg",
+    "abcd efgabc defg abc defg abc defg abcdefg",
+    "abcd efgabc defg abc defg abcd efgabc defg",
+    "abcd efgabc defg abc defg abcdefg abc defg",
+    "abcd efgabc defg abc defg abcdefg abcdefg",
+    "abcd efgabc defg abcd efgabc defg abc defg",
+    "abcd efgabc defg abcd efgabc defg abcdefg",
+    "abcd efgabc defg abcdefg abc defg abc defg",
+    "abcd efgabc defg abcdefg abc defg abcdefg",
+    "abcd efgabc defg abcdefg abcd efgabc defg",
+    "abcd efgabc defg abcdefg abcdefg abc defg",
+    "abcd efgabc defg abcdefg abcdefg abcdefg",
+    "abcdefg abc defg abc defg abc defg abc defg",
+    "abcdefg abc defg abc defg abc defg abcdefg",
+    "abcdefg abc defg abc defg abcd efgabc defg",
+    "abcdefg abc defg abc defg abcdefg abc defg",
+    "abcdefg abc defg abc defg abcdefg abcdefg",
+    "abcdefg abc defg abcd efgabc defg abc defg",
+    "abcdefg abc defg abcd efgabc defg abcdefg",
+    "abcdefg abc defg abcdefg abc defg abc defg",
+    "abcdefg abc defg abcdefg abc defg abcdefg",
+    "abcdefg abc defg abcdefg abcd efgabc defg",
+    "abcdefg abc defg abcdefg abcdefg abc defg",
+    "abcdefg abc defg abcdefg abcdefg abcdefg",
+    "abcdefg abcd efgabc defg abc defg abc defg",
+    "abcdefg abcd efgabc defg abc defg abcdefg",
+    "abcdefg abcd efgabc defg abcd efgabc defg",
+    "abcdefg abcd efgabc defg abcdefg abc defg",
+    "abcdefg abcd efgabc defg abcdefg abcdefg",
+    "abcdefg abcdefg abc defg abc defg abc defg",
+    "abcdefg abcdefg abc defg abc defg abcdefg",
+    "abcdefg abcdefg abc defg abcd efgabc defg",
+    "abcdefg abcdefg abc defg abcdefg abc defg",
+    "abcdefg abcdefg abc defg abcdefg abcdefg",
+    "abcdefg abcdefg abcd efgabc defg abc defg",
+    "abcdefg abcdefg abcd efgabc defg abcdefg",
+    "abcdefg abcdefg abcdefg abc defg abc defg",
+    "abcdefg abcdefg abcdefg abc defg abcdefg",
+    "abcdefg abcdefg abcdefg abcd efgabc defg",
+    "abcdefg abcdefg abcdefg abcdefg abc defg",
+    "abcdefg abcdefg abcdefg abcdefg abcdefg"
+   ]
+  },
+  {
+   "id": "h11",
+   "input": {
+    "s": "anagramproblem",
+    "wordDict": [
+     "anagram",
+     "anagramprob",
+     "gram",
+     "prob",
+     "lem",
+     "problem",
+     "ana",
+     "gramprob",
+     "anag",
+     "ramprob",
+     "rampro",
+     "an",
+     "grampro",
+     "gramprob"
+    ]
+   },
+   "expected": [
+    "ana gram prob lem",
+    "ana gram problem",
+    "ana gramprob lem",
+    "anag ramprob lem",
+    "anagram prob lem",
+    "anagram problem",
+    "anagramprob lem"
+   ]
+  },
+  {
+   "id": "h12",
+   "input": {
+    "s": "amazingrace",
+    "wordDict": [
+     "amazing",
+     "race",
+     "amazingr",
+     "acer",
+     "age",
+     "maze",
+     "rang",
+     "racer",
+     "ace",
+     "zing"
+    ]
+   },
+   "expected": [
+    "amazing race",
+    "amazingr ace"
+   ]
+  },
+  {
+   "id": "h13",
+   "input": {
+    "s": "thisproblemiswaytoolongtobreakdownintosmallervariables",
+    "wordDict": [
+     "this",
+     "problem",
+     "is",
+     "way",
+     "too",
+     "long",
+     "to",
+     "be",
+     "broken",
+     "down",
+     "into",
+     "smaller",
+     "variables",
+     "break",
+     "down",
+     "small"
+    ]
+   },
+   "expected": [
+    "this problem is way too long to break down into smaller variables"
+   ]
+  },
+  {
+   "id": "h14",
+   "input": {
+    "s": "mississippi",
+    "wordDict": [
+     "mis",
+     "is",
+     "sip",
+     "issi",
+     "ppi",
+     "ippi",
+     "pi",
+     "pippi",
+     "miss",
+     "sipi"
+    ]
+   },
+   "expected": [
+    "miss is sip pi",
+    "miss issi ppi"
+   ]
+  },
+  {
+   "id": "h15",
+   "input": {
+    "s": "quickbrownfoxjumpsoverthelazydog",
+    "wordDict": [
+     "quick",
+     "brown",
+     "fox",
+     "jumps",
+     "over",
+     "the",
+     "lazy",
+     "dog",
+     "quickbrown",
+     "brownfox",
+     "jumpsover",
+     "overthe",
+     "the",
+     "lazydog"
+    ]
+   },
+   "expected": [
+    "quick brown fox jumps over the lazy dog",
+    "quick brown fox jumps over the lazydog",
+    "quick brown fox jumps overthe lazy dog",
+    "quick brown fox jumps overthe lazydog",
+    "quick brown fox jumpsover the lazy dog",
+    "quick brown fox jumpsover the lazydog",
+    "quick brownfox jumps over the lazy dog",
+    "quick brownfox jumps over the lazydog",
+    "quick brownfox jumps overthe lazy dog",
+    "quick brownfox jumps overthe lazydog",
+    "quick brownfox jumpsover the lazy dog",
+    "quick brownfox jumpsover the lazydog",
+    "quickbrown fox jumps over the lazy dog",
+    "quickbrown fox jumps over the lazydog",
+    "quickbrown fox jumps overthe lazy dog",
+    "quickbrown fox jumps overthe lazydog",
+    "quickbrown fox jumpsover the lazy dog",
+    "quickbrown fox jumpsover the lazydog"
+   ]
+  },
+  {
+   "id": "h16",
+   "input": {
+    "s": "abcd",
+    "wordDict": [
+     "a",
+     "ab",
+     "abc",
+     "abcd",
+     "b",
+     "bc",
+     "bcd",
+     "c",
+     "cd",
+     "d"
+    ]
+   },
+   "expected": [
+    "a b c d",
+    "a b cd",
+    "a bc d",
+    "a bcd",
+    "ab c d",
+    "ab cd",
+    "abc d",
+    "abcd"
+   ]
+  },
+  {
+   "id": "h17",
+   "input": {
+    "s": "wordbreakproblem",
+    "wordDict": [
+     "word",
+     "break",
+     "breakproblem",
+     "problem",
+     "wordbreak",
+     "breakpro",
+     "lem"
+    ]
+   },
+   "expected": [
+    "word break problem",
+    "word breakproblem",
+    "wordbreak problem"
+   ]
+  },
+  {
+   "id": "h18",
+   "input": {
+    "s": "amazingprogramminglanguage",
+    "wordDict": [
+     "amazing",
+     "programming",
+     "language",
+     "pro",
+     "gram",
+     "ming",
+     "amaz",
+     "ing",
+     "za",
+     "zing"
+    ]
+   },
+   "expected": [
+    "amaz ing pro gram ming language",
+    "amaz ing programming language",
+    "amazing pro gram ming language",
+    "amazing programming language"
+   ]
+  },
+  {
+   "id": "h19",
+   "input": {
+    "s": "programmingisfun",
+    "wordDict": [
+     "programming",
+     "is",
+     "fun",
+     "pro",
+     "gram",
+     "ming",
+     "gramming",
+     "isfun",
+     "progra"
+    ]
+   },
+   "expected": [
+    "pro gram ming is fun",
+    "pro gram ming isfun",
+    "pro gramming is fun",
+    "pro gramming isfun",
+    "programming is fun",
+    "programming isfun"
+   ]
+  },
+  {
+   "id": "h20",
+   "input": {
+    "s": "supercalifragilisticexpialidocious",
+    "wordDict": [
+     "super",
+     "cali",
+     "fragi",
+     "listic",
+     "expi",
+     "ali",
+     "docious",
+     "supercal",
+     "ifragilisticexpi",
+     "alidocious",
+     "frag",
+     "listicexpialido",
+     "cious"
+    ]
+   },
+   "expected": [
+    "super cali fragi listic expi ali docious",
+    "super cali fragi listic expi alidocious",
+    "super cali fragi listicexpialido cious",
+    "supercal ifragilisticexpi ali docious",
+    "supercal ifragilisticexpi alidocious"
+   ]
+  },
+  {
+   "id": "h21",
+   "input": {
+    "s": "optimization",
+    "wordDict": [
+     "opt",
+     "im",
+     "iza",
+     "tio",
+     "n",
+     "on",
+     "optim",
+     "optimiz",
+     "optimiza",
+     "ization"
+    ]
+   },
+   "expected": [
+    "opt im iza tio n",
+    "opt im ization",
+    "optim iza tio n",
+    "optim ization",
+    "optimiza tio n"
+   ]
+  },
+  {
+   "id": "h22",
+   "input": {
+    "s": "theprogramminglanguage",
+    "wordDict": [
+     "the",
+     "pro",
+     "gram",
+     "ming",
+     "lan",
+     "guage"
+    ]
+   },
+   "expected": [
+    "the pro gram ming lan guage"
+   ]
+  },
+  {
+   "id": "h23",
+   "input": {
+    "s": "thisisatest",
+    "wordDict": [
+     "this",
+     "is",
+     "a",
+     "test",
+     "thisis",
+     "ate",
+     "st"
+    ]
+   },
+   "expected": [
+    "this is a test",
+    "this is ate st",
+    "thisis a test",
+    "thisis ate st"
+   ]
+  },
+  {
+   "id": "h24",
+   "input": {
+    "s": "backtrackingalgorithm",
+    "wordDict": [
+     "back",
+     "tracking",
+     "algorithm",
+     "backtrack",
+     "ingalgo",
+     "rithm",
+     "backtracki",
+     "ngalgor",
+     "thmalgo",
+     "rithmal",
+     "backtrac",
+     "kingalg",
+     "thm",
+     "algo",
+     "thmalgo",
+     "backtrackin",
+     "backtrackinga",
+     "backtrackingal",
+     "backtrackingalg",
+     "backtrackingalgo"
+    ]
+   },
+   "expected": [
+    "back tracking algo rithm",
+    "back tracking algorithm",
+    "backtrack ingalgo rithm",
+    "backtrackingalgo rithm"
+   ]
+  },
+  {
+   "id": "h25",
+   "input": {
+    "s": "thepinkquickbrownfoxjumpsoverthelazydog",
+    "wordDict": [
+     "the",
+     "pink",
+     "quick",
+     "brown",
+     "fox",
+     "jumps",
+     "over",
+     "lazy",
+     "dog",
+     "pinkquick",
+     "brownfox",
+     "overthe",
+     "lazydog"
+    ]
+   },
+   "expected": [
+    "the pink quick brown fox jumps over the lazy dog",
+    "the pink quick brown fox jumps over the lazydog",
+    "the pink quick brown fox jumps overthe lazy dog",
+    "the pink quick brown fox jumps overthe lazydog",
+    "the pink quick brownfox jumps over the lazy dog",
+    "the pink quick brownfox jumps over the lazydog",
+    "the pink quick brownfox jumps overthe lazy dog",
+    "the pink quick brownfox jumps overthe lazydog",
+    "the pinkquick brown fox jumps over the lazy dog",
+    "the pinkquick brown fox jumps over the lazydog",
+    "the pinkquick brown fox jumps overthe lazy dog",
+    "the pinkquick brown fox jumps overthe lazydog",
+    "the pinkquick brownfox jumps over the lazy dog",
+    "the pinkquick brownfox jumps over the lazydog",
+    "the pinkquick brownfox jumps overthe lazy dog",
+    "the pinkquick brownfox jumps overthe lazydog"
+   ]
+  },
+  {
+   "id": "h26",
+   "input": {
+    "s": "thequickbrownfoxjumpsoverthelazydog",
+    "wordDict": [
+     "the",
+     "quick",
+     "brown",
+     "fox",
+     "jumps",
+     "over",
+     "lazy",
+     "dog",
+     "quickbrown",
+     "brownfox",
+     "foxjump",
+     "jumpsover",
+     "overthe",
+     "thelazy"
+    ]
+   },
+   "expected": [
+    "the quick brown fox jumps over the lazy dog",
+    "the quick brown fox jumps over thelazy dog",
+    "the quick brown fox jumps overthe lazy dog",
+    "the quick brown fox jumpsover the lazy dog",
+    "the quick brown fox jumpsover thelazy dog",
+    "the quick brownfox jumps over the lazy dog",
+    "the quick brownfox jumps over thelazy dog",
+    "the quick brownfox jumps overthe lazy dog",
+    "the quick brownfox jumpsover the lazy dog",
+    "the quick brownfox jumpsover thelazy dog",
+    "the quickbrown fox jumps over the lazy dog",
+    "the quickbrown fox jumps over thelazy dog",
+    "the quickbrown fox jumps overthe lazy dog",
+    "the quickbrown fox jumpsover the lazy dog",
+    "the quickbrown fox jumpsover thelazy dog"
+   ]
+  },
+  {
+   "id": "h27",
+   "input": {
+    "s": "sololeveltwo",
+    "wordDict": [
+     "sol",
+     "olev",
+     "el",
+     "elv",
+     "ello",
+     "lev",
+     "leve",
+     "vel",
+     "velt",
+     "velto",
+     "veltwo",
+     "o",
+     "l",
+     "v",
+     "t",
+     "w",
+     "two",
+     "to",
+     "level",
+     "levelt",
+     "levelto",
+     "leveltwo"
+    ]
+   },
+   "expected": [
+    "sol o lev el t w o",
+    "sol o lev el two",
+    "sol o leve l t w o",
+    "sol o leve l two",
+    "sol o level t w o",
+    "sol o level two",
+    "sol o levelt w o",
+    "sol o leveltwo",
+    "sol olev el t w o",
+    "sol olev el two"
+   ]
+  },
+  {
+   "id": "h28",
+   "input": {
+    "s": "thisisjustasillywordtobreak",
+    "wordDict": [
+     "this",
+     "is",
+     "just",
+     "a",
+     "silly",
+     "word",
+     "to",
+     "break",
+     "sillyword",
+     "wordtobreak"
+    ]
+   },
+   "expected": [
+    "this is just a silly word to break",
+    "this is just a silly wordtobreak",
+    "this is just a sillyword to break"
+   ]
+  },
+  {
+   "id": "h29",
+   "input": {
+    "s": "thisisaverylongsentencethatweneedtosplit",
+    "wordDict": [
+     "this",
+     "is",
+     "a",
+     "very",
+     "long",
+     "sentence",
+     "that",
+     "we",
+     "need",
+     "to",
+     "split",
+     "verylong",
+     "sentencewe",
+     "needtos",
+     "tosplit",
+     "thisisavery"
+    ]
+   },
+   "expected": [
+    "this is a very long sentence that we need to split",
+    "this is a very long sentence that we need tosplit",
+    "this is a verylong sentence that we need to split",
+    "this is a verylong sentence that we need tosplit",
+    "thisisavery long sentence that we need to split",
+    "thisisavery long sentence that we need tosplit"
+   ]
+  },
+  {
+   "id": "h30",
+   "input": {
+    "s": "solvetheproblem",
+    "wordDict": [
+     "solve",
+     "the",
+     "problem",
+     "sol",
+     "ve",
+     "prob",
+     "lem",
+     "othe",
+     "probem",
+     "solvethe",
+     "heproblem"
+    ]
+   },
+   "expected": [
+    "sol ve the prob lem",
+    "sol ve the problem",
+    "solve the prob lem",
+    "solve the problem",
+    "solvethe prob lem",
+    "solvethe problem"
+   ]
+  },
+  {
+   "id": "h31",
+   "input": {
+    "s": "supercalifragilisticexpialidocious",
+    "wordDict": [
+     "super",
+     "cali",
+     "fragilistic",
+     "expiali",
+     "docious",
+     "frag",
+     "ilisti",
+     "c",
+     "ex",
+     "piali",
+     "doc",
+     "io",
+     "us",
+     "superca",
+     "li",
+     "frag",
+     "listic",
+     "expi",
+     "ali",
+     "do",
+     "cious"
+    ]
+   },
+   "expected": [
+    "super c ali frag ilisti c ex piali do c io us",
+    "super c ali frag ilisti c ex piali do cious",
+    "super c ali frag ilisti c ex piali doc io us",
+    "super c ali frag ilisti c ex piali docious",
+    "super c ali frag ilisti c expi ali do c io us",
+    "super c ali frag ilisti c expi ali do cious",
+    "super c ali frag ilisti c expi ali doc io us",
+    "super c ali frag ilisti c expi ali docious",
+    "super c ali frag ilisti c expiali do c io us",
+    "super c ali frag ilisti c expiali do cious",
+    "super c ali frag ilisti c expiali doc io us",
+    "super c ali frag ilisti c expiali docious",
+    "super c ali fragilistic ex piali do c io us",
+    "super c ali fragilistic ex piali do cious",
+    "super c ali fragilistic ex piali doc io us",
+    "super c ali fragilistic ex piali docious",
+    "super c ali fragilistic expi ali do c io us",
+    "super c ali fragilistic expi ali do cious",
+    "super c ali fragilistic expi ali doc io us",
+    "super c ali fragilistic expi ali docious",
+    "super c ali fragilistic expiali do c io us",
+    "super c ali fragilistic expiali do cious",
+    "super c ali fragilistic expiali doc io us",
+    "super c ali fragilistic expiali docious",
+    "super cali frag ilisti c ex piali do c io us",
+    "super cali frag ilisti c ex piali do cious",
+    "super cali frag ilisti c ex piali doc io us",
+    "super cali frag ilisti c ex piali docious",
+    "super cali frag ilisti c expi ali do c io us",
+    "super cali frag ilisti c expi ali do cious",
+    "super cali frag ilisti c expi ali doc io us",
+    "super cali frag ilisti c expi ali docious",
+    "super cali frag ilisti c expiali do c io us",
+    "super cali frag ilisti c expiali do cious",
+    "super cali frag ilisti c expiali doc io us",
+    "super cali frag ilisti c expiali docious",
+    "super cali fragilistic ex piali do c io us",
+    "super cali fragilistic ex piali do cious",
+    "super cali fragilistic ex piali doc io us",
+    "super cali fragilistic ex piali docious",
+    "super cali fragilistic expi ali do c io us",
+    "super cali fragilistic expi ali do cious",
+    "super cali fragilistic expi ali doc io us",
+    "super cali fragilistic expi ali docious",
+    "super cali fragilistic expiali do c io us",
+    "super cali fragilistic expiali do cious",
+    "super cali fragilistic expiali doc io us",
+    "super cali fragilistic expiali docious",
+    "superca li frag ilisti c ex piali do c io us",
+    "superca li frag ilisti c ex piali do cious",
+    "superca li frag ilisti c ex piali doc io us",
+    "superca li frag ilisti c ex piali docious",
+    "superca li frag ilisti c expi ali do c io us",
+    "superca li frag ilisti c expi ali do cious",
+    "superca li frag ilisti c expi ali doc io us",
+    "superca li frag ilisti c expi ali docious",
+    "superca li frag ilisti c expiali do c io us",
+    "superca li frag ilisti c expiali do cious",
+    "superca li frag ilisti c expiali doc io us",
+    "superca li frag ilisti c expiali docious",
+    "superca li fragilistic ex piali do c io us",
+    "superca li fragilistic ex piali do cious",
+    "superca li fragilistic ex piali doc io us",
+    "superca li fragilistic ex piali docious",
+    "superca li fragilistic expi ali do c io us",
+    "superca li fragilistic expi ali do cious",
+    "superca li fragilistic expi ali doc io us",
+    "superca li fragilistic expi ali docious",
+    "superca li fragilistic expiali do c io us",
+    "superca li fragilistic expiali do cious",
+    "superca li fragilistic expiali doc io us",
+    "superca li fragilistic expiali docious"
+   ]
+  },
+  {
+   "id": "h32",
+   "input": {
+    "s": "leetcode",
+    "wordDict": [
+     "leet",
+     "code",
+     "le",
+     "et",
+     "code",
+     "cod",
+     "leetco"
+    ]
+   },
+   "expected": [
+    "le et code",
+    "leet code"
+   ]
+  },
+  {
+   "id": "h33",
+   "input": {
+    "s": "thelongestwordisinthisdictionary",
+    "wordDict": [
+     "the",
+     "longest",
+     "word",
+     "is",
+     "in",
+     "this",
+     "dictionary"
+    ]
+   },
+   "expected": [
+    "the longest word is in this dictionary"
+   ]
+  },
+  {
+   "id": "h34",
+   "input": {
+    "s": "backtracking",
+    "wordDict": [
+     "back",
+     "track",
+     "ing",
+     "backtrack",
+     "backtracking",
+     "tra",
+     "ck",
+     "bac",
+     "king"
+    ]
+   },
+   "expected": [
+    "back tra ck ing",
+    "back track ing",
+    "backtrack ing",
+    "backtracking"
+   ]
+  },
+  {
+   "id": "h35",
+   "input": {
+    "s": "thethreefishes",
+    "wordDict": [
+     "the",
+     "three",
+     "threefish",
+     "fish",
+     "fishes"
+    ]
+   },
+   "expected": [
+    "the three fishes"
+   ]
+  },
+  {
+   "id": "h36",
+   "input": {
+    "s": "abcd",
+    "wordDict": [
+     "a",
+     "b",
+     "c",
+     "d",
+     "ab",
+     "bc",
+     "cd",
+     "abcd"
+    ]
+   },
+   "expected": [
+    "a b c d",
+    "a b cd",
+    "a bc d",
+    "ab c d",
+    "ab cd",
+    "abcd"
+   ]
+  },
+  {
+   "id": "h37",
+   "input": {
+    "s": "canadaday",
+    "wordDict": [
+     "can",
+     "ada",
+     "day",
+     "canada",
+     "anada",
+     "aday"
+    ]
+   },
+   "expected": [
+    "can ada day",
+    "canada day"
+   ]
+  },
+  {
+   "id": "h38",
+   "input": {
+    "s": "ambiguityindictionary",
+    "wordDict": [
+     "ambi",
+     "biguity",
+     "in",
+     "dictionary",
+     "ambigui",
+     "tity",
+     "uity",
+     "amb",
+     "uityin",
+     "ityinden",
+     "uityindict",
+     "uityindicti",
+     "uityindiction",
+     "uityindictiona",
+     "uityindictionar",
+     "uityindictionary"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h39",
+   "input": {
+    "s": "wordbreakproblem",
+    "wordDict": [
+     "word",
+     "break",
+     "problem",
+     "wordbreak",
+     "pro",
+     "blem",
+     "wordbreakpro",
+     "breakpro",
+     "lemproblem"
+    ]
+   },
+   "expected": [
+    "word break pro blem",
+    "word break problem",
+    "word breakpro blem",
+    "wordbreak pro blem",
+    "wordbreak problem",
+    "wordbreakpro blem"
+   ]
+  },
+  {
+   "id": "h40",
+   "input": {
+    "s": "optimizethiscode",
+    "wordDict": [
+     "optimize",
+     "this",
+     "code",
+     "opt",
+     "imize",
+     "thisco",
+     "deopt",
+     "mizethis",
+     "ethiscode",
+     "optimizethis",
+     "opti",
+     "mize",
+     "thisc"
+    ]
+   },
+   "expected": [
+    "opt imize this code",
+    "opti mize this code",
+    "opti mizethis code",
+    "optimize this code",
+    "optimizethis code"
+   ]
+  },
+  {
+   "id": "h41",
+   "input": {
+    "s": "abcdefgh",
+    "wordDict": [
+     "ab",
+     "abc",
+     "abcd",
+     "abcde",
+     "abcdef",
+     "abcdefg",
+     "abcdefgh"
+    ]
+   },
+   "expected": [
+    "abcdefgh"
+   ]
+  },
+  {
+   "id": "h42",
+   "input": {
+    "s": "elephant",
+    "wordDict": [
+     "ele",
+     "phant",
+     "lephant",
+     "el",
+     "phant",
+     "le",
+     "pha",
+     "nt",
+     "e",
+     "phantom",
+     "pha"
+    ]
+   },
+   "expected": [
+    "e le pha nt",
+    "e le phant",
+    "e lephant",
+    "el e pha nt",
+    "el e phant",
+    "ele pha nt",
+    "ele phant"
+   ]
+  },
+  {
+   "id": "h43",
+   "input": {
+    "s": "thelongwordthatshouldbreakdown",
+    "wordDict": [
+     "the",
+     "long",
+     "word",
+     "that",
+     "should",
+     "break",
+     "down",
+     "thelon",
+     "breakdo",
+     "wordtha",
+     "thatshoul",
+     "ouldbreak"
+    ]
+   },
+   "expected": [
+    "the long word that should break down"
+   ]
+  },
+  {
+   "id": "h44",
+   "input": {
+    "s": "thisisaverylongstringthatcanbebrokenintomultiplewordswithdictionary",
+    "wordDict": [
+     "this",
+     "is",
+     "a",
+     "very",
+     "long",
+     "string",
+     "that",
+     "can",
+     "be",
+     "broken",
+     "into",
+     "multiple",
+     "words",
+     "with",
+     "dictionary"
+    ]
+   },
+   "expected": [
+    "this is a very long string that can be broken into multiple words with dictionary"
+   ]
+  },
+  {
+   "id": "h45",
+   "input": {
+    "s": "solvetheproblem",
+    "wordDict": [
+     "solve",
+     "the",
+     "problem",
+     "solvethe",
+     "solvepro",
+     "prob",
+     "lem",
+     "prob",
+     "lempro",
+     "solvethepro",
+     "solvetheprob",
+     "solvetheproblem",
+     "sol",
+     "vel",
+     "ethe",
+     "prob",
+     "pro",
+     "lem",
+     "lempro",
+     "solvethepro",
+     "solvetheprob",
+     "solvetheproblem"
+    ]
+   },
+   "expected": [
+    "solve the prob lem",
+    "solve the problem",
+    "solvethe prob lem",
+    "solvethe problem",
+    "solvetheprob lem",
+    "solvetheproblem"
+   ]
+  },
+  {
+   "id": "h46",
+   "input": {
+    "s": "aquickbrownfox",
+    "wordDict": [
+     "a",
+     "quick",
+     "brown",
+     "fox",
+     "quickbrown",
+     "brownfox"
+    ]
+   },
+   "expected": [
+    "a quick brown fox",
+    "a quick brownfox",
+    "a quickbrown fox"
+   ]
+  },
+  {
+   "id": "h47",
+   "input": {
+    "s": "thisisatoyproblem",
+    "wordDict": [
+     "this",
+     "is",
+     "atoy",
+     "problem",
+     "isato",
+     "oyprob",
+     "lem",
+     "toy",
+     "prob",
+     "em",
+     "l",
+     "em",
+     "thisisato",
+     "oy",
+     "prob"
+    ]
+   },
+   "expected": [
+    "this is atoy prob l em",
+    "this is atoy prob lem",
+    "this is atoy problem"
+   ]
+  },
+  {
+   "id": "h48",
+   "input": {
+    "s": "thequickbrownfoxjumpsoverthelazydog",
+    "wordDict": [
+     "the",
+     "quick",
+     "brown",
+     "fox",
+     "jumps",
+     "over",
+     "lazy",
+     "dog",
+     "thequick",
+     "brownfox",
+     "jumpsover",
+     "thelazy"
+    ]
+   },
+   "expected": [
+    "the quick brown fox jumps over the lazy dog",
+    "the quick brown fox jumps over thelazy dog",
+    "the quick brown fox jumpsover the lazy dog",
+    "the quick brown fox jumpsover thelazy dog",
+    "the quick brownfox jumps over the lazy dog",
+    "the quick brownfox jumps over thelazy dog",
+    "the quick brownfox jumpsover the lazy dog",
+    "the quick brownfox jumpsover thelazy dog",
+    "thequick brown fox jumps over the lazy dog",
+    "thequick brown fox jumps over thelazy dog",
+    "thequick brown fox jumpsover the lazy dog",
+    "thequick brown fox jumpsover thelazy dog",
+    "thequick brownfox jumps over the lazy dog",
+    "thequick brownfox jumps over thelazy dog",
+    "thequick brownfox jumpsover the lazy dog",
+    "thequick brownfox jumpsover thelazy dog"
+   ]
+  },
+  {
+   "id": "h49",
+   "input": {
+    "s": "abcd",
+    "wordDict": [
+     "a",
+     "b",
+     "c",
+     "d",
+     "ab",
+     "bc",
+     "cd",
+     "abcd",
+     "abc",
+     "bcd",
+     "ab",
+     "bc",
+     "a",
+     "d",
+     "abcd"
+    ]
+   },
+   "expected": [
+    "a b c d",
+    "a b cd",
+    "a bc d",
+    "a bcd",
+    "ab c d",
+    "ab cd",
+    "abc d",
+    "abcd"
+   ]
+  },
+  {
+   "id": "h50",
+   "input": {
+    "s": "wordbreakproblem",
+    "wordDict": [
+     "word",
+     "break",
+     "problem",
+     "wordbreak",
+     "pro",
+     "blem"
+    ]
+   },
+   "expected": [
+    "word break pro blem",
+    "word break problem",
+    "wordbreak pro blem",
+    "wordbreak problem"
+   ]
+  },
+  {
+   "id": "h51",
+   "input": {
+    "s": "wordbreakproblem",
+    "wordDict": [
+     "word",
+     "break",
+     "problem",
+     "wordbreak",
+     "breakprob",
+     "lem",
+     "prob",
+     "lempro",
+     "breakpro",
+     "wordbreakpro",
+     "wordbreakprob",
+     "wordbreakproblem"
+    ]
+   },
+   "expected": [
+    "word break prob lem",
+    "word break problem",
+    "word breakprob lem",
+    "wordbreak prob lem",
+    "wordbreak problem",
+    "wordbreakprob lem",
+    "wordbreakproblem"
+   ]
+  },
+  {
+   "id": "h52",
+   "input": {
+    "s": "supercalifragilisticexpialidocious",
+    "wordDict": [
+     "super",
+     "cali",
+     "fragilistic",
+     "expiali",
+     "docious",
+     "cal",
+     "frag",
+     "ilis",
+     "tic",
+     "exp",
+     "expi",
+     "ali",
+     "do",
+     "cious"
+    ]
+   },
+   "expected": [
+    "super cali frag ilis tic expi ali do cious",
+    "super cali frag ilis tic expi ali docious",
+    "super cali frag ilis tic expiali do cious",
+    "super cali frag ilis tic expiali docious",
+    "super cali fragilistic expi ali do cious",
+    "super cali fragilistic expi ali docious",
+    "super cali fragilistic expiali do cious",
+    "super cali fragilistic expiali docious"
+   ]
+  },
+  {
+   "id": "h53",
+   "input": {
+    "s": "solvetheproblemrecursively",
+    "wordDict": [
+     "solve",
+     "the",
+     "problem",
+     "recursively",
+     "solvethe",
+     "problemre",
+     "cursivelysolve",
+     "solvetheproblem",
+     "theproblemis",
+     "solvetheproble",
+     "problemrecursively",
+     "theisproblem"
+    ]
+   },
+   "expected": [
+    "solve the problem recursively",
+    "solve the problemrecursively",
+    "solvethe problem recursively",
+    "solvethe problemrecursively",
+    "solvetheproblem recursively"
+   ]
+  }
+ ]
+}

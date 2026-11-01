@@ -1,0 +1,34 @@
+{
+ "id": "letter_combinations_of_a_phone_number",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "backtracking",
+  "hashing",
+  "strings"
+ ],
+ "entry_point": "letter_combinations",
+ "signature": {
+  "params": [
+   {
+    "name": "digits",
+    "type": "str"
+   }
+  ],
+  "returns": "list[str]"
+ },
+ "comparator": {
+  "kind": "unordered_list",
+  "tolerance": null
+ },
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "letter-combinations-of-a-phone-number",
+  "question_id": 17
+ }
+}

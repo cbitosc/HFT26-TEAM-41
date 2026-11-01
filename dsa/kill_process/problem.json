@@ -1,0 +1,44 @@
+{
+ "id": "kill_process",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "graphs_bfs_dfs",
+  "hashing",
+  "trees"
+ ],
+ "entry_point": "kill_process",
+ "signature": {
+  "params": [
+   {
+    "name": "pid",
+    "type": "list[int]"
+   },
+   {
+    "name": "ppid",
+    "type": "list[int]"
+   },
+   {
+    "name": "kill",
+    "type": "int"
+   }
+  ],
+  "returns": "list[int]"
+ },
+ "comparator": {
+  "kind": "unordered_list",
+  "tolerance": null
+ },
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "kill-process",
+  "question_id": 582
+ },
+ "practice_only": true
+}

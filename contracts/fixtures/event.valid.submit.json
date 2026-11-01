@@ -1,0 +1,18 @@
+{
+  "session_id": "sess_01JBQ4M7X2K9",
+  "task_id": "fastapi-inventory-low-stock",
+  "ts": 1793354500000,
+  "type": "submit",
+  "payload": {
+    "visible": {
+      "passed": 1,
+      "total": 1
+    },
+    "hidden": {
+      "passed": 3,
+      "total": 3
+    },
+    "perf_ms": 58.4,
+    "final": true
+  }
+}

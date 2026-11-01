@@ -1,0 +1,34 @@
+{
+ "id": "search_insert_position",
+ "difficulty": "easy",
+ "tiers": [
+  "novice"
+ ],
+ "tags": [
+  "arrays",
+  "binary_search"
+ ],
+ "entry_point": "search_insert",
+ "signature": {
+  "params": [
+   {
+    "name": "nums",
+    "type": "list[int]"
+   },
+   {
+    "name": "target",
+    "type": "int"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "search-insert-position",
+  "question_id": 35
+ },
+ "practice_only": true
+}

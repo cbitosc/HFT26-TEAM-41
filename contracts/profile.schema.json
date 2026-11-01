@@ -1,0 +1,74 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ROG-user-0987/HFT26-TEAM-41/contracts/profile.schema.json",
+  "title": "Profile",
+  "description": "What backend/profiler reads from a portfolio: the stack and concepts the domain task is built from, and the DSA topics each tier may use. Computed by deterministic rules; an LLM fills a field only when the rules find nothing (see `sources`).",
+  "type": "object",
+  "required": [
+    "domain",
+    "runtime",
+    "concepts",
+    "topics_solved",
+    "allowed_topics",
+    "suggested_tier",
+    "tier_reason",
+    "unsupported_notes",
+    "sources"
+  ],
+  "properties": {
+    "domain": { "$ref": "#/$defs/Domain" },
+    "runtime": { "$ref": "#/$defs/Runtime" },
+    "concepts": {
+      "type": "array",
+      "description": "Concepts from the seed concept vocabulary (union of seeds/*/concepts.yaml), strongest evidence first.",
+      "items": { "type": "string", "pattern": "^[a-z0-9]+(_[a-z0-9]+)*$" },
+      "uniqueItems": true
+    },
+    "topics_solved": {
+      "type": "object",
+      "description": "Problems solved per canonical DSA topic (dsa/taxonomy.yaml), after mapping the portfolio's topic names through their synonyms and summing.",
+      "propertyNames": { "pattern": "^[a-z0-9]+(_[a-z0-9]+)*$" },
+      "additionalProperties": { "type": "integer", "minimum": 0 }
+    },
+    "allowed_topics": {
+      "type": "object",
+      "description": "Canonical DSA topics allowed for each tier: listed for the tier in the taxonomy and solved at least the tier difficulty's threshold times.",
+      "required": ["novice", "adept", "master"],
+      "properties": {
+        "novice": { "$ref": "#/$defs/TopicList" },
+        "adept": { "$ref": "#/$defs/TopicList" },
+        "master": { "$ref": "#/$defs/TopicList" }
+      },
+      "additionalProperties": false
+    },
+    "suggested_tier": { "type": "string", "enum": ["novice", "adept", "master"] },
+    "tier_reason": { "type": "string", "minLength": 1, "description": "Why this tier, in one sentence with the numbers used." },
+    "unsupported_notes": {
+      "type": "array",
+      "description": "What the profiler could not use as claimed: unsupported stacks and the runtime used instead, unknown DSA topic names, failed fallbacks.",
+      "items": { "type": "string", "minLength": 1 }
+    },
+    "sources": {
+      "type": "object",
+      "description": "Where each inferred field came from. rules: keyword rules. llm: the generator fallback (rules found nothing). default: neither found anything.",
+      "required": ["domain", "runtime", "concepts"],
+      "properties": {
+        "domain": { "$ref": "#/$defs/Source" },
+        "runtime": { "$ref": "#/$defs/Source" },
+        "concepts": { "$ref": "#/$defs/Source" }
+      },
+      "additionalProperties": false
+    }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "Domain": { "type": "string", "enum": ["backend", "web", "ml", "security"] },
+    "Runtime": { "type": "string", "enum": ["python311", "node20"] },
+    "Source": { "type": "string", "enum": ["rules", "llm", "default"] },
+    "TopicList": {
+      "type": "array",
+      "items": { "type": "string", "pattern": "^[a-z0-9]+(_[a-z0-9]+)*$" },
+      "uniqueItems": true
+    }
+  }
+}

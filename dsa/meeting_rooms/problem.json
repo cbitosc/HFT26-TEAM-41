@@ -1,0 +1,29 @@
+{
+ "id": "meeting_rooms",
+ "difficulty": "easy",
+ "tiers": [
+  "novice"
+ ],
+ "tags": [
+  "arrays",
+  "sorting"
+ ],
+ "entry_point": "can_attend_meetings",
+ "signature": {
+  "params": [
+   {
+    "name": "intervals",
+    "type": "list[list[int]]"
+   }
+  ],
+  "returns": "bool"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "meeting-rooms",
+  "question_id": 252
+ }
+}

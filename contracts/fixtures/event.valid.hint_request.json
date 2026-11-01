@@ -1,0 +1,10 @@
+{
+  "session_id": "sess_01JBQ4M7X2K9",
+  "task_id": "fastapi-inventory-low-stock",
+  "ts": 1793352840000,
+  "type": "hint_request",
+  "payload": {
+    "level_allowed": 2,
+    "flagged_extraction": false
+  }
+}

@@ -1,0 +1,128 @@
+# Concepts this seed teaches, the symbols that implement each one, and the tests covering it.
+# Symbols: "path::name" or "path::Class.method". Tests: "path::test_function".
+seed: py-fastapi-expenses
+runtime: python311
+# Domain terms LLM enrichment (P2.5) may rename to fit the candidate's projects
+# (e.g. expense -> order). Renaming covers code, tests, routes and strings.
+renamable: [expense, category]
+
+concepts:
+  pagination:
+    symbols:
+      - app/utils.py::paginate
+      - app/utils.py::Page
+      - app/schemas.py::ExpensePage
+    tests:
+      - tests/test_pagination.py::test_first_page_reports_total_and_has_next
+      - tests/test_pagination.py::test_last_page_is_partial_and_has_no_next
+      - tests/test_pagination.py::test_page_past_the_end_is_empty_but_keeps_total
+      - tests/test_pagination.py::test_full_last_page_has_no_next
+      - tests/test_pagination.py::test_pages_do_not_overlap
+      - tests/test_pagination.py::test_no_expenses_gives_an_empty_first_page
+      - tests/test_pagination.py::test_page_size_limits
+      - tests/test_pagination.py::test_page_must_be_at_least_one
+
+  filtering:
+    symbols:
+      - app/services.py::apply_filters
+      - app/services.py::InvalidDateRange
+    tests:
+      - tests/test_filtering.py::test_filter_by_category
+      - tests/test_filtering.py::test_date_range_includes_both_ends
+      - tests/test_filtering.py::test_open_ended_date_range
+      - tests/test_filtering.py::test_category_and_dates_combine
+      - tests/test_filtering.py::test_filters_change_the_total
+      - tests/test_filtering.py::test_date_from_after_date_to_is_rejected
+      - tests/test_filtering.py::test_unknown_category_filter_is_rejected
+
+  sorting:
+    symbols:
+      - app/services.py::apply_sorting
+      - app/schemas.py::SortKey
+    tests:
+      - tests/test_sorting.py::test_default_sort_is_newest_first
+      - tests/test_sorting.py::test_sort_by_date_ascending
+      - tests/test_sorting.py::test_sort_by_amount_ascending
+      - tests/test_sorting.py::test_sort_by_amount_descending
+      - tests/test_sorting.py::test_ties_break_on_creation_order
+      - tests/test_sorting.py::test_unknown_sort_key_is_rejected
+
+  auth:
+    symbols:
+      - app/auth.py::get_current_user
+      - app/repo.py::find_user_by_token
+    tests:
+      - tests/test_auth.py::test_missing_token_is_rejected
+      - tests/test_auth.py::test_unknown_token_is_rejected
+      - tests/test_auth.py::test_non_bearer_scheme_is_rejected
+      - tests/test_auth.py::test_writes_and_reports_require_auth
+      - tests/test_auth.py::test_users_only_see_their_own_expenses
+
+  validation:
+    symbols:
+      - app/schemas.py::ExpenseCreate
+      - app/schemas.py::IsoDate
+      - app/utils.py::parse_iso_date
+    tests:
+      - tests/test_validation.py::test_valid_expense_is_created
+      - tests/test_validation.py::test_amount_must_be_positive
+      - tests/test_validation.py::test_amount_must_be_integer_cents
+      - tests/test_validation.py::test_unknown_category_is_rejected
+      - tests/test_validation.py::test_impossible_calendar_date_is_rejected
+      - tests/test_validation.py::test_non_iso_date_is_rejected
+      - tests/test_validation.py::test_unexpected_field_is_rejected
+      - tests/test_validation.py::test_invalid_date_in_query_is_rejected
+
+  caching:
+    symbols:
+      - app/services.py::ReportCache
+      - app/services.py::monthly_report
+      - app/services.py::create_expense
+    tests:
+      - tests/test_cache.py::test_repeated_report_is_served_from_cache
+      - tests/test_cache.py::test_new_expense_invalidates_its_month
+      - tests/test_cache.py::test_new_expense_keeps_other_months_cached
+      - tests/test_cache.py::test_cache_is_per_user
+      - tests/test_cache.py::test_cache_evicts_least_recently_used_entry_when_full
+
+  reporting:
+    symbols:
+      - app/services.py::compute_monthly_report
+      - app/utils.py::month_bounds
+      - app/schemas.py::MonthlyReport
+      - app/routes.py::get_monthly_report
+    tests:
+      - tests/test_reports.py::test_totals_per_category
+      - tests/test_reports.py::test_month_boundaries
+      - tests/test_reports.py::test_other_users_are_excluded
+      - tests/test_reports.py::test_empty_month
+      - tests/test_reports.py::test_december_ends_at_new_year
+      - tests/test_reports.py::test_out_of_range_month_or_year_is_rejected
+      - tests/test_reports.py::test_year_and_month_are_required
+
+  importing:
+    symbols:
+      - app/services.py::import_expenses
+      - app/routes.py::import_expenses
+      - app/schemas.py::ImportResult
+    tests:
+      - tests/test_import.py::test_import_creates_every_new_expense
+      - tests/test_import.py::test_duplicates_of_stored_expenses_are_skipped
+      - tests/test_import.py::test_repeated_items_in_one_import_are_created_once
+      - tests/test_import.py::test_another_users_expense_is_not_a_duplicate
+      - tests/test_import.py::test_import_invalidates_cached_reports_of_its_months
+      - tests/test_import.py::test_empty_or_oversized_import_is_rejected
+      - tests/test_import.py::test_one_invalid_item_rejects_the_whole_import
+
+# Perf-sensitive symbols (Master tasks): `perf: true` marks code whose speed is timed by
+# `test` on the large dataset of `input_gen`. Perf tests live in tests/perf/ and are
+# never part of Novice/Adept tasks.
+perf_symbols:
+  - symbol: app/services.py::import_expenses
+    perf: true
+    test: tests/perf/test_import_perf.py::test_import_into_a_large_history_is_fast
+    input_gen: tests/perf/gen_large.py
+  - symbol: app/services.py::monthly_report
+    perf: true
+    test: tests/perf/test_report_perf.py::test_repeated_monthly_reports_are_fast
+    input_gen: tests/perf/gen_large.py

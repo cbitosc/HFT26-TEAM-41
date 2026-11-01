@@ -1,0 +1,38 @@
+{
+ "id": "shortest_word_distance",
+ "difficulty": "easy",
+ "tiers": [
+  "novice"
+ ],
+ "tags": [
+  "arrays",
+  "strings"
+ ],
+ "entry_point": "shortest_distance",
+ "signature": {
+  "params": [
+   {
+    "name": "wordsDict",
+    "type": "list[str]"
+   },
+   {
+    "name": "word1",
+    "type": "str"
+   },
+   {
+    "name": "word2",
+    "type": "str"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "shortest-word-distance",
+  "question_id": 243
+ },
+ "practice_only": true
+}

@@ -1,0 +1,29 @@
+{
+ "id": "max_consecutive_ones",
+ "difficulty": "easy",
+ "tiers": [
+  "novice"
+ ],
+ "tags": [
+  "arrays"
+ ],
+ "entry_point": "find_max_consecutive_ones",
+ "signature": {
+  "params": [
+   {
+    "name": "nums",
+    "type": "list[int]"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "max-consecutive-ones",
+  "question_id": 485
+ },
+ "practice_only": true
+}

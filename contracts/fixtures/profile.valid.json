@@ -1,0 +1,52 @@
+{
+  "domain": "backend",
+  "runtime": "python311",
+  "concepts": [
+    "caching",
+    "reporting",
+    "validation"
+  ],
+  "topics_solved": {
+    "arrays": 48,
+    "dp": 11,
+    "graphs_bfs_dfs": 16,
+    "hashing": 35,
+    "sliding_window": 14,
+    "trees": 19,
+    "two_pointers": 22
+  },
+  "allowed_topics": {
+    "novice": [
+      "arrays",
+      "hashing",
+      "two_pointers",
+      "trees",
+      "sliding_window",
+      "dp"
+    ],
+    "adept": [
+      "arrays",
+      "hashing",
+      "two_pointers",
+      "trees",
+      "graphs_bfs_dfs",
+      "sliding_window",
+      "dp"
+    ],
+    "master": [
+      "arrays",
+      "hashing",
+      "two_pointers",
+      "trees",
+      "graphs_bfs_dfs"
+    ]
+  },
+  "suggested_tier": "master",
+  "tier_reason": "165 problems solved in 7 taxonomy topics, 3 projects: meets the master rule (≥3 projects, ≥150 solved, ≥1 topic with ≥15 solved).",
+  "unsupported_notes": [],
+  "sources": {
+    "domain": "rules",
+    "runtime": "rules",
+    "concepts": "rules"
+  }
+}

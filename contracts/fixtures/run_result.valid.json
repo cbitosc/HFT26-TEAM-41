@@ -1,0 +1,35 @@
+{
+  "status": "ok",
+  "reason": null,
+  "duration_ms": 1840,
+  "tests": [
+    {
+      "id": "tests/test_low_stock_visible.py::test_low_stock_lists_products_below_threshold",
+      "name": "test_low_stock_lists_products_below_threshold",
+      "outcome": "failed",
+      "duration_ms": 31,
+      "message": "AssertionError: assert ['Keyboard'] == ['Keyboard', 'Monitor']"
+    },
+    {
+      "id": "tests/test_health.py::test_health",
+      "name": "test_health",
+      "outcome": "passed",
+      "duration_ms": 4,
+      "message": null
+    },
+    {
+      "id": "tests/test_health.py::test_metrics",
+      "name": "test_metrics",
+      "outcome": "skipped",
+      "duration_ms": 0,
+      "message": "metrics endpoint not enabled"
+    }
+  ],
+  "summary": {
+    "passed": 1,
+    "failed": 1,
+    "total": 3
+  },
+  "stdout_tail": "FAILED tests/test_low_stock_visible.py::test_low_stock_lists_products_below_threshold\n1 failed, 1 passed, 1 skipped in 0.41s\n",
+  "stderr_tail": ""
+}

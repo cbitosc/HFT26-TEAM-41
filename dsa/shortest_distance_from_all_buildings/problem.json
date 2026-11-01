@@ -1,0 +1,29 @@
+{
+ "id": "shortest_distance_from_all_buildings",
+ "difficulty": "hard",
+ "tiers": [
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "graphs_bfs_dfs"
+ ],
+ "entry_point": "shortest_distance",
+ "signature": {
+  "params": [
+   {
+    "name": "grid",
+    "type": "list[list[int]]"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "shortest-distance-from-all-buildings",
+  "question_id": 317
+ }
+}

@@ -1,0 +1,38 @@
+{
+ "id": "reachable_nodes_in_subdivided_graph",
+ "difficulty": "hard",
+ "tiers": [
+  "master"
+ ],
+ "tags": [
+  "graphs_bfs_dfs",
+  "heaps",
+  "shortest_paths"
+ ],
+ "entry_point": "reachable_nodes",
+ "signature": {
+  "params": [
+   {
+    "name": "edges",
+    "type": "list[list[int]]"
+   },
+   {
+    "name": "maxMoves",
+    "type": "int"
+   },
+   {
+    "name": "n",
+    "type": "int"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "reachable-nodes-in-subdivided-graph",
+  "question_id": 882
+ }
+}

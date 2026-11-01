@@ -1,0 +1,31 @@
+{
+ "id": "array_partition",
+ "difficulty": "easy",
+ "tiers": [
+  "novice"
+ ],
+ "tags": [
+  "arrays",
+  "greedy",
+  "sorting"
+ ],
+ "entry_point": "array_pair_sum",
+ "signature": {
+  "params": [
+   {
+    "name": "nums",
+    "type": "list[int]"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "array-partition",
+  "question_id": 561
+ },
+ "practice_only": true
+}

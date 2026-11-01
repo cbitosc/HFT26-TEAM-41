@@ -1,0 +1,31 @@
+{
+ "id": "minimum_path_sum",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "dp"
+ ],
+ "entry_point": "min_path_sum",
+ "signature": {
+  "params": [
+   {
+    "name": "grid",
+    "type": "list[list[int]]"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "minimum-path-sum",
+  "question_id": 64
+ },
+ "practice_only": true
+}

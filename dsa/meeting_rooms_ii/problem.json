@@ -1,0 +1,33 @@
+{
+ "id": "meeting_rooms_ii",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "greedy",
+  "heaps",
+  "sorting",
+  "two_pointers"
+ ],
+ "entry_point": "min_meeting_rooms",
+ "signature": {
+  "params": [
+   {
+    "name": "intervals",
+    "type": "list[list[int]]"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "meeting-rooms-ii",
+  "question_id": 253
+ }
+}

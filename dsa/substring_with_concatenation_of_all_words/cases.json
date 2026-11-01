@@ -1,0 +1,1083 @@
+{
+ "visible": [
+  {
+   "id": "v1",
+   "input": {
+    "s": "a",
+    "words": [
+     "a",
+     "a",
+     "a"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "v2",
+   "input": {
+    "s": "barfoothefoobarman",
+    "words": [
+     "foo",
+     "bar"
+    ]
+   },
+   "expected": [
+    0,
+    9
+   ]
+  },
+  {
+   "id": "v3",
+   "input": {
+    "s": "aaa",
+    "words": [
+     "a",
+     "a"
+    ]
+   },
+   "expected": [
+    0,
+    1
+   ]
+  },
+  {
+   "id": "v4",
+   "input": {
+    "s": "mississippi",
+    "words": [
+     "issi",
+     "ippi"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "v5",
+   "input": {
+    "s": "aabbccddeeff",
+    "words": [
+     "abc",
+     "def",
+     "abb"
+    ]
+   },
+   "expected": []
+  }
+ ],
+ "hidden": [
+  {
+   "id": "h01",
+   "input": {
+    "s": "wordgoodgoodgoodbestword",
+    "words": [
+     "word",
+     "good",
+     "best",
+     "word"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h02",
+   "input": {
+    "s": "abababab",
+    "words": [
+     "a",
+     "b",
+     "a",
+     "b"
+    ]
+   },
+   "expected": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "id": "h03",
+   "input": {
+    "s": "lingmindraboofooowingdingbarrwingmonkeypoundcake",
+    "words": [
+     "fooo",
+     "barr",
+     "wing",
+     "ding",
+     "wing"
+    ]
+   },
+   "expected": [
+    13
+   ]
+  },
+  {
+   "id": "h04",
+   "input": {
+    "s": "barfoofoobarthefoobarman",
+    "words": [
+     "bar",
+     "foo",
+     "the"
+    ]
+   },
+   "expected": [
+    6,
+    9,
+    12
+   ]
+  },
+  {
+   "id": "h05",
+   "input": {
+    "s": "thisisjustafancysentencewithallthesewordsin",
+    "words": [
+     "this",
+     "is",
+     "a",
+     "just",
+     "fancy",
+     "sentence",
+     "with",
+     "all",
+     "these",
+     "words",
+     "in"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h06",
+   "input": {
+    "s": "overlaplaplaplaplaplaplaplaplaplap",
+    "words": [
+     "lap",
+     "laplap",
+     "laplap",
+     "laplap",
+     "laplap",
+     "laplap",
+     "laplap",
+     "laplap"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h07",
+   "input": {
+    "s": "abcdefabcdefabcdefabcdefabcdef",
+    "words": [
+     "abcdef",
+     "abcdef",
+     "abcdef",
+     "abcdef",
+     "abcdef"
+    ]
+   },
+   "expected": [
+    0
+   ]
+  },
+  {
+   "id": "h08",
+   "input": {
+    "s": "aabbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz",
+    "words": [
+     "aabb",
+     "ccdd",
+     "eefg",
+     "ghhi",
+     "jklk",
+     "llmm",
+     "nnoo",
+     "pqqr",
+     "rstt",
+     "uuvv",
+     "wwxx",
+     "yyzz"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h09",
+   "input": {
+    "s": "oneonetwoonethreetwothreeonetwothreeone",
+    "words": [
+     "one",
+     "two",
+     "three"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h10",
+   "input": {
+    "s": "abcdefgabcdefgabcdefg",
+    "words": [
+     "abc",
+     "def",
+     "gab",
+     "cde",
+     "fgh"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h11",
+   "input": {
+    "s": "zazbzczdzazbzczdzaz",
+    "words": [
+     "zaz",
+     "bz",
+     "cz",
+     "dz",
+     "az",
+     "bz",
+     "cz",
+     "dz"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h12",
+   "input": {
+    "s": "onetwothreefourfivesixseveneightnine",
+    "words": [
+     "onetwo",
+     "threefour",
+     "fivesix",
+     "seveneight",
+     "ninetwo",
+     "threefour",
+     "fivesix"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h13",
+   "input": {
+    "s": "zzzzzzzzzzzzzzzzzz",
+    "words": [
+     "zzz",
+     "zzz",
+     "zzz",
+     "zzz"
+    ]
+   },
+   "expected": [
+    0,
+    3,
+    6,
+    1,
+    4,
+    2,
+    5
+   ]
+  },
+  {
+   "id": "h14",
+   "input": {
+    "s": "abcdefghijabcdefghijabcdefghij",
+    "words": [
+     "abc",
+     "def",
+     "ghi",
+     "jkl",
+     "abc",
+     "def",
+     "ghi",
+     "jkl",
+     "abc",
+     "def"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h15",
+   "input": {
+    "s": "abcdabcdabcdabcd",
+    "words": [
+     "abcd",
+     "dcba",
+     "abdc",
+     "bacd"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h16",
+   "input": {
+    "s": "testtesttesttest",
+    "words": [
+     "test",
+     "test",
+     "test"
+    ]
+   },
+   "expected": [
+    0,
+    4
+   ]
+  },
+  {
+   "id": "h17",
+   "input": {
+    "s": "alibabacloudisfastgrowing",
+    "words": [
+     "ali",
+     "ba",
+     "ba",
+     "cloud",
+     "is",
+     "fast",
+     "grow",
+     "ing"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h18",
+   "input": {
+    "s": "mississippiissippi",
+    "words": [
+     "mis",
+     "iss",
+     "ssi",
+     "ipp",
+     "ppi",
+     "ippi",
+     "ippi",
+     "ippi",
+     "ippi",
+     "ippi",
+     "ippi",
+     "ippi",
+     "ippi",
+     "ippi",
+     "ippi"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h19",
+   "input": {
+    "s": "thisisaverylongstringthatcontainsmanywordsandwordstogether",
+    "words": [
+     "this",
+     "is",
+     "avery",
+     "long",
+     "string",
+     "that",
+     "contains",
+     "many",
+     "words",
+     "and",
+     "words",
+     "together"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h20",
+   "input": {
+    "s": "catdogcatdogcatdogcat",
+    "words": [
+     "cat",
+     "dog",
+     "cat",
+     "dog",
+     "cat"
+    ]
+   },
+   "expected": [
+    0,
+    6
+   ]
+  },
+  {
+   "id": "h21",
+   "input": {
+    "s": "abcdefghabcdefghabcdefgh",
+    "words": [
+     "abcdef",
+     "ghabcd",
+     "efghab",
+     "cdefgh",
+     "defghi",
+     "efghab",
+     "fghabc"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h22",
+   "input": {
+    "s": "repeatedrepeatedrepeated",
+    "words": [
+     "repeated",
+     "repe",
+     "atedre",
+     "peated"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h23",
+   "input": {
+    "s": "xylophoneclarinetxylophoneclarinet",
+    "words": [
+     "xylo",
+     "phone",
+     "clar",
+     "inet"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h24",
+   "input": {
+    "s": "aquickbrownfoxjumpsoverthelazydog",
+    "words": [
+     "quick",
+     "brown",
+     "fox",
+     "jump",
+     "over",
+     "the",
+     "lazy",
+     "dog"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h25",
+   "input": {
+    "s": "repeatedrepeatedrepeatedword",
+    "words": [
+     "repeated",
+     "repeated",
+     "repeated",
+     "word"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h26",
+   "input": {
+    "s": "aquickbrownfoxjumpsoverthelazydog",
+    "words": [
+     "quick",
+     "brown",
+     "fox",
+     "jumps",
+     "over",
+     "the",
+     "lazy",
+     "dog"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h27",
+   "input": {
+    "s": "onetwothreefour",
+    "words": [
+     "one",
+     "two",
+     "three",
+     "four"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h28",
+   "input": {
+    "s": "loremipsumdolorsitamet",
+    "words": [
+     "lorem",
+     "ipsum",
+     "dolor",
+     "sit",
+     "amet"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h29",
+   "input": {
+    "s": "aabbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz",
+    "words": [
+     "aabb",
+     "ccdd",
+     "eefg",
+     "ghhi",
+     "ijjk",
+     "kllm",
+     "mnnm",
+     "nnoo",
+     "ppqq",
+     "rrss",
+     "ttuu",
+     "vvww",
+     "xxyy",
+     "zzaa"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h30",
+   "input": {
+    "s": "ababababababababababababababababab",
+    "words": [
+     "aba",
+     "bab",
+     "aba",
+     "bab",
+     "aba",
+     "bab",
+     "aba",
+     "bab",
+     "aba",
+     "bab",
+     "aba",
+     "bab",
+     "aba",
+     "bab",
+     "aba",
+     "bab",
+     "aba",
+     "bab",
+     "aba",
+     "bab"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h31",
+   "input": {
+    "s": "onetwothreefourfivesixseveneightnine",
+    "words": [
+     "one",
+     "two",
+     "three",
+     "four",
+     "five",
+     "six",
+     "seven",
+     "eight",
+     "nine"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h32",
+   "input": {
+    "s": "aaaabbbbccccddddeeeeffffgggghhhhiiii",
+    "words": [
+     "aabb",
+     "bbcc",
+     "ccdd",
+     "ddeeff",
+     "ffgg",
+     "gghh",
+     "hhiiaa"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h33",
+   "input": {
+    "s": "aabbccddeeffgghhiijj",
+    "words": [
+     "aabb",
+     "ccdd",
+     "eeff",
+     "gghh",
+     "iijj"
+    ]
+   },
+   "expected": [
+    0
+   ]
+  },
+  {
+   "id": "h34",
+   "input": {
+    "s": "aaaaaaaaaaaabbbbbbbbbbbcccccccccccddddddddddd",
+    "words": [
+     "aaaaa",
+     "bbbbb",
+     "ccccc",
+     "ddddd",
+     "aaaaa",
+     "bbbbb",
+     "ccccc",
+     "ddddd",
+     "aaaaa",
+     "bbbbb"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h35",
+   "input": {
+    "s": "complexcomplexcomplexcomplex",
+    "words": [
+     "com",
+     "ple",
+     "xco",
+     "mple",
+     "com",
+     "ple",
+     "xco",
+     "mple"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h36",
+   "input": {
+    "s": "aabbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz",
+    "words": [
+     "abc",
+     "def",
+     "ghi",
+     "jkl",
+     "mno",
+     "pqr",
+     "stu",
+     "vwx",
+     "yz",
+     "zz"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h37",
+   "input": {
+    "s": "pythonprogramminglanguage",
+    "words": [
+     "py",
+     "thon",
+     "pro",
+     "gram",
+     "ming",
+     "lan",
+     "guag",
+     "e"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h38",
+   "input": {
+    "s": "exampleexampleexampleexample",
+    "words": [
+     "example",
+     "example",
+     "example",
+     "example"
+    ]
+   },
+   "expected": [
+    0
+   ]
+  },
+  {
+   "id": "h39",
+   "input": {
+    "s": "abcdefghabcdefgh",
+    "words": [
+     "abcd",
+     "efgh",
+     "efgh",
+     "abcd"
+    ]
+   },
+   "expected": [
+    0
+   ]
+  },
+  {
+   "id": "h40",
+   "input": {
+    "s": "hellohellohellohellohello",
+    "words": [
+     "hello",
+     "hello",
+     "hello",
+     "hello",
+     "hello"
+    ]
+   },
+   "expected": [
+    0
+   ]
+  },
+  {
+   "id": "h41",
+   "input": {
+    "s": "xxyyyzzzzzyyyxx",
+    "words": [
+     "xx",
+     "yy",
+     "zz",
+     "yy",
+     "xx"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h42",
+   "input": {
+    "s": "abcdefghijklmnopqrstuvwxyzabcdefghijklmnopqrstuvwxyz",
+    "words": [
+     "abc",
+     "def",
+     "ghi",
+     "jkl",
+     "mno",
+     "pqr",
+     "stu",
+     "vwx",
+     "yz"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h43",
+   "input": {
+    "s": "hellohellohellohellohellohellohello",
+    "words": [
+     "hello",
+     "hello"
+    ]
+   },
+   "expected": [
+    0,
+    5,
+    10,
+    15,
+    20,
+    25
+   ]
+  },
+  {
+   "id": "h44",
+   "input": {
+    "s": "concatenationconcatenationconcatenation",
+    "words": [
+     "concat",
+     "enationc",
+     "ationc",
+     "tenation",
+     "enationc",
+     "oncatena"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h45",
+   "input": {
+    "s": "overlapoverlappingoverlapping",
+    "words": [
+     "over",
+     "lap",
+     "over",
+     "lapping"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h46",
+   "input": {
+    "s": "xxyyzzxxyyzzxxyyzzxxyyzz",
+    "words": [
+     "xxyy",
+     "yyzz",
+     "xxyy",
+     "yyzz",
+     "xxyy",
+     "yyzz"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h47",
+   "input": {
+    "s": "abcdefgabcdefgabcdefg",
+    "words": [
+     "abc",
+     "def",
+     "gab"
+    ]
+   },
+   "expected": [
+    0,
+    7
+   ]
+  },
+  {
+   "id": "h48",
+   "input": {
+    "s": "mississippiissississippi",
+    "words": [
+     "issi",
+     "ssis",
+     "siss",
+     "issi",
+     "ssis",
+     "siss",
+     "issi",
+     "ssis",
+     "siss"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h49",
+   "input": {
+    "s": "abcdefghijklmno",
+    "words": [
+     "abc",
+     "def",
+     "ghi",
+     "jkl",
+     "mno"
+    ]
+   },
+   "expected": [
+    0
+   ]
+  },
+  {
+   "id": "h50",
+   "input": {
+    "s": "xyzxyzxyzxyzxyz",
+    "words": [
+     "xyz",
+     "zyx",
+     "yzx",
+     "xzy",
+     "zxy"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h51",
+   "input": {
+    "s": "abcdefabcdefabcdefabcdefabcdefabcdef",
+    "words": [
+     "abcdef",
+     "abcdef",
+     "abcdef",
+     "abcdef",
+     "abcdef",
+     "abcdef"
+    ]
+   },
+   "expected": [
+    0
+   ]
+  },
+  {
+   "id": "h52",
+   "input": {
+    "s": "thisisatargetstringwithtargetstring",
+    "words": [
+     "this",
+     "is",
+     "a",
+     "target",
+     "string"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h53",
+   "input": {
+    "s": "thisisanexamplethisisanexamplethisisanexample",
+    "words": [
+     "this",
+     "isan",
+     "example",
+     "isan",
+     "example"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h54",
+   "input": {
+    "s": "zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz",
+    "words": [
+     "zzzz",
+     "zzzz",
+     "zzzz",
+     "zzzz",
+     "zzzz",
+     "zzzz",
+     "zzzz",
+     "zzzz",
+     "zzzz",
+     "zzzz"
+    ]
+   },
+   "expected": [
+    0,
+    4,
+    1,
+    5,
+    2,
+    6,
+    3
+   ]
+  },
+  {
+   "id": "h55",
+   "input": {
+    "s": "abcdabcdabcdabcdabcdabcd",
+    "words": [
+     "abcd",
+     "dcba",
+     "abdc",
+     "bacd",
+     "cdab"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h56",
+   "input": {
+    "s": "abcdefghijabcdefghijabcdefghij",
+    "words": [
+     "abc",
+     "def",
+     "ghi",
+     "jabc",
+     "def",
+     "ghij",
+     "abc",
+     "def",
+     "ghi",
+     "j"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h57",
+   "input": {
+    "s": "abcdefghiabcdefghiabcdefghi",
+    "words": [
+     "abc",
+     "def",
+     "ghi",
+     "abc",
+     "def",
+     "ghi",
+     "abc",
+     "def",
+     "ghi"
+    ]
+   },
+   "expected": [
+    0
+   ]
+  },
+  {
+   "id": "h58",
+   "input": {
+    "s": "abcdefghijabcdefghijabcdefghijabcdefghij",
+    "words": [
+     "abc",
+     "def",
+     "ghi",
+     "jabc",
+     "def",
+     "ghi",
+     "jabc",
+     "def",
+     "ghi",
+     "j"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h59",
+   "input": {
+    "s": "aaaaaaaaaaaaaaaaaab",
+    "words": [
+     "aaaa",
+     "aaaa",
+     "aaaa",
+     "aaaa",
+     "aaaa",
+     "aaaa",
+     "aaaa",
+     "aaaa",
+     "aaaa",
+     "a"
+    ]
+   },
+   "expected": []
+  },
+  {
+   "id": "h60",
+   "input": {
+    "s": "onetwothreefourfivesix",
+    "words": [
+     "one",
+     "two",
+     "three",
+     "four",
+     "five",
+     "six"
+    ]
+   },
+   "expected": []
+  }
+ ]
+}

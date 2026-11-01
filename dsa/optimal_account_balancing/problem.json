@@ -1,0 +1,32 @@
+{
+ "id": "optimal_account_balancing",
+ "difficulty": "hard",
+ "tiers": [
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "backtracking",
+  "bit_manipulation",
+  "dp"
+ ],
+ "entry_point": "min_transfers",
+ "signature": {
+  "params": [
+   {
+    "name": "transactions",
+    "type": "list[list[int]]"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "optimal-account-balancing",
+  "question_id": 465
+ },
+ "practice_only": true
+}

@@ -1,0 +1,31 @@
+{
+ "id": "longest_substring_with_at_most_two_distinct_characters",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "hashing",
+  "sliding_window",
+  "strings"
+ ],
+ "entry_point": "length_of_longest_substring_two_distinct",
+ "signature": {
+  "params": [
+   {
+    "name": "s",
+    "type": "str"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "longest-substring-with-at-most-two-distinct-characters",
+  "question_id": 159
+ }
+}

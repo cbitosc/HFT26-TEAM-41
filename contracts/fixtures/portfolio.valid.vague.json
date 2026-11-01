@@ -1,0 +1,22 @@
+{
+  "basics": {
+    "name": "Sam Taylor",
+    "label": "Software enthusiast",
+    "summary": "I love building things and learning new technologies every day."
+  },
+  "projects": [
+    {
+      "name": "Side project",
+      "description": "A small tool I made for my friends to keep track of things."
+    },
+    {
+      "name": "Hackathon entry",
+      "description": "Built a prototype with my team in a weekend."
+    }
+  ],
+  "assessment": {
+    "dsaTopicsSolved": {
+      "arrays": 3
+    }
+  }
+}

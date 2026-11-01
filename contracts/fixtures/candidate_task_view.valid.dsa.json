@@ -1,0 +1,47 @@
+{
+  "task_id": "dsa-longest-unique-substring",
+  "version": 1,
+  "tier": "adept",
+  "kind": "dsa",
+  "runtime": "python311",
+  "dsa_tags": [
+    "sliding_window",
+    "hashing"
+  ],
+  "statement_md": "# Longest substring without repeats\n\nImplement `longest_unique_substring(s: str) -> int`, returning the length of the longest contiguous substring of `s` in which no character appears twice.\n\n- `0 <= len(s) <= 100000`\n- `s` may contain any Unicode characters.\n",
+  "repo_tour_md": "",
+  "starter_files": {
+    "solution.py": "def longest_unique_substring(s: str) -> int:\n    raise NotImplementedError\n"
+  },
+  "entry_symbols": [
+    "solution.py::longest_unique_substring"
+  ],
+  "visible_tests": [],
+  "time_budget_min": 20,
+  "dsa_cases": {
+    "visible": [
+      {
+        "id": "v1",
+        "input": {
+          "s": "abcabcbb"
+        },
+        "expected": 3
+      },
+      {
+        "id": "v2",
+        "input": {
+          "s": "bbbbb"
+        },
+        "expected": 1
+      },
+      {
+        "id": "v3",
+        "input": {
+          "s": ""
+        },
+        "expected": 0
+      }
+    ]
+  },
+  "perf": null
+}

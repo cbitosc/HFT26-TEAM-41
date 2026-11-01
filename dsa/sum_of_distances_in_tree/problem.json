@@ -1,0 +1,35 @@
+{
+ "id": "sum_of_distances_in_tree",
+ "difficulty": "hard",
+ "tiers": [
+  "master"
+ ],
+ "tags": [
+  "dp",
+  "graphs_bfs_dfs",
+  "trees"
+ ],
+ "entry_point": "sum_of_distances_in_tree",
+ "signature": {
+  "params": [
+   {
+    "name": "n",
+    "type": "int"
+   },
+   {
+    "name": "edges",
+    "type": "list[list[int]]"
+   }
+  ],
+  "returns": "list[int]"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "sum-of-distances-in-tree",
+  "question_id": 834
+ },
+ "practice_only": true
+}

@@ -1,0 +1,30 @@
+{
+ "id": "contains_duplicate",
+ "difficulty": "easy",
+ "tiers": [
+  "novice"
+ ],
+ "tags": [
+  "arrays",
+  "hashing",
+  "sorting"
+ ],
+ "entry_point": "contains_duplicate",
+ "signature": {
+  "params": [
+   {
+    "name": "nums",
+    "type": "list[int]"
+   }
+  ],
+  "returns": "bool"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "contains-duplicate",
+  "question_id": 217
+ }
+}

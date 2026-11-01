@@ -1,0 +1,31 @@
+{
+ "id": "number_of_islands",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "graphs_bfs_dfs",
+  "union_find"
+ ],
+ "entry_point": "num_islands",
+ "signature": {
+  "params": [
+   {
+    "name": "grid",
+    "type": "list[list[str]]"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "number-of-islands",
+  "question_id": 200
+ }
+}

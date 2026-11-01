@@ -1,0 +1,37 @@
+{
+ "id": "jump_game_vi",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "dp",
+  "heaps",
+  "queue"
+ ],
+ "entry_point": "max_result",
+ "signature": {
+  "params": [
+   {
+    "name": "nums",
+    "type": "list[int]"
+   },
+   {
+    "name": "k",
+    "type": "int"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "jump-game-vi",
+  "question_id": 1696
+ },
+ "practice_only": true
+}

@@ -1,0 +1,38 @@
+{
+  "scoring_version": "1",
+  "tier": "novice",
+  "final_score": 84.83,
+  "band": "strong",
+  "mean_correctness": 84.83,
+  "ai_efficiency": null,
+  "tasks": [
+    {
+      "task_id": "expenses-pagination",
+      "kind": "domain",
+      "visible": { "passed": 3, "total": 3 },
+      "hidden": { "passed": 54, "total": 54 },
+      "visible_rate": 1.0,
+      "hidden_rate": 1.0,
+      "perf_budget_ms": null,
+      "perf_ms": null,
+      "perf_factor": 1.0,
+      "correctness": 100.0,
+      "time_ms": 412000,
+      "runs": 3
+    },
+    {
+      "task_id": "longest-unique-substring",
+      "kind": "dsa",
+      "visible": { "passed": 5, "total": 5 },
+      "hidden": { "passed": 17, "total": 30 },
+      "visible_rate": 1.0,
+      "hidden_rate": 0.5667,
+      "perf_budget_ms": null,
+      "perf_ms": null,
+      "perf_factor": 1.0,
+      "correctness": 69.67,
+      "time_ms": null,
+      "runs": 1
+    }
+  ]
+}

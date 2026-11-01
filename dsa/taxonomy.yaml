@@ -1,0 +1,95 @@
+# Canonical DSA topics (P2.1). The profiler maps the topic names a portfolio claims
+# (assessment.dsaTopicsSolved) to these ids through their synonyms; the DSA bank (P2.6)
+# is tagged with the same ids. Synonyms are written in the portfolio's snake_case form.
+#
+# A topic is allowed for a tier when the tier is listed under `tiers` and the candidate
+# has solved at least `thresholds[difficulty]` problems in it, where the difficulty is
+# `tier_difficulty[tier]`.
+
+thresholds:
+  easy: 1
+  medium: 5
+  hard: 15
+
+tier_difficulty:
+  novice: easy
+  adept: medium
+  master: hard
+
+# suggested_tier: the highest tier whose rule holds (checked master, then adept), else
+# novice. A rule also needs at least one topic allowed for that tier.
+tier_rules:
+  master:
+    min_projects: 3
+    min_solved: 150
+  adept:
+    min_projects: 2
+    min_solved: 40
+
+topics:
+  arrays:
+    synonyms: [array, list, lists, matrix, matrices, prefix_sum, prefix_sums, subarray, subarrays]
+    tiers: [novice, adept, master]
+  hashing:
+    synonyms: [hash, hash_map, hashmap, hash_maps, hash_table, hash_tables, hash_set, hashset, dictionary, dictionaries, counting]
+    tiers: [novice, adept, master]
+  strings:
+    synonyms: [string, string_manipulation, palindromes]
+    tiers: [novice, adept, master]
+  two_pointers:
+    synonyms: [two_pointer, two_pointer_technique, pointers]
+    tiers: [novice, adept, master]
+  sliding_window:
+    synonyms: [sliding_windows, window]
+    tiers: [novice, adept, master]
+  stack:
+    synonyms: [stacks, monotonic_stack]
+    tiers: [novice, adept, master]
+  queue:
+    synonyms: [queues, deque, monotonic_queue]
+    tiers: [novice, adept, master]
+  linked_list:
+    synonyms: [linked_lists, linkedlist, linkedlists, singly_linked_list, doubly_linked_list]
+    tiers: [novice, adept, master]
+  binary_search:
+    synonyms: [bisection, binary_search_on_answer]
+    tiers: [novice, adept, master]
+  sorting:
+    synonyms: [sort, sorts, merge_sort, quick_sort, quicksort, counting_sort]
+    tiers: [novice, adept, master]
+  trees:
+    synonyms: [tree, binary_tree, binary_trees, tree_traversal]
+    tiers: [novice, adept, master]
+  bst:
+    synonyms: [binary_search_tree, binary_search_trees]
+    tiers: [adept, master]
+  heaps:
+    synonyms: [heap, heap_priority_queue, priority_queue, priority_queues, top_k]
+    tiers: [adept, master]
+  graphs_bfs_dfs:
+    synonyms: [graph, graphs, bfs, dfs, breadth_first_search, depth_first_search, graph_traversal, topological_sort, toposort]
+    tiers: [adept, master]
+  shortest_paths:
+    synonyms: [shortest_path, dijkstra, bellman_ford, floyd_warshall]
+    tiers: [master]
+  dp:
+    synonyms: [dynamic_programming, memoization, tabulation, knapsack]
+    tiers: [novice, adept, master]
+  greedy:
+    synonyms: [greedy_algorithms, greedy_algorithm]
+    tiers: [novice, adept, master]
+  backtracking:
+    synonyms: [permutations, combinations, subsets]
+    tiers: [adept, master]
+  tries:
+    synonyms: [trie, prefix_tree, prefix_trees]
+    tiers: [adept, master]
+  union_find:
+    synonyms: [disjoint_set, disjoint_sets, dsu, disjoint_set_union]
+    tiers: [adept, master]
+  bit_manipulation:
+    synonyms: [bits, bitwise, bitmask, bitmasks, bit_masks]
+    tiers: [novice, adept, master]
+  intervals:
+    synonyms: [interval, merge_intervals, sweep_line, line_sweep]
+    tiers: [adept, master]

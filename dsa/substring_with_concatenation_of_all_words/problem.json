@@ -1,0 +1,38 @@
+{
+ "id": "substring_with_concatenation_of_all_words",
+ "difficulty": "hard",
+ "tiers": [
+  "master"
+ ],
+ "tags": [
+  "hashing",
+  "sliding_window",
+  "strings"
+ ],
+ "entry_point": "find_substring",
+ "signature": {
+  "params": [
+   {
+    "name": "s",
+    "type": "str"
+   },
+   {
+    "name": "words",
+    "type": "list[str]"
+   }
+  ],
+  "returns": "list[int]"
+ },
+ "comparator": {
+  "kind": "unordered_list",
+  "tolerance": null
+ },
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "substring-with-concatenation-of-all-words",
+  "question_id": 30
+ },
+ "practice_only": true
+}

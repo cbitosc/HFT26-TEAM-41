@@ -1,0 +1,29 @@
+{
+ "id": "find_minimum_in_rotated_sorted_array_ii",
+ "difficulty": "hard",
+ "tiers": [
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "binary_search"
+ ],
+ "entry_point": "find_min",
+ "signature": {
+  "params": [
+   {
+    "name": "nums",
+    "type": "list[int]"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "find-minimum-in-rotated-sorted-array-ii",
+  "question_id": 154
+ }
+}

@@ -1,0 +1,526 @@
+{
+ "visible": [
+  {
+   "id": "v1",
+   "input": {
+    "s": "a",
+    "t": "a"
+   },
+   "expected": true
+  },
+  {
+   "id": "v2",
+   "input": {
+    "s": "ab",
+    "t": "ba"
+   },
+   "expected": true
+  },
+  {
+   "id": "v3",
+   "input": {
+    "s": "",
+    "t": ""
+   },
+   "expected": true
+  },
+  {
+   "id": "v4",
+   "input": {
+    "s": "",
+    "t": "a"
+   },
+   "expected": false
+  },
+  {
+   "id": "v5",
+   "input": {
+    "s": "a",
+    "t": "b"
+   },
+   "expected": false
+  }
+ ],
+ "hidden": [
+  {
+   "id": "h01",
+   "input": {
+    "s": "abcdefghijklmnopqrstuvwxyz",
+    "t": "zyxwvutsrqponmlkjihgfedcba"
+   },
+   "expected": true
+  },
+  {
+   "id": "h02",
+   "input": {
+    "s": "abcde",
+    "t": "edcba"
+   },
+   "expected": true
+  },
+  {
+   "id": "h03",
+   "input": {
+    "s": "abc",
+    "t": "abcd"
+   },
+   "expected": false
+  },
+  {
+   "id": "h04",
+   "input": {
+    "s": "apple",
+    "t": "pale"
+   },
+   "expected": false
+  },
+  {
+   "id": "h05",
+   "input": {
+    "s": "hello",
+    "t": "bello"
+   },
+   "expected": false
+  },
+  {
+   "id": "h06",
+   "input": {
+    "s": "aacc",
+    "t": "ccac"
+   },
+   "expected": false
+  },
+  {
+   "id": "h07",
+   "input": {
+    "s": "abc",
+    "t": "def"
+   },
+   "expected": false
+  },
+  {
+   "id": "h08",
+   "input": {
+    "s": "abc",
+    "t": "cba"
+   },
+   "expected": true
+  },
+  {
+   "id": "h09",
+   "input": {
+    "s": "abcd",
+    "t": "abce"
+   },
+   "expected": false
+  },
+  {
+   "id": "h10",
+   "input": {
+    "s": "anagram",
+    "t": "nagaram"
+   },
+   "expected": true
+  },
+  {
+   "id": "h11",
+   "input": {
+    "s": "rat",
+    "t": "car"
+   },
+   "expected": false
+  },
+  {
+   "id": "h12",
+   "input": {
+    "s": "listen",
+    "t": "silent"
+   },
+   "expected": true
+  },
+  {
+   "id": "h13",
+   "input": {
+    "s": "abcd",
+    "t": "dcba"
+   },
+   "expected": true
+  },
+  {
+   "id": "h14",
+   "input": {
+    "s": "triangle",
+    "t": "integral"
+   },
+   "expected": true
+  },
+  {
+   "id": "h15",
+   "input": {
+    "s": "aabbcc",
+    "t": "abcabc"
+   },
+   "expected": true
+  },
+  {
+   "id": "h16",
+   "input": {
+    "s": "ababababababababab",
+    "t": "bababababababababa"
+   },
+   "expected": true
+  },
+  {
+   "id": "h17",
+   "input": {
+    "s": "hello world",
+    "t": "worldhello"
+   },
+   "expected": false
+  },
+  {
+   "id": "h18",
+   "input": {
+    "s": "theeyes",
+    "t": "theysee"
+   },
+   "expected": true
+  },
+  {
+   "id": "h19",
+   "input": {
+    "s": "repeatedcharactershere",
+    "t": "repeatedcharactershere"
+   },
+   "expected": true
+  },
+  {
+   "id": "h20",
+   "input": {
+    "s": "ababababab",
+    "t": "bababababa"
+   },
+   "expected": true
+  },
+  {
+   "id": "h21",
+   "input": {
+    "s": "aabbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz",
+    "t": "zzxxyywwvvuuttssrrqqppoonnmmllkkjjiihhggffeeddccbbaa"
+   },
+   "expected": true
+  },
+  {
+   "id": "h22",
+   "input": {
+    "s": "the quick brown fox",
+    "t": "xof nworb kciuq eht"
+   },
+   "expected": true
+  },
+  {
+   "id": "h23",
+   "input": {
+    "s": "astronomer",
+    "t": "moonstarer"
+   },
+   "expected": true
+  },
+  {
+   "id": "h24",
+   "input": {
+    "s": "thisisananagram",
+    "t": "isanagramthis"
+   },
+   "expected": false
+  },
+  {
+   "id": "h25",
+   "input": {
+    "s": "spaces should be ignored",
+    "t": "should be ignored spaces"
+   },
+   "expected": true
+  },
+  {
+   "id": "h26",
+   "input": {
+    "s": "aabbcc",
+    "t": "ccbbaa"
+   },
+   "expected": true
+  },
+  {
+   "id": "h27",
+   "input": {
+    "s": "special!@#$%^&*()characters",
+    "t": "characters)!@#$%^&*()special"
+   },
+   "expected": false
+  },
+  {
+   "id": "h28",
+   "input": {
+    "s": "aaaabbbbccccddddeeeeffffgggghhhhiiiijjjjkkkkllllmmmmnnnnooooppppqqqqrrrrssssttttuuuuvvvvwwwwxxxxyyyyzzzz",
+    "t": "zzzzyyyxxxwwwwvvvvuuuuttttssssrrrrqqqqppppooooonnnnmmmmllllkkkkjjjjiiiigggghhhhffffffeeeeeeeeddccccbbbbaaaa"
+   },
+   "expected": false
+  },
+  {
+   "id": "h29",
+   "input": {
+    "s": "anagram",
+    "t": "nagarams"
+   },
+   "expected": false
+  },
+  {
+   "id": "h30",
+   "input": {
+    "s": "dormitory",
+    "t": "dirtyroom"
+   },
+   "expected": true
+  },
+  {
+   "id": "h31",
+   "input": {
+    "s": "1234567890",
+    "t": "0987654321"
+   },
+   "expected": true
+  },
+  {
+   "id": "h32",
+   "input": {
+    "s": "anananana",
+    "t": "naanaanna"
+   },
+   "expected": true
+  },
+  {
+   "id": "h33",
+   "input": {
+    "s": "thisisanagramtest",
+    "t": "agamnartisiesttst"
+   },
+   "expected": false
+  },
+  {
+   "id": "h34",
+   "input": {
+    "s": "hello world",
+    "t": "world hello"
+   },
+   "expected": true
+  },
+  {
+   "id": "h35",
+   "input": {
+    "s": "a gentleman",
+    "t": "elegant man"
+   },
+   "expected": true
+  },
+  {
+   "id": "h36",
+   "input": {
+    "s": "aabbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz",
+    "t": "zzyyxxwwvvuuttrrssqqppoonnmmllkkjjiihhggffeeddccbbaa"
+   },
+   "expected": true
+  },
+  {
+   "id": "h37",
+   "input": {
+    "s": "aabbcc",
+    "t": "aabbc"
+   },
+   "expected": false
+  },
+  {
+   "id": "h38",
+   "input": {
+    "s": "school master",
+    "t": "the classroom"
+   },
+   "expected": true
+  },
+  {
+   "id": "h39",
+   "input": {
+    "s": "thisisaverylongstringthatwearetesting",
+    "t": "averylongstringthatwearetestingthisis"
+   },
+   "expected": true
+  },
+  {
+   "id": "h40",
+   "input": {
+    "s": "thequickbrownfoxjumpsoverthelazydog",
+    "t": "godzylathedelvropmusfixnworbquickthe"
+   },
+   "expected": false
+  },
+  {
+   "id": "h41",
+   "input": {
+    "s": "thisisananagram",
+    "t": "isananagramthis"
+   },
+   "expected": true
+  },
+  {
+   "id": "h42",
+   "input": {
+    "s": "funeral",
+    "t": "real fun"
+   },
+   "expected": false
+  },
+  {
+   "id": "h43",
+   "input": {
+    "s": "unitedstates",
+    "t": "adtenisestatesu"
+   },
+   "expected": false
+  },
+  {
+   "id": "h44",
+   "input": {
+    "s": "mississippi",
+    "t": "mississipi"
+   },
+   "expected": false
+  },
+  {
+   "id": "h45",
+   "input": {
+    "s": "elevenplus",
+    "t": "twelvestop"
+   },
+   "expected": false
+  },
+  {
+   "id": "h46",
+   "input": {
+    "s": "anagramanagramanagram",
+    "t": "nagaramnagaramnagaram"
+   },
+   "expected": true
+  },
+  {
+   "id": "h47",
+   "input": {
+    "s": "aabbccdd",
+    "t": "ddbbaacc"
+   },
+   "expected": true
+  },
+  {
+   "id": "h48",
+   "input": {
+    "s": "aquickbrownfoxjumpsoverthelazydog",
+    "t": "quickbrownfoxjumpsoverthelazydoga"
+   },
+   "expected": true
+  },
+  {
+   "id": "h49",
+   "input": {
+    "s": "abcdeabced",
+    "t": "abcedabcde"
+   },
+   "expected": true
+  },
+  {
+   "id": "h50",
+   "input": {
+    "s": "aquickbrownfoxjumpsoverthelazydog",
+    "t": "thelazydogjumpsoveraquickbrownfox"
+   },
+   "expected": true
+  },
+  {
+   "id": "h51",
+   "input": {
+    "s": "pythonprogramming",
+    "t": "nohtypgnimmargorp"
+   },
+   "expected": true
+  },
+  {
+   "id": "h52",
+   "input": {
+    "s": "forty five",
+    "t": "over fifty"
+   },
+   "expected": true
+  },
+  {
+   "id": "h53",
+   "input": {
+    "s": "a!@#b$%^c&*()",
+    "t": "c&*()b$%^a!@#"
+   },
+   "expected": true
+  },
+  {
+   "id": "h54",
+   "input": {
+    "s": "aquickbrownfoxjumpsoverthelazydog",
+    "t": "quickbrownfoxjumpsoverthelazygod"
+   },
+   "expected": false
+  },
+  {
+   "id": "h55",
+   "input": {
+    "s": "noon",
+    "t": "noon"
+   },
+   "expected": true
+  },
+  {
+   "id": "h56",
+   "input": {
+    "s": "anagrammatic",
+    "t": "icnagarammat"
+   },
+   "expected": true
+  },
+  {
+   "id": "h57",
+   "input": {
+    "s": "aabbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz",
+    "t": "zyxwvutsrqponmlkjihgfedcba"
+   },
+   "expected": false
+  },
+  {
+   "id": "h58",
+   "input": {
+    "s": "abacabadabacaba",
+    "t": "bacabacabacaba"
+   },
+   "expected": false
+  },
+  {
+   "id": "h59",
+   "input": {
+    "s": "aabbccddeeffgghhiijjkkllmmnnooppqqrrssttuuvvwwxxyyzz",
+    "t": "zzyyxxwwvvuuttssrrqqppoonnmmllkkjjiihhggeeffddeebbaa"
+   },
+   "expected": false
+  },
+  {
+   "id": "h60",
+   "input": {
+    "s": "the quick brown fox jumps over the lazy dog",
+    "t": "dog lazy the over jumps fox brown quick the"
+   },
+   "expected": true
+  }
+ ]
+}

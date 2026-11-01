@@ -1,0 +1,33 @@
+{
+ "id": "course_schedule_ii",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "graphs_bfs_dfs"
+ ],
+ "entry_point": "find_order",
+ "signature": {
+  "params": [
+   {
+    "name": "numCourses",
+    "type": "int"
+   },
+   {
+    "name": "prerequisites",
+    "type": "list[list[int]]"
+   }
+  ],
+  "returns": "list[int]"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "course-schedule-ii",
+  "question_id": 210
+ }
+}

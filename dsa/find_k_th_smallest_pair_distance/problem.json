@@ -1,0 +1,35 @@
+{
+ "id": "find_k_th_smallest_pair_distance",
+ "difficulty": "hard",
+ "tiers": [
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "binary_search",
+  "sorting",
+  "two_pointers"
+ ],
+ "entry_point": "smallest_distance_pair",
+ "signature": {
+  "params": [
+   {
+    "name": "nums",
+    "type": "list[int]"
+   },
+   {
+    "name": "k",
+    "type": "int"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "find-k-th-smallest-pair-distance",
+  "question_id": 719
+ }
+}

@@ -1,0 +1,11 @@
+{
+  "session_id": "sess_01JBQ4M7X2K9",
+  "task_id": "fastapi-inventory-low-stock",
+  "ts": 1793352780000,
+  "type": "run",
+  "payload": {
+    "file": "app/routes/products.py",
+    "line": 11,
+    "symbol": null
+  }
+}

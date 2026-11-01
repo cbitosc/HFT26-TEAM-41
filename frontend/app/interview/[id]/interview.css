@@ -1,0 +1,697 @@
+/* AI interview room (F5). Ported from showcase/app/interview/interview.css (same rules),
+   with the showcase tokens and helper classes it relies on, scoped under .iv so the rest
+   of the app is unaffected. */
+.iv {
+  --paper: #f3eee3;
+  --ink: #ede6d6;
+  --text-ink: #ede6d6;
+  --graphite: #9ba3cc;
+  --rule: rgba(237, 230, 214, 0.14);
+  --sandbox: #0a1034;
+  --sandbox-2: #131b4b;
+  --sandbox-ink: #ede6d6;
+  --sandbox-muted: #9ba3cc;
+  --accent: #e2c27a;
+  --gold: #a9822f;
+  --gold-hi: #e2c27a;
+  --fail: #ff8a70;
+  --display: "Cormorant Garamond", "EB Garamond", Georgia, serif;
+  --inscr: "Cinzel", "EB Garamond", Georgia, serif;
+  --text: "Archivo", system-ui, sans-serif;
+  --code: "JetBrains Mono", ui-monospace, monospace;
+  --max: 1360px;
+  --gutter: 24px;
+  --side: clamp(16px, 4vw, 56px);
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  background: var(--sandbox);
+  color: var(--sandbox-ink);
+  font-family: var(--text);
+  font-size: 18px;
+  line-height: 1.62;
+  -webkit-font-smoothing: antialiased;
+}
+
+.iv .wrap {
+  max-width: var(--max);
+  margin: 0 auto;
+  padding: 0 var(--side);
+}
+
+.iv .h2 {
+  font-family: var(--display);
+  font-weight: 400;
+  font-size: clamp(42px, 6.2vw, 96px);
+  letter-spacing: -0.022em;
+  line-height: 0.96;
+  margin: 0 0 0.45em;
+  color: var(--ink);
+  text-wrap: balance;
+}
+
+.iv .h3 {
+  font-family: var(--display);
+  font-weight: 600;
+  font-size: clamp(26px, 2.4vw, 32px);
+  line-height: 1.1;
+  margin: 0 0 0.4em;
+  color: var(--ink);
+}
+
+.iv .label {
+  font-family: var(--inscr);
+  font-weight: 500;
+  font-size: 12.5px;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--graphite);
+  margin: 0 0 28px;
+}
+
+.iv .small {
+  font-size: 14.5px;
+  line-height: 1.55;
+  color: var(--graphite);
+}
+
+.iv .muted {
+  color: var(--graphite);
+}
+
+.iv .hdr-mark {
+  font-family: var(--display);
+  font-size: 28px;
+  font-weight: 500;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.iv .orb-state {
+  font-family: var(--inscr);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  color: var(--gold-hi);
+}
+
+.iv p {
+  margin: 0 0 1em;
+}
+
+.iv .orb-fallback {
+  background: radial-gradient(circle at 42% 38%, #c8d4ff 0, #2442c9 22%, #0a1034 34%, transparent 35%);
+}
+
+/* ---------- from the showcase ---------- */
+
+
+.iv-top {
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: color-mix(in srgb, var(--sandbox) 90%, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--rule);
+}
+
+.iv-top-in {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  height: 56px;
+}
+
+.iv-crumb {
+  font-size: 15px;
+  color: var(--graphite);
+  margin-right: auto;
+}
+
+.iv-back {
+  font-size: 15px;
+  color: var(--graphite);
+  text-decoration: none;
+}
+
+.iv-timer {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--code);
+  font-size: 13px;
+  font-variant-numeric: tabular-nums;
+  padding: 6px 12px;
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+}
+
+.iv-timer i {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--accent);
+  animation: iv-blink 1.6s ease-in-out infinite;
+}
+
+@keyframes iv-blink {
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* ---------- setup ---------- */
+
+.iv-setup {
+  display: grid;
+  grid-template-columns: repeat(12, minmax(0, 1fr));
+  column-gap: var(--gutter);
+  row-gap: 48px;
+  padding-top: clamp(48px, 8vw, 104px);
+}
+
+.iv-setup-intro {
+  grid-column: 1 / 6;
+}
+
+.iv-setup-intro .h2 {
+  font-size: clamp(34px, 4.4vw, 56px);
+}
+
+.iv-setup-intro .chip {
+  white-space: normal;
+  line-height: 1.3;
+}
+
+.iv-credit {
+  margin-top: 18px;
+}
+
+.iv-preview {
+  margin-top: 24px;
+  max-width: 280px;
+}
+
+.iv-form {
+  grid-column: 7 / 13;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+  padding: 28px;
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: var(--sandbox-2);
+  align-self: start;
+}
+
+.iv-field {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  border: 0;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+.iv-field legend,
+.iv-lab {
+  font-size: 15px;
+  color: var(--graphite);
+  padding: 0;
+  margin-bottom: 8px;
+}
+
+.iv-lab {
+  margin-bottom: 0;
+}
+
+.iv-field input {
+  font: inherit;
+  font-size: 17px;
+  color: var(--sandbox-ink);
+  background: var(--sandbox);
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  padding: 10px 12px;
+  min-width: 0;
+}
+
+.iv-field input::placeholder {
+  color: #5f6c65;
+}
+
+.iv-field input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 0;
+}
+
+.iv-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+.iv-seg {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  border: 1px solid var(--rule);
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.iv-seg-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.iv-opt {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 12px 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.iv-opt + .iv-opt {
+  border-left: 1px solid var(--rule);
+}
+
+.iv-opt input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.iv-opt:has(input:focus-visible) {
+  outline: 2px solid var(--accent);
+  outline-offset: -2px;
+}
+
+.iv-opt[data-on="true"] {
+  background: rgba(63, 211, 160, 0.1);
+  box-shadow: inset 0 -2px 0 var(--accent);
+}
+
+.iv-opt[data-off="true"] {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.iv-opt-name {
+  font-family: var(--display);
+  font-stretch: 100%;
+  font-weight: 650;
+  font-size: 17px;
+  line-height: 1.2;
+}
+
+.iv-opt .small {
+  font-size: 13.5px;
+  line-height: 1.35;
+}
+
+.iv-check {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  font-size: 15px;
+  line-height: 1.5;
+  cursor: pointer;
+}
+
+.iv-check input {
+  accent-color: var(--accent);
+  width: 18px;
+  height: 18px;
+  margin: 2px 0 0;
+  flex: none;
+}
+
+.iv-consent {
+  padding: 14px 16px;
+  border-left: 2px solid var(--accent);
+  background: var(--sandbox);
+  color: var(--sandbox-muted);
+}
+
+.iv-link {
+  align-self: flex-start;
+  font: inherit;
+  font-size: 15px;
+  color: var(--accent);
+  background: none;
+  border: 0;
+  padding: 0;
+  text-decoration: underline;
+  text-underline-offset: 0.2em;
+  text-decoration-thickness: 1px;
+  cursor: pointer;
+}
+
+.iv-start,
+.iv-buttons button,
+.iv-type button {
+  font: inherit;
+  font-size: 15px;
+  line-height: 1;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: background 0.2s, opacity 0.2s, border-color 0.2s;
+}
+
+.iv-start {
+  align-self: flex-start;
+  padding: 14px 22px;
+  background: var(--accent);
+  color: var(--sandbox);
+  border: 0;
+  font-family: var(--display);
+  font-weight: 700;
+  font-size: 16px;
+}
+
+.iv-start:hover:not(:disabled) {
+  background: #6ee2b9;
+}
+
+.iv-start:disabled,
+.iv-buttons button:disabled,
+.iv-type button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+/* ---------- live room ---------- */
+
+.iv-room {
+  padding-top: 28px;
+}
+
+.iv-ticks {
+  list-style: none;
+  margin: 0 0 8px;
+  padding: 0;
+  display: flex;
+  gap: 4px;
+}
+
+.iv-ticks li {
+  flex: 1;
+  font-size: 13px;
+  color: var(--graphite);
+  padding-top: 10px;
+  border-top: 2px solid var(--rule);
+  transition: border-color 0.4s, color 0.4s;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.iv-ticks li[data-s="done"] {
+  border-color: var(--accent);
+}
+
+.iv-ticks li[data-s="now"] {
+  border-color: var(--sandbox-ink);
+  color: var(--sandbox-ink);
+}
+
+.iv-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: var(--gutter);
+  align-items: center;
+  min-height: min(62vh, 620px);
+}
+
+.iv-orb {
+  margin: 0;
+  text-align: center;
+}
+
+.iv-blob {
+  width: min(100%, 460px);
+  aspect-ratio: 1;
+  display: block;
+  margin: 0 auto;
+}
+
+.iv-orb figcaption {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  min-height: 56px;
+}
+
+.iv-log {
+  height: min(58vh, 560px);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  background: var(--sandbox-2);
+  overflow: hidden;
+}
+
+.iv-log ol {
+  list-style: none;
+  margin: 0;
+  padding: 20px 22px;
+  height: 100%;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  overscroll-behavior: contain;
+}
+
+.iv-log li {
+  max-width: 88%;
+  animation: iv-in 0.45s var(--ease) both;
+}
+
+.iv-log li[data-r="candidate"] {
+  align-self: flex-end;
+  text-align: right;
+}
+
+.iv-log li[data-interim] p {
+  color: var(--graphite);
+}
+
+.iv-log p {
+  margin: 2px 0 0;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.iv-log li[data-r="candidate"] p {
+  margin-left: auto;
+}
+
+.iv-who {
+  font-size: 13px;
+  color: var(--graphite);
+}
+
+.iv-log li[data-r="interviewer"] .iv-who {
+  color: var(--accent);
+}
+
+@keyframes iv-in {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+  }
+}
+
+.iv-notice {
+  margin: 20px 0 0;
+  max-width: none;
+  padding: 12px 16px;
+  border-left: 2px solid var(--fail);
+  background: rgba(255, 122, 99, 0.08);
+  font-size: 15px;
+}
+
+.iv-controls {
+  margin-top: 24px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.iv-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.iv-buttons button,
+.iv-type button {
+  padding: 11px 16px;
+  background: transparent;
+  color: var(--sandbox-ink);
+  border: 1px solid var(--rule);
+}
+
+.iv-buttons button:hover:not(:disabled),
+.iv-type button:hover:not(:disabled) {
+  border-color: var(--sandbox-ink);
+}
+
+.iv-buttons button[aria-pressed="true"] {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+.iv-buttons .iv-end {
+  border-color: rgba(255, 122, 99, 0.5);
+  color: var(--fail);
+}
+
+.iv-buttons .iv-end:hover {
+  border-color: var(--fail) !important;
+}
+
+.iv-type {
+  display: flex;
+  gap: 8px;
+  flex: 1 1 340px;
+  max-width: 560px;
+}
+
+.iv-type input {
+  flex: 1;
+  min-width: 0;
+  font: inherit;
+  font-size: 16px;
+  color: var(--sandbox-ink);
+  background: var(--sandbox-2);
+  border: 1px solid var(--rule);
+  border-radius: 999px;
+  padding: 10px 16px;
+}
+
+.iv-type input:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 0;
+}
+
+/* ---------- notes ---------- */
+
+.iv-notes {
+  margin-top: 48px;
+  padding-top: 40px;
+  border-top: 1px solid var(--rule);
+}
+
+.iv-stats {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: var(--gutter);
+  margin: 32px 0 40px;
+}
+
+.iv-stats div {
+  border-top: 1px solid var(--rule);
+  padding-top: 12px;
+}
+
+.iv-stats dt {
+  font-size: 14px;
+  color: var(--graphite);
+}
+
+.iv-stats dd {
+  margin: 4px 0 0;
+  font-family: var(--display);
+  font-stretch: 112%;
+  font-weight: 720;
+  font-size: clamp(28px, 3.4vw, 45px);
+  letter-spacing: -0.02em;
+  line-height: 1.1;
+}
+
+.iv-stats dd .muted {
+  font-size: 0.55em;
+}
+
+.iv-qs {
+  list-style: none;
+  margin: 0 0 32px;
+  padding: 0;
+  counter-reset: q;
+}
+
+.iv-qs li {
+  padding: 18px 0;
+  border-top: 1px solid var(--rule);
+  display: grid;
+  grid-template-columns: minmax(0, 3fr) minmax(0, 6fr) minmax(0, 3fr);
+  gap: var(--gutter);
+  align-items: baseline;
+}
+
+.iv-qs p {
+  margin: 0;
+  font-size: 17px;
+}
+
+/* ---------- responsive ---------- */
+
+@media (max-width: 980px) {
+  .iv-setup-intro,
+  .iv-form {
+    grid-column: 1 / -1;
+  }
+  .iv-preview {
+    display: none;
+  }
+  .iv-stage {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+  .iv-blob {
+    width: min(70vw, 300px);
+  }
+  .iv-log {
+    height: 42vh;
+  }
+  .iv-stats {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .iv-qs li {
+    grid-template-columns: 1fr;
+    gap: 6px;
+  }
+}
+
+@media (max-width: 600px) {
+  .iv-form {
+    padding: 20px 16px;
+  }
+  .iv-row,
+  .iv-seg {
+    grid-template-columns: 1fr;
+  }
+  .iv-opt + .iv-opt {
+    border-left: 0;
+    border-top: 1px solid var(--rule);
+  }
+  .iv-crumb {
+    display: none;
+  }
+  .iv-top-in {
+    justify-content: space-between;
+  }
+  .iv-ticks span {
+    display: none;
+  }
+  .iv-ticks li {
+    padding-top: 0;
+  }
+}

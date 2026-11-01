@@ -1,0 +1,57 @@
+{
+  "basics": {
+    "name": "Arjun Nair",
+    "label": "Application Security Engineer",
+    "summary": "AppSec engineer running penetration tests and building security tooling in Python."
+  },
+  "skills": [
+    {
+      "name": "Security",
+      "keywords": [
+        "OWASP",
+        "Burp Suite",
+        "Nmap",
+        "Wireshark"
+      ]
+    },
+    {
+      "name": "Programming",
+      "keywords": [
+        "Python",
+        "Bash"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Auth Audit Toolkit",
+      "description": "Scanner that finds JWT and session misconfigurations in web apps.",
+      "highlights": [
+        "Detects weak JWT signing and missing authorization checks",
+        "Found 12 vulnerabilities in internal services"
+      ],
+      "keywords": [
+        "Python",
+        "OWASP",
+        "Burp Suite"
+      ]
+    },
+    {
+      "name": "Input Fuzzer",
+      "description": "Fuzzer for XSS and SQL injection in form inputs.",
+      "highlights": [
+        "Validation bypass reports for each endpoint"
+      ],
+      "keywords": [
+        "Python"
+      ]
+    }
+  ],
+  "assessment": {
+    "dsaTopicsSolved": {
+      "arrays": 9,
+      "strings": 7,
+      "bit_manipulation": 3
+    }
+  }
+}

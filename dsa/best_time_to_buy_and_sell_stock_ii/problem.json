@@ -1,0 +1,32 @@
+{
+ "id": "best_time_to_buy_and_sell_stock_ii",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "dp",
+  "greedy"
+ ],
+ "entry_point": "max_profit",
+ "signature": {
+  "params": [
+   {
+    "name": "prices",
+    "type": "list[int]"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "best-time-to-buy-and-sell-stock-ii",
+  "question_id": 122
+ },
+ "practice_only": true
+}

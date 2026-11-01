@@ -1,0 +1,20 @@
+{
+  "session_id": "sess_01JBQ4M7X2K9",
+  "task_id": "fastapi-inventory-low-stock",
+  "ts": 1793352780000,
+  "type": "run",
+  "payload": {
+    "visible": {
+      "passed": 0,
+      "total": 1
+    },
+    "hidden_silent": {
+      "passed": 1,
+      "total": 3,
+      "failing_ids": [
+        "tests/test_low_stock_hidden.py::test_product_without_stock_rows_is_low_stock",
+        "tests/test_low_stock_hidden.py::test_route_passes_threshold_through"
+      ]
+    }
+  }
+}

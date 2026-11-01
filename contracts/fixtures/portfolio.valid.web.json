@@ -1,0 +1,62 @@
+{
+  "basics": {
+    "name": "Rohan Mehta",
+    "label": "Frontend Developer",
+    "summary": "Frontend developer building accessible single-page apps with React and TypeScript."
+  },
+  "skills": [
+    {
+      "name": "Frontend",
+      "keywords": [
+        "React",
+        "TypeScript",
+        "Next.js",
+        "Tailwind CSS",
+        "Redux"
+      ]
+    },
+    {
+      "name": "Testing",
+      "keywords": [
+        "Jest",
+        "Playwright"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Recipe Finder",
+      "description": "Single-page app for browsing recipes with search and infinite scroll.",
+      "highlights": [
+        "Faceted filters by cuisine and diet",
+        "Infinite scroll with cursor-based pagination"
+      ],
+      "keywords": [
+        "React",
+        "TypeScript",
+        "Vite",
+        "Tailwind CSS"
+      ]
+    },
+    {
+      "name": "Team Dashboard",
+      "description": "Internal dashboard with OAuth login and sortable tables.",
+      "highlights": [
+        "Sign-in with Google OAuth",
+        "Column sorting and CSV export"
+      ],
+      "keywords": [
+        "Next.js",
+        "TypeScript",
+        "Redux"
+      ]
+    }
+  ],
+  "assessment": {
+    "dsaTopicsSolved": {
+      "arrays": 12,
+      "strings": 8,
+      "hashing": 6
+    }
+  }
+}

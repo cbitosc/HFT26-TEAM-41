@@ -1,0 +1,33 @@
+{
+ "id": "range_addition",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "arrays"
+ ],
+ "entry_point": "get_modified_array",
+ "signature": {
+  "params": [
+   {
+    "name": "length",
+    "type": "int"
+   },
+   {
+    "name": "updates",
+    "type": "list[list[int]]"
+   }
+  ],
+  "returns": "list[int]"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "range-addition",
+  "question_id": 370
+ }
+}

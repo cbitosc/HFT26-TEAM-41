@@ -1,0 +1,112 @@
+{
+  "task_id": "dsa-longest-unique-substring",
+  "version": 1,
+  "tier": "adept",
+  "kind": "dsa",
+  "mode": "seed",
+  "seed_id": "longest_unique_substring",
+  "runtime": "python311",
+  "dsa_tags": [
+    "sliding_window",
+    "hashing"
+  ],
+  "statement_md": "# Longest substring without repeats\n\nImplement `longest_unique_substring(s: str) -> int`, returning the length of the longest contiguous substring of `s` in which no character appears twice.\n\n- `0 <= len(s) <= 100000`\n- `s` may contain any Unicode characters.\n",
+  "repo_tour_md": "",
+  "starter_files": {
+    "solution.py": "def longest_unique_substring(s: str) -> int:\n    raise NotImplementedError\n"
+  },
+  "reference_ref": "dsa/longest_unique_substring/reference@v1",
+  "target_symbols": [
+    "solution.py::longest_unique_substring"
+  ],
+  "entry_symbols": [
+    "solution.py::longest_unique_substring"
+  ],
+  "visible_tests": [],
+  "hidden_tests": [],
+  "visible_test_ids": [
+    "v1",
+    "v2",
+    "v3"
+  ],
+  "hidden_test_ids": [
+    "h1",
+    "h2",
+    "h3",
+    "h4"
+  ],
+  "dsa_cases": {
+    "visible": [
+      {
+        "id": "v1",
+        "input": {
+          "s": "abcabcbb"
+        },
+        "expected": 3
+      },
+      {
+        "id": "v2",
+        "input": {
+          "s": "bbbbb"
+        },
+        "expected": 1
+      },
+      {
+        "id": "v3",
+        "input": {
+          "s": ""
+        },
+        "expected": 0
+      }
+    ],
+    "hidden": [
+      {
+        "id": "h1",
+        "input": {
+          "s": "pwwkew"
+        },
+        "expected": 3
+      },
+      {
+        "id": "h2",
+        "input": {
+          "s": "abba"
+        },
+        "expected": 2
+      },
+      {
+        "id": "h3",
+        "input": {
+          "s": "dvdf"
+        },
+        "expected": 3
+      },
+      {
+        "id": "h4",
+        "input": {
+          "s": "ñaña🙂"
+        },
+        "expected": 3
+      }
+    ],
+    "comparator": null
+  },
+  "perf": null,
+  "time_budget_min": 20,
+  "random_seeds": [
+    7
+  ],
+  "certificate": {
+    "reference_pass": true,
+    "starter_fail": true,
+    "mutation_score": 0.93,
+    "bruteforce_agree": true,
+    "perf_ref_ms": null,
+    "perf_naive_ms": null,
+    "scope_files": [
+      "solution.py"
+    ]
+  },
+  "ai_solve_rate": 0.9,
+  "difficulty_index": 0.35
+}

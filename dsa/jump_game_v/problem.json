@@ -1,0 +1,34 @@
+{
+ "id": "jump_game_v",
+ "difficulty": "hard",
+ "tiers": [
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "dp",
+  "sorting"
+ ],
+ "entry_point": "max_jumps",
+ "signature": {
+  "params": [
+   {
+    "name": "arr",
+    "type": "list[int]"
+   },
+   {
+    "name": "d",
+    "type": "int"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "jump-game-v",
+  "question_id": 1340
+ }
+}

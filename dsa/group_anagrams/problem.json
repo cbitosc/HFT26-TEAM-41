@@ -1,0 +1,36 @@
+{
+ "id": "group_anagrams",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "hashing",
+  "sorting",
+  "strings"
+ ],
+ "entry_point": "group_anagrams",
+ "signature": {
+  "params": [
+   {
+    "name": "strs",
+    "type": "list[str]"
+   }
+  ],
+  "returns": "list[list[str]]"
+ },
+ "comparator": {
+  "kind": "unordered_list",
+  "tolerance": null
+ },
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "group-anagrams",
+  "question_id": 49
+ },
+ "practice_only": true
+}

@@ -1,0 +1,31 @@
+{
+ "id": "steps_to_make_array_non_decreasing",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "linked_list",
+  "stack"
+ ],
+ "entry_point": "total_steps",
+ "signature": {
+  "params": [
+   {
+    "name": "nums",
+    "type": "list[int]"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "steps-to-make-array-non-decreasing",
+  "question_id": 2289
+ }
+}

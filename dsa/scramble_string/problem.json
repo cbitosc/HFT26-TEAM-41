@@ -1,0 +1,34 @@
+{
+ "id": "scramble_string",
+ "difficulty": "hard",
+ "tiers": [
+  "master"
+ ],
+ "tags": [
+  "dp",
+  "strings"
+ ],
+ "entry_point": "is_scramble",
+ "signature": {
+  "params": [
+   {
+    "name": "s1",
+    "type": "str"
+   },
+   {
+    "name": "s2",
+    "type": "str"
+   }
+  ],
+  "returns": "bool"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "scramble-string",
+  "question_id": 87
+ },
+ "practice_only": true
+}

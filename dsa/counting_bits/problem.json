@@ -1,0 +1,29 @@
+{
+ "id": "counting_bits",
+ "difficulty": "easy",
+ "tiers": [
+  "novice"
+ ],
+ "tags": [
+  "bit_manipulation",
+  "dp"
+ ],
+ "entry_point": "count_bits",
+ "signature": {
+  "params": [
+   {
+    "name": "n",
+    "type": "int"
+   }
+  ],
+  "returns": "list[int]"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "counting-bits",
+  "question_id": 338
+ }
+}

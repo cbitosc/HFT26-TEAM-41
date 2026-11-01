@@ -1,0 +1,31 @@
+{
+ "id": "container_with_most_water",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "greedy",
+  "two_pointers"
+ ],
+ "entry_point": "max_area",
+ "signature": {
+  "params": [
+   {
+    "name": "height",
+    "type": "list[int]"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "container-with-most-water",
+  "question_id": 11
+ }
+}

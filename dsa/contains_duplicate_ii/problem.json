@@ -1,0 +1,35 @@
+{
+ "id": "contains_duplicate_ii",
+ "difficulty": "easy",
+ "tiers": [
+  "novice"
+ ],
+ "tags": [
+  "arrays",
+  "hashing",
+  "sliding_window"
+ ],
+ "entry_point": "contains_nearby_duplicate",
+ "signature": {
+  "params": [
+   {
+    "name": "nums",
+    "type": "list[int]"
+   },
+   {
+    "name": "k",
+    "type": "int"
+   }
+  ],
+  "returns": "bool"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "contains-duplicate-ii",
+  "question_id": 219
+ },
+ "practice_only": true
+}

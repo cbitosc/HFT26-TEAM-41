@@ -1,0 +1,342 @@
+{
+ "visible": [
+  {
+   "id": "v1",
+   "input": {
+    "s": "a "
+   },
+   "expected": 1
+  },
+  {
+   "id": "v2",
+   "input": {
+    "s": " "
+   },
+   "expected": 0
+  },
+  {
+   "id": "v3",
+   "input": {
+    "s": ""
+   },
+   "expected": 0
+  },
+  {
+   "id": "v4",
+   "input": {
+    "s": "one"
+   },
+   "expected": 3
+  },
+  {
+   "id": "v5",
+   "input": {
+    "s": "a"
+   },
+   "expected": 1
+  }
+ ],
+ "hidden": [
+  {
+   "id": "h01",
+   "input": {
+    "s": "Hello World"
+   },
+   "expected": 5
+  },
+  {
+   "id": "h02",
+   "input": {
+    "s": "   fly me   to   the moon  "
+   },
+   "expected": 4
+  },
+  {
+   "id": "h03",
+   "input": {
+    "s": "luffy is still joyboy"
+   },
+   "expected": 6
+  },
+  {
+   "id": "h04",
+   "input": {
+    "s": "    a    "
+   },
+   "expected": 1
+  },
+  {
+   "id": "h05",
+   "input": {
+    "s": "multiple   spaces   between   words"
+   },
+   "expected": 5
+  },
+  {
+   "id": "h06",
+   "input": {
+    "s": "multiple    spaces    between    words"
+   },
+   "expected": 5
+  },
+  {
+   "id": "h07",
+   "input": {
+    "s": "    word1    word2    word3    "
+   },
+   "expected": 5
+  },
+  {
+   "id": "h08",
+   "input": {
+    "s": "word1 word2  word3   word4    word5"
+   },
+   "expected": 5
+  },
+  {
+   "id": "h09",
+   "input": {
+    "s": "longwordwithnospaces"
+   },
+   "expected": 20
+  },
+  {
+   "id": "h10",
+   "input": {
+    "s": "trailing    spaces   ontheend    "
+   },
+   "expected": 8
+  },
+  {
+   "id": "h11",
+   "input": {
+    "s": "Multiple     spaces     between     words"
+   },
+   "expected": 5
+  },
+  {
+   "id": "h12",
+   "input": {
+    "s": "trailing spaces    "
+   },
+   "expected": 6
+  },
+  {
+   "id": "h13",
+   "input": {
+    "s": "oneTwoThree"
+   },
+   "expected": 11
+  },
+  {
+   "id": "h14",
+   "input": {
+    "s": "   leading and trailing spaces   "
+   },
+   "expected": 6
+  },
+  {
+   "id": "h15",
+   "input": {
+    "s": "    leading spaces"
+   },
+   "expected": 6
+  },
+  {
+   "id": "h16",
+   "input": {
+    "s": "noSpacesHere"
+   },
+   "expected": 12
+  },
+  {
+   "id": "h17",
+   "input": {
+    "s": "special!@#$%^&*()characters"
+   },
+   "expected": 27
+  },
+  {
+   "id": "h18",
+   "input": {
+    "s": "\tword\twith\ttabs\t"
+   },
+   "expected": 16
+  },
+  {
+   "id": "h19",
+   "input": {
+    "s": "   a    b   c    d   "
+   },
+   "expected": 1
+  },
+  {
+   "id": "h20",
+   "input": {
+    "s": "word1 word2 word3 word4word5"
+   },
+   "expected": 10
+  },
+  {
+   "id": "h21",
+   "input": {
+    "s": "   oneTwoThree   "
+   },
+   "expected": 11
+  },
+  {
+   "id": "h22",
+   "input": {
+    "s": "singleword"
+   },
+   "expected": 10
+  },
+  {
+   "id": "h23",
+   "input": {
+    "s": "   longwordwithnospaces   "
+   },
+   "expected": 20
+  },
+  {
+   "id": "h24",
+   "input": {
+    "s": "    very    very    very    long    string    with    many    spaces    in    between    words    "
+   },
+   "expected": 5
+  },
+  {
+   "id": "h25",
+   "input": {
+    "s": "   SingleWord   "
+   },
+   "expected": 10
+  },
+  {
+   "id": "h26",
+   "input": {
+    "s": "onewordwithpunctuation!"
+   },
+   "expected": 23
+  },
+  {
+   "id": "h27",
+   "input": {
+    "s": "   multiple      spaces     between   words   "
+   },
+   "expected": 5
+  },
+  {
+   "id": "h28",
+   "input": {
+    "s": "   "
+   },
+   "expected": 0
+  },
+  {
+   "id": "h29",
+   "input": {
+    "s": "     onlyspaces    "
+   },
+   "expected": 10
+  },
+  {
+   "id": "h30",
+   "input": {
+    "s": "multiple     spaces    between words"
+   },
+   "expected": 5
+  },
+  {
+   "id": "h31",
+   "input": {
+    "s": "   special!@#$%^&*()characters   "
+   },
+   "expected": 27
+  },
+  {
+   "id": "h32",
+   "input": {
+    "s": "word1word2word3"
+   },
+   "expected": 15
+  },
+  {
+   "id": "h33",
+   "input": {
+    "s": "   a   "
+   },
+   "expected": 1
+  },
+  {
+   "id": "h34",
+   "input": {
+    "s": "Python     programming    language"
+   },
+   "expected": 8
+  },
+  {
+   "id": "h35",
+   "input": {
+    "s": "   Leading and trailing spaces   "
+   },
+   "expected": 6
+  },
+  {
+   "id": "h36",
+   "input": {
+    "s": "   a    b   c   d   e   f   g   h   i   j   k   l   m   n   o   p   q   r   s   t   u   v   w   x   y   z   "
+   },
+   "expected": 1
+  },
+  {
+   "id": "h37",
+   "input": {
+    "s": "word with special@characters!"
+   },
+   "expected": 19
+  },
+  {
+   "id": "h38",
+   "input": {
+    "s": "word\nwith\nnewlines"
+   },
+   "expected": 18
+  },
+  {
+   "id": "h39",
+   "input": {
+    "s": "word1 word2 word3"
+   },
+   "expected": 5
+  },
+  {
+   "id": "h40",
+   "input": {
+    "s": "SingleWord"
+   },
+   "expected": 10
+  },
+  {
+   "id": "h41",
+   "input": {
+    "s": "     "
+   },
+   "expected": 0
+  },
+  {
+   "id": "h42",
+   "input": {
+    "s": "    verylongwordwithoutspaces    "
+   },
+   "expected": 25
+  },
+  {
+   "id": "h43",
+   "input": {
+    "s": "another-word-with-hyphens"
+   },
+   "expected": 25
+  }
+ ]
+}

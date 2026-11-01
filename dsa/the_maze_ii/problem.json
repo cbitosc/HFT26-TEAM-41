@@ -1,0 +1,40 @@
+{
+ "id": "the_maze_ii",
+ "difficulty": "medium",
+ "tiers": [
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "graphs_bfs_dfs",
+  "heaps",
+  "shortest_paths"
+ ],
+ "entry_point": "shortest_distance",
+ "signature": {
+  "params": [
+   {
+    "name": "maze",
+    "type": "list[list[int]]"
+   },
+   {
+    "name": "start",
+    "type": "list[int]"
+   },
+   {
+    "name": "destination",
+    "type": "list[int]"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "the-maze-ii",
+  "question_id": 505
+ },
+ "practice_only": true
+}

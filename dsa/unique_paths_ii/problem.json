@@ -1,0 +1,30 @@
+{
+ "id": "unique_paths_ii",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "dp"
+ ],
+ "entry_point": "unique_paths_with_obstacles",
+ "signature": {
+  "params": [
+   {
+    "name": "obstacleGrid",
+    "type": "list[list[int]]"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "unique-paths-ii",
+  "question_id": 63
+ }
+}

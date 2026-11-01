@@ -1,0 +1,35 @@
+{
+ "id": "minimum_size_subarray_sum",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "binary_search",
+  "sliding_window"
+ ],
+ "entry_point": "min_sub_array_len",
+ "signature": {
+  "params": [
+   {
+    "name": "target",
+    "type": "int"
+   },
+   {
+    "name": "nums",
+    "type": "list[int]"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "minimum-size-subarray-sum",
+  "question_id": 209
+ }
+}

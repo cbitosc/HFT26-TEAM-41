@@ -1,0 +1,30 @@
+{
+ "id": "product_of_array_except_self",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "arrays"
+ ],
+ "entry_point": "product_except_self",
+ "signature": {
+  "params": [
+   {
+    "name": "nums",
+    "type": "list[int]"
+   }
+  ],
+  "returns": "list[int]"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "product-of-array-except-self",
+  "question_id": 238
+ },
+ "practice_only": true
+}

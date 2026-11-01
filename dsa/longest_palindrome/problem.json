@@ -1,0 +1,30 @@
+{
+ "id": "longest_palindrome",
+ "difficulty": "easy",
+ "tiers": [
+  "novice"
+ ],
+ "tags": [
+  "greedy",
+  "hashing",
+  "strings"
+ ],
+ "entry_point": "longest_palindrome",
+ "signature": {
+  "params": [
+   {
+    "name": "s",
+    "type": "str"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "longest-palindrome",
+  "question_id": 409
+ }
+}

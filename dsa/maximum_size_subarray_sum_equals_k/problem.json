@@ -1,0 +1,35 @@
+{
+ "id": "maximum_size_subarray_sum_equals_k",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "hashing"
+ ],
+ "entry_point": "max_sub_array_len",
+ "signature": {
+  "params": [
+   {
+    "name": "nums",
+    "type": "list[int]"
+   },
+   {
+    "name": "k",
+    "type": "int"
+   }
+  ],
+  "returns": "int"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "maximum-size-subarray-sum-equals-k",
+  "question_id": 325
+ },
+ "practice_only": true
+}

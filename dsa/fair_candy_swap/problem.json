@@ -1,0 +1,35 @@
+{
+ "id": "fair_candy_swap",
+ "difficulty": "easy",
+ "tiers": [
+  "novice"
+ ],
+ "tags": [
+  "arrays",
+  "binary_search",
+  "hashing",
+  "sorting"
+ ],
+ "entry_point": "fair_candy_swap",
+ "signature": {
+  "params": [
+   {
+    "name": "aliceSizes",
+    "type": "list[int]"
+   },
+   {
+    "name": "bobSizes",
+    "type": "list[int]"
+   }
+  ],
+  "returns": "list[int]"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "fair-candy-swap",
+  "question_id": 888
+ }
+}

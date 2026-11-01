@@ -1,0 +1,35 @@
+{
+ "id": "interval_list_intersections",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "intervals",
+  "two_pointers"
+ ],
+ "entry_point": "interval_intersection",
+ "signature": {
+  "params": [
+   {
+    "name": "firstList",
+    "type": "list[list[int]]"
+   },
+   {
+    "name": "secondList",
+    "type": "list[list[int]]"
+   }
+  ],
+  "returns": "list[list[int]]"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "interval-list-intersections",
+  "question_id": 986
+ }
+}

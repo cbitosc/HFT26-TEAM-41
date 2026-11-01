@@ -1,0 +1,1211 @@
+{
+ "visible": [
+  {
+   "id": "v1",
+   "input": {
+    "wordsDict": [
+     "a",
+     "b",
+     "a",
+     "b",
+     "a"
+    ],
+    "word1": "a",
+    "word2": "b"
+   },
+   "expected": 1
+  },
+  {
+   "id": "v2",
+   "input": {
+    "wordsDict": [
+     "a",
+     "a",
+     "b",
+     "b"
+    ],
+    "word1": "a",
+    "word2": "b"
+   },
+   "expected": 1
+  },
+  {
+   "id": "v3",
+   "input": {
+    "wordsDict": [
+     "a",
+     "b",
+     "a"
+    ],
+    "word1": "a",
+    "word2": "a"
+   },
+   "expected": 2
+  },
+  {
+   "id": "v4",
+   "input": {
+    "wordsDict": [
+     "a",
+     "c",
+     "b",
+     "a"
+    ],
+    "word1": "a",
+    "word2": "b"
+   },
+   "expected": 1
+  },
+  {
+   "id": "v5",
+   "input": {
+    "wordsDict": [
+     "a",
+     "c",
+     "b",
+     "a"
+    ],
+    "word1": "a",
+    "word2": "a"
+   },
+   "expected": 3
+  }
+ ],
+ "hidden": [
+  {
+   "id": "h01",
+   "input": {
+    "wordsDict": [
+     "practice",
+     "makes",
+     "perfect",
+     "coding",
+     "makes"
+    ],
+    "word1": "makes",
+    "word2": "makes"
+   },
+   "expected": 3
+  },
+  {
+   "id": "h02",
+   "input": {
+    "wordsDict": [
+     "foo",
+     "bar",
+     "foo",
+     "bar",
+     "foo"
+    ],
+    "word1": "foo",
+    "word2": "foo"
+   },
+   "expected": 2
+  },
+  {
+   "id": "h03",
+   "input": {
+    "wordsDict": [
+     "hello",
+     "world",
+     "hello",
+     "world",
+     "hello"
+    ],
+    "word1": "hello",
+    "word2": "world"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h04",
+   "input": {
+    "wordsDict": [
+     "practice",
+     "makes",
+     "perfect",
+     "coding",
+     "makes"
+    ],
+    "word1": "makes",
+    "word2": "coding"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h05",
+   "input": {
+    "wordsDict": [
+     "hello",
+     "world",
+     "hello",
+     "python",
+     "world"
+    ],
+    "word1": "hello",
+    "word2": "world"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h06",
+   "input": {
+    "wordsDict": [
+     "hello",
+     "world",
+     "hello",
+     "world"
+    ],
+    "word1": "hello",
+    "word2": "world"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h07",
+   "input": {
+    "wordsDict": [
+     "hello",
+     "world",
+     "hello",
+     "leetcode"
+    ],
+    "word1": "hello",
+    "word2": "world"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h08",
+   "input": {
+    "wordsDict": [
+     "a",
+     "a",
+     "b",
+     "b",
+     "a",
+     "a"
+    ],
+    "word1": "a",
+    "word2": "b"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h09",
+   "input": {
+    "wordsDict": [
+     "a",
+     "b",
+     "c",
+     "d",
+     "e",
+     "f",
+     "g"
+    ],
+    "word1": "a",
+    "word2": "g"
+   },
+   "expected": 6
+  },
+  {
+   "id": "h10",
+   "input": {
+    "wordsDict": [
+     "same",
+     "word",
+     "repeated",
+     "same",
+     "word"
+    ],
+    "word1": "same",
+    "word2": "same"
+   },
+   "expected": 3
+  },
+  {
+   "id": "h11",
+   "input": {
+    "wordsDict": [
+     "a",
+     "b",
+     "c",
+     "a",
+     "b",
+     "c"
+    ],
+    "word1": "a",
+    "word2": "b"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h12",
+   "input": {
+    "wordsDict": [
+     "a",
+     "b",
+     "c",
+     "a",
+     "b",
+     "c"
+    ],
+    "word1": "a",
+    "word2": "c"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h13",
+   "input": {
+    "wordsDict": [
+     "x",
+     "y",
+     "z",
+     "x",
+     "y",
+     "z",
+     "x",
+     "y",
+     "z",
+     "x",
+     "y",
+     "z"
+    ],
+    "word1": "x",
+    "word2": "z"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h14",
+   "input": {
+    "wordsDict": [
+     "unique",
+     "word",
+     "example",
+     "unique",
+     "another",
+     "word",
+     "example",
+     "unique"
+    ],
+    "word1": "word",
+    "word2": "word"
+   },
+   "expected": 4
+  },
+  {
+   "id": "h15",
+   "input": {
+    "wordsDict": [
+     "dog",
+     "cat",
+     "dog",
+     "cat",
+     "dog",
+     "cat"
+    ],
+    "word1": "dog",
+    "word2": "cat"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h16",
+   "input": {
+    "wordsDict": [
+     "one",
+     "two",
+     "three",
+     "four",
+     "five",
+     "six",
+     "seven",
+     "eight",
+     "nine",
+     "ten"
+    ],
+    "word1": "three",
+    "word2": "seven"
+   },
+   "expected": 4
+  },
+  {
+   "id": "h17",
+   "input": {
+    "wordsDict": [
+     "x",
+     "y",
+     "z",
+     "x",
+     "y",
+     "z",
+     "x",
+     "y",
+     "z"
+    ],
+    "word1": "x",
+    "word2": "y"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h18",
+   "input": {
+    "wordsDict": [
+     "red",
+     "blue",
+     "green",
+     "yellow",
+     "red",
+     "blue",
+     "green",
+     "yellow",
+     "red",
+     "blue",
+     "green",
+     "yellow"
+    ],
+    "word1": "red",
+    "word2": "blue"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h19",
+   "input": {
+    "wordsDict": [
+     "complex",
+     "example",
+     "with",
+     "complex",
+     "example",
+     "with",
+     "complex",
+     "example",
+     "with",
+     "complex"
+    ],
+    "word1": "complex",
+    "word2": "example"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h20",
+   "input": {
+    "wordsDict": [
+     "this",
+     "is",
+     "a",
+     "longer",
+     "list",
+     "with",
+     "several",
+     "repeated",
+     "words",
+     "including",
+     "repeated",
+     "words"
+    ],
+    "word1": "repeated",
+    "word2": "words"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h21",
+   "input": {
+    "wordsDict": [
+     "quick",
+     "brown",
+     "fox",
+     "jumps",
+     "over",
+     "lazy",
+     "dog",
+     "quick",
+     "brown",
+     "fox"
+    ],
+    "word1": "fox",
+    "word2": "lazy"
+   },
+   "expected": 3
+  },
+  {
+   "id": "h22",
+   "input": {
+    "wordsDict": [
+     "find",
+     "me",
+     "find",
+     "me",
+     "find",
+     "me",
+     "find",
+     "me"
+    ],
+    "word1": "find",
+    "word2": "me"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h23",
+   "input": {
+    "wordsDict": [
+     "finding",
+     "the",
+     "minimum",
+     "distance",
+     "between",
+     "two",
+     "words",
+     "in",
+     "the",
+     "array"
+    ],
+    "word1": "the",
+    "word2": "array"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h24",
+   "input": {
+    "wordsDict": [
+     "quick",
+     "brown",
+     "fox",
+     "jumps",
+     "over",
+     "lazy",
+     "dog",
+     "quick"
+    ],
+    "word1": "quick",
+    "word2": "lazy"
+   },
+   "expected": 2
+  },
+  {
+   "id": "h25",
+   "input": {
+    "wordsDict": [
+     "x",
+     "y",
+     "z",
+     "x",
+     "y",
+     "z",
+     "x",
+     "y",
+     "z",
+     "x",
+     "y",
+     "z"
+    ],
+    "word1": "x",
+    "word2": "y"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h26",
+   "input": {
+    "wordsDict": [
+     "x",
+     "y",
+     "z",
+     "x",
+     "y",
+     "z",
+     "x",
+     "y",
+     "z",
+     "x",
+     "y",
+     "z",
+     "x",
+     "y",
+     "z"
+    ],
+    "word1": "x",
+    "word2": "z"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h27",
+   "input": {
+    "wordsDict": [
+     "start",
+     "middle",
+     "end",
+     "start",
+     "middle",
+     "end",
+     "start",
+     "middle",
+     "end"
+    ],
+    "word1": "start",
+    "word2": "end"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h28",
+   "input": {
+    "wordsDict": [
+     "repeated",
+     "word",
+     "is",
+     "repeated",
+     "in",
+     "this",
+     "repeated",
+     "word",
+     "example"
+    ],
+    "word1": "repeated",
+    "word2": "word"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h29",
+   "input": {
+    "wordsDict": [
+     "sample",
+     "input",
+     "with",
+     "multiple",
+     "words",
+     "sample",
+     "input",
+     "with",
+     "multiple",
+     "words"
+    ],
+    "word1": "sample",
+    "word2": "words"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h30",
+   "input": {
+    "wordsDict": [
+     "apple",
+     "banana",
+     "cherry",
+     "apple",
+     "banana",
+     "cherry",
+     "apple"
+    ],
+    "word1": "apple",
+    "word2": "banana"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h31",
+   "input": {
+    "wordsDict": [
+     "dog",
+     "cat",
+     "dog",
+     "cat",
+     "dog",
+     "cat",
+     "dog",
+     "cat"
+    ],
+    "word1": "dog",
+    "word2": "dog"
+   },
+   "expected": 2
+  },
+  {
+   "id": "h32",
+   "input": {
+    "wordsDict": [
+     "this",
+     "is",
+     "a",
+     "test",
+     "to",
+     "ensure",
+     "the",
+     "function",
+     "works",
+     "correctly"
+    ],
+    "word1": "this",
+    "word2": "correctly"
+   },
+   "expected": 9
+  },
+  {
+   "id": "h33",
+   "input": {
+    "wordsDict": [
+     "apple",
+     "banana",
+     "cherry",
+     "apple",
+     "banana",
+     "cherry",
+     "apple"
+    ],
+    "word1": "banana",
+    "word2": "cherry"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h34",
+   "input": {
+    "wordsDict": [
+     "unique",
+     "words",
+     "here",
+     "to",
+     "check",
+     "the",
+     "distance",
+     "between",
+     "unique",
+     "words"
+    ],
+    "word1": "unique",
+    "word2": "unique"
+   },
+   "expected": 8
+  },
+  {
+   "id": "h35",
+   "input": {
+    "wordsDict": [
+     "same",
+     "word",
+     "is",
+     "here",
+     "multiple",
+     "times",
+     "same",
+     "word",
+     "is",
+     "here"
+    ],
+    "word1": "same",
+    "word2": "same"
+   },
+   "expected": 6
+  },
+  {
+   "id": "h36",
+   "input": {
+    "wordsDict": [
+     "one",
+     "two",
+     "three",
+     "four",
+     "five",
+     "six",
+     "seven",
+     "eight",
+     "nine",
+     "ten"
+    ],
+    "word1": "two",
+    "word2": "eight"
+   },
+   "expected": 6
+  },
+  {
+   "id": "h37",
+   "input": {
+    "wordsDict": [
+     "red",
+     "blue",
+     "green",
+     "yellow",
+     "red",
+     "blue",
+     "green",
+     "yellow",
+     "red"
+    ],
+    "word1": "red",
+    "word2": "red"
+   },
+   "expected": 4
+  },
+  {
+   "id": "h38",
+   "input": {
+    "wordsDict": [
+     "repeated",
+     "repeated",
+     "repeated",
+     "repeated",
+     "repeated"
+    ],
+    "word1": "repeated",
+    "word2": "repeated"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h39",
+   "input": {
+    "wordsDict": [
+     "unique",
+     "words",
+     "only",
+     "here",
+     "no",
+     "repeats",
+     "unique",
+     "words",
+     "only",
+     "here",
+     "no",
+     "repeats"
+    ],
+    "word1": "unique",
+    "word2": "only"
+   },
+   "expected": 2
+  },
+  {
+   "id": "h40",
+   "input": {
+    "wordsDict": [
+     "one",
+     "two",
+     "three",
+     "four",
+     "five",
+     "six",
+     "seven",
+     "eight",
+     "nine",
+     "ten"
+    ],
+    "word1": "one",
+    "word2": "ten"
+   },
+   "expected": 9
+  },
+  {
+   "id": "h41",
+   "input": {
+    "wordsDict": [
+     "example",
+     "with",
+     "repeated",
+     "words",
+     "example",
+     "with",
+     "repeated",
+     "words"
+    ],
+    "word1": "example",
+    "word2": "repeated"
+   },
+   "expected": 2
+  },
+  {
+   "id": "h42",
+   "input": {
+    "wordsDict": [
+     "apple",
+     "banana",
+     "cherry",
+     "apple",
+     "banana",
+     "cherry",
+     "apple",
+     "banana"
+    ],
+    "word1": "apple",
+    "word2": "banana"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h43",
+   "input": {
+    "wordsDict": [
+     "find",
+     "the",
+     "shortest",
+     "distance",
+     "between",
+     "these",
+     "words"
+    ],
+    "word1": "find",
+    "word2": "words"
+   },
+   "expected": 6
+  },
+  {
+   "id": "h44",
+   "input": {
+    "wordsDict": [
+     "foo",
+     "bar",
+     "baz",
+     "qux",
+     "quux",
+     "corge",
+     "grault",
+     "garply",
+     "waldo",
+     "fred"
+    ],
+    "word1": "bar",
+    "word2": "waldo"
+   },
+   "expected": 7
+  },
+  {
+   "id": "h45",
+   "input": {
+    "wordsDict": [
+     "alpha",
+     "beta",
+     "gamma",
+     "delta",
+     "epsilon",
+     "zeta",
+     "eta",
+     "theta",
+     "iota",
+     "kappa"
+    ],
+    "word1": "gamma",
+    "word2": "theta"
+   },
+   "expected": 5
+  },
+  {
+   "id": "h46",
+   "input": {
+    "wordsDict": [
+     "python",
+     "java",
+     "c++",
+     "javascript",
+     "python",
+     "ruby",
+     "python",
+     "java"
+    ],
+    "word1": "python",
+    "word2": "java"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h47",
+   "input": {
+    "wordsDict": [
+     "hello",
+     "world",
+     "hello",
+     "world",
+     "hello",
+     "world",
+     "hello",
+     "world",
+     "hello",
+     "world"
+    ],
+    "word1": "hello",
+    "word2": "hello"
+   },
+   "expected": 2
+  },
+  {
+   "id": "h48",
+   "input": {
+    "wordsDict": [
+     "first",
+     "second",
+     "third",
+     "fourth",
+     "fifth",
+     "sixth",
+     "seventh",
+     "eighth",
+     "ninth",
+     "tenth"
+    ],
+    "word1": "first",
+    "word2": "tenth"
+   },
+   "expected": 9
+  },
+  {
+   "id": "h49",
+   "input": {
+    "wordsDict": [
+     "repeated",
+     "words",
+     "are",
+     "repeated",
+     "multiple",
+     "times",
+     "in",
+     "this",
+     "repeated",
+     "example"
+    ],
+    "word1": "repeated",
+    "word2": "repeated"
+   },
+   "expected": 3
+  },
+  {
+   "id": "h50",
+   "input": {
+    "wordsDict": [
+     "find",
+     "the",
+     "shortest",
+     "distance",
+     "between",
+     "two",
+     "words",
+     "in",
+     "a",
+     "list"
+    ],
+    "word1": "find",
+    "word2": "list"
+   },
+   "expected": 9
+  },
+  {
+   "id": "h51",
+   "input": {
+    "wordsDict": [
+     "duplicate",
+     "words",
+     "here",
+     "duplicate",
+     "words",
+     "here",
+     "duplicate",
+     "words",
+     "here"
+    ],
+    "word1": "duplicate",
+    "word2": "words"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h52",
+   "input": {
+    "wordsDict": [
+     "red",
+     "blue",
+     "green",
+     "blue",
+     "red",
+     "green",
+     "blue",
+     "red",
+     "green",
+     "blue"
+    ],
+    "word1": "red",
+    "word2": "green"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h53",
+   "input": {
+    "wordsDict": [
+     "foo",
+     "bar",
+     "baz",
+     "foo",
+     "qux",
+     "bar",
+     "quux",
+     "foo",
+     "corge",
+     "grault",
+     "bar",
+     "garply"
+    ],
+    "word1": "foo",
+    "word2": "bar"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h54",
+   "input": {
+    "wordsDict": [
+     "programming",
+     "code",
+     "algorithm",
+     "data",
+     "structure",
+     "code",
+     "programming"
+    ],
+    "word1": "programming",
+    "word2": "code"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h55",
+   "input": {
+    "wordsDict": [
+     "duplicate",
+     "words",
+     "are",
+     "here",
+     "duplicate",
+     "words",
+     "in",
+     "this",
+     "duplicate",
+     "example"
+    ],
+    "word1": "duplicate",
+    "word2": "words"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h56",
+   "input": {
+    "wordsDict": [
+     "search",
+     "in",
+     "a",
+     "large",
+     "array",
+     "of",
+     "words",
+     "to",
+     "find",
+     "the",
+     "shortest",
+     "distance",
+     "between",
+     "two",
+     "words"
+    ],
+    "word1": "shortest",
+    "word2": "distance"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h57",
+   "input": {
+    "wordsDict": [
+     "one",
+     "two",
+     "three",
+     "four",
+     "five",
+     "six",
+     "seven",
+     "eight",
+     "nine",
+     "ten",
+     "one",
+     "two",
+     "three",
+     "four",
+     "five"
+    ],
+    "word1": "one",
+    "word2": "five"
+   },
+   "expected": 4
+  },
+  {
+   "id": "h58",
+   "input": {
+    "wordsDict": [
+     "repeat",
+     "word",
+     "repeat",
+     "word",
+     "repeat",
+     "word",
+     "repeat",
+     "word"
+    ],
+    "word1": "repeat",
+    "word2": "word"
+   },
+   "expected": 1
+  },
+  {
+   "id": "h59",
+   "input": {
+    "wordsDict": [
+     "a",
+     "b",
+     "c",
+     "d",
+     "e",
+     "f",
+     "g",
+     "h",
+     "i",
+     "j",
+     "k",
+     "l",
+     "m",
+     "n",
+     "o",
+     "p",
+     "q",
+     "r",
+     "s",
+     "t"
+    ],
+    "word1": "a",
+    "word2": "t"
+   },
+   "expected": 19
+  },
+  {
+   "id": "h60",
+   "input": {
+    "wordsDict": [
+     "apple",
+     "banana",
+     "orange",
+     "banana",
+     "grape",
+     "apple",
+     "banana"
+    ],
+    "word1": "banana",
+    "word2": "banana"
+   },
+   "expected": 2
+  }
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "id": "3sum",
+ "difficulty": "medium",
+ "tiers": [
+  "adept",
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "sorting",
+  "two_pointers"
+ ],
+ "entry_point": "three_sum",
+ "signature": {
+  "params": [
+   {
+    "name": "nums",
+    "type": "list[int]"
+   }
+  ],
+  "returns": "list[list[int]]"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "3sum",
+  "question_id": 15
+ },
+ "practice_only": true
+}

@@ -1,0 +1,62 @@
+{
+  "basics": {
+    "name": "Meera Iyer",
+    "label": "Machine Learning Engineer",
+    "summary": "ML engineer training and serving tabular and NLP models in Python."
+  },
+  "skills": [
+    {
+      "name": "Machine Learning",
+      "keywords": [
+        "PyTorch",
+        "scikit-learn",
+        "XGBoost",
+        "Hugging Face"
+      ]
+    },
+    {
+      "name": "Data",
+      "keywords": [
+        "pandas",
+        "NumPy",
+        "Jupyter"
+      ]
+    }
+  ],
+  "projects": [
+    {
+      "name": "Churn Model",
+      "description": "Gradient-boosted churn classifier with a feature store.",
+      "highlights": [
+        "Data validation checks on every training run",
+        "Cached feature computation cut training time by 40%"
+      ],
+      "keywords": [
+        "Python",
+        "XGBoost",
+        "pandas",
+        "scikit-learn"
+      ]
+    },
+    {
+      "name": "Ticket Triage",
+      "description": "Fine-tuned a transformer to route support tickets.",
+      "highlights": [
+        "Weekly accuracy reports per category"
+      ],
+      "keywords": [
+        "Python",
+        "PyTorch",
+        "Hugging Face"
+      ]
+    }
+  ],
+  "assessment": {
+    "dsaTopicsSolved": {
+      "arrays": 30,
+      "dp": 20,
+      "graphs_bfs_dfs": 10,
+      "heaps": 6
+    }
+  }
+}

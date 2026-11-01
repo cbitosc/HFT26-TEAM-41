@@ -1,0 +1,30 @@
+{
+ "id": "split_array_with_equal_sum",
+ "difficulty": "hard",
+ "tiers": [
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "hashing"
+ ],
+ "entry_point": "split_array",
+ "signature": {
+  "params": [
+   {
+    "name": "nums",
+    "type": "list[int]"
+   }
+  ],
+  "returns": "bool"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "split-array-with-equal-sum",
+  "question_id": 548
+ },
+ "practice_only": true
+}

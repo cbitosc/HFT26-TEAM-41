@@ -1,0 +1,103 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/ROG-user-0987/HFT26-TEAM-41/contracts/candidate_task_view.schema.json",
+  "title": "CandidateTaskView",
+  "description": "The part of a TaskSpec the browser may see. Every field here exists in TaskSpec with the same meaning. Never add reference_ref, target_symbols, hidden_tests, hidden DSA cases, certificate or random_seeds.",
+  "type": "object",
+  "required": [
+    "task_id",
+    "version",
+    "tier",
+    "kind",
+    "runtime",
+    "dsa_tags",
+    "statement_md",
+    "repo_tour_md",
+    "starter_files",
+    "entry_symbols",
+    "visible_tests",
+    "dsa_cases",
+    "perf",
+    "time_budget_min"
+  ],
+  "properties": {
+    "task_id": { "type": "string", "minLength": 1 },
+    "version": { "type": "integer", "minimum": 1 },
+    "tier": { "$ref": "#/$defs/Tier" },
+    "kind": { "$ref": "#/$defs/Kind" },
+    "runtime": { "type": "string", "minLength": 1 },
+    "dsa_tags": { "type": "array", "items": { "type": "string" } },
+    "statement_md": { "type": "string" },
+    "repo_tour_md": { "type": "string" },
+    "starter_files": { "$ref": "#/$defs/FileMap" },
+    "entry_symbols": { "type": "array", "items": { "type": "string" } },
+    "visible_tests": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/TestFile" }
+    },
+    "dsa_cases": {
+      "oneOf": [{ "$ref": "#/$defs/VisibleDsaCases" }, { "type": "null" }],
+      "description": "Only the visible DSA cases. Null for domain tasks."
+    },
+    "perf": {
+      "oneOf": [{ "$ref": "#/$defs/PerfBudget" }, { "type": "null" }],
+      "description": "The time budget the candidate must meet. The input generator stays on the backend."
+    },
+    "time_budget_min": { "type": "integer", "minimum": 1, "maximum": 60 }
+  },
+  "additionalProperties": false,
+  "$defs": {
+    "Tier": { "type": "string", "enum": ["novice", "adept", "master"] },
+    "Kind": { "type": "string", "enum": ["domain", "dsa"] },
+    "RelPath": {
+      "type": "string",
+      "description": "Relative POSIX path inside the task repo. No leading slash, no . or .. segments.",
+      "pattern": "^\\.?[A-Za-z0-9_-][A-Za-z0-9_.-]*(/\\.?[A-Za-z0-9_-][A-Za-z0-9_.-]*)*$"
+    },
+    "FileMap": {
+      "type": "object",
+      "description": "Relative path -> file content.",
+      "propertyNames": {
+        "description": "Same rule as RelPath (inlined: the Python generator cannot resolve a $ref here).",
+        "pattern": "^\\.?[A-Za-z0-9_-][A-Za-z0-9_.-]*(/\\.?[A-Za-z0-9_-][A-Za-z0-9_.-]*)*$"
+      },
+      "additionalProperties": { "type": "string" }
+    },
+    "TestFile": {
+      "type": "object",
+      "required": ["path", "content"],
+      "properties": {
+        "path": { "$ref": "#/$defs/RelPath" },
+        "content": { "type": "string" }
+      },
+      "additionalProperties": false
+    },
+    "DsaCase": {
+      "type": "object",
+      "description": "One DSA test case. input: arguments passed to the entry function; expected: its expected return value. Both may be any JSON value.",
+      "required": ["id", "input", "expected"],
+      "properties": {
+        "id": { "type": "string", "minLength": 1 },
+        "input": {},
+        "expected": {}
+      },
+      "additionalProperties": false
+    },
+    "VisibleDsaCases": {
+      "type": "object",
+      "required": ["visible"],
+      "properties": {
+        "visible": { "type": "array", "items": { "$ref": "#/$defs/DsaCase" } }
+      },
+      "additionalProperties": false
+    },
+    "PerfBudget": {
+      "type": "object",
+      "required": ["budget_ms"],
+      "properties": {
+        "budget_ms": { "type": "integer", "minimum": 1 }
+      },
+      "additionalProperties": false
+    }
+  }
+}

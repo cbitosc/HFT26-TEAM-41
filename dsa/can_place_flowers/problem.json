@@ -1,0 +1,33 @@
+{
+ "id": "can_place_flowers",
+ "difficulty": "easy",
+ "tiers": [
+  "novice"
+ ],
+ "tags": [
+  "arrays",
+  "greedy"
+ ],
+ "entry_point": "can_place_flowers",
+ "signature": {
+  "params": [
+   {
+    "name": "flowerbed",
+    "type": "list[int]"
+   },
+   {
+    "name": "n",
+    "type": "int"
+   }
+  ],
+  "returns": "bool"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "can-place-flowers",
+  "question_id": 605
+ }
+}

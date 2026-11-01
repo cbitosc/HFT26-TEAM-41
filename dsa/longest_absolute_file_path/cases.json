@@ -1,0 +1,377 @@
+{
+ "visible": [
+  {
+   "id": "v1",
+   "input": {
+    "input": "dir\n\tsubdir1\n\tsubdir2\n\t\tfile.ext"
+   },
+   "expected": 20
+  },
+  {
+   "id": "v2",
+   "input": {
+    "input": "a"
+   },
+   "expected": 0
+  },
+  {
+   "id": "v3",
+   "input": {
+    "input": "file1.txt\nfile2.txt\nlongfile.txt"
+   },
+   "expected": 12
+  },
+  {
+   "id": "v4",
+   "input": {
+    "input": "root\n\tdir1\n\t\tdir2\n\t\t\tdir3\n\t\t\t\tfile1.txt"
+   },
+   "expected": 29
+  },
+  {
+   "id": "v5",
+   "input": {
+    "input": "app\n\tlib\n\t\tmodule1\n\t\t\tfile1.py\n\t\t\tfile2.py\n\t\tmodule2\n\t\t\tfile3.py"
+   },
+   "expected": 24
+  }
+ ],
+ "hidden": [
+  {
+   "id": "h01",
+   "input": {
+    "input": "dir\n\tsubdir1\n\t\tfile1.ext\n\t\tsubsubdir1\n\tsubdir2\n\t\tsubsubdir2\n\t\t\tfile2.ext"
+   },
+   "expected": 32
+  },
+  {
+   "id": "h02",
+   "input": {
+    "input": "data\n\ttemp\n\t\ttempfile1.csv\n\t\ttempfile2.csv\n\tlogs\n\t\terror.log\n\t\tinfo.log\n\t\tdebug.log"
+   },
+   "expected": 23
+  },
+  {
+   "id": "h03",
+   "input": {
+    "input": "project\n\tassets\n\t\timages\n\t\t\timage1.png\n\t\t\timage2.png\n\t\t\tvideos\n\t\t\tvideo1.mp4\n\t\t\tvideo2.mp4\n\t\tfonts\n\t\t\tfont1.ttf"
+   },
+   "expected": 32
+  },
+  {
+   "id": "h04",
+   "input": {
+    "input": "data\n\tdataset1\n\t\tfile1.csv\n\t\tfile2.csv\n\t\tdataset2\n\t\tfile3.csv\n\t\tdataset3\n\t\tfile4.csv"
+   },
+   "expected": 23
+  },
+  {
+   "id": "h05",
+   "input": {
+    "input": "documents\n\treports\n\t\tmonthly\n\t\t\tjanuary.pdf\n\t\t\tfebruary.pdf\n\t\tannual\n\t\t\treport.pdf"
+   },
+   "expected": 38
+  },
+  {
+   "id": "h06",
+   "input": {
+    "input": "project\n\tsrc\n\t\tmain.py\n\t\tutils\n\t\t\thelper.py\n\t\ttests\n\t\t\ttest_main.py\n\tREADME.md"
+   },
+   "expected": 30
+  },
+  {
+   "id": "h07",
+   "input": {
+    "input": "documents\n\treports\n\t\tq4_sales_report.pdf\n\t\tq4_marketing_report.pdf\n\t\tfinancials\n\t\t\tq4_financials.xlsx"
+   },
+   "expected": 47
+  },
+  {
+   "id": "h08",
+   "input": {
+    "input": "logs\n\tserver1\n\t\taccess.log\n\t\terror.log\n\t\tserver2\n\t\t\taccess.log\n\t\t\terror.log"
+   },
+   "expected": 31
+  },
+  {
+   "id": "h09",
+   "input": {
+    "input": "home\n\tuser\n\t\tdesktop\n\t\t\tphoto1.jpg\n\t\t\tphoto2.jpg\n\t\tdownloads\n\t\t\tfile.zip"
+   },
+   "expected": 28
+  },
+  {
+   "id": "h10",
+   "input": {
+    "input": "documents\n\twork\n\t\tprojects\n\t\t\tproject1\n\t\t\t\tfiles\n\t\t\t\t\tfile1.txt\n\t\t\t\t\tfile2.txt\n\t\t\t\t\tfile3.txt\n\t\t\t\t\tfile4.txt\n\t\t\t\t\tfile5.txt\n\t\t\t\t\tfile6.txt\n\t\t\t\t\tfile7.txt\n\t\t\t\t\tfile8.txt\n\t\t\t\t\tfile9.txt\n\t\t\t\t\tfile10.txt\n\t\t\t\t\tfile11.txt\n\t\t\t\t\tfile12.txt\n\t\t\t\t\tfile13.txt\n\t\t\t\t\tfile14.txt\n\t\t\t\t\tfile15.txt\n\t\t\t\t\tfile16.txt\n\t\t\t\t\tfile17.txt\n\t\t\t\t\tfile18.txt\n\t\t\t\t\tfile19.txt\n\t\t\t\t\tfile20.txt"
+   },
+   "expected": 49
+  },
+  {
+   "id": "h11",
+   "input": {
+    "input": "main\n\tproject\n\t\tcode\n\t\t\tfile1.py\n\t\t\tfile2.py\n\t\tdocs\n\t\t\tdocumentation.md\n\t\tassets\n\t\t\timage.png"
+   },
+   "expected": 34
+  },
+  {
+   "id": "h12",
+   "input": {
+    "input": "nested\n\tdir1\n\t\tdir2\n\t\t\tdir3\n\t\t\t\tdir4\n\t\t\t\t\tdir5\n\t\t\t\t\t\t\tdir6\n\t\t\t\t\t\t\t\t\tfile.txt\n\t\t\t\t\t\t\tdir7\n\t\t\t\t\t\t\t\t\tfile2.txt"
+   },
+   "expected": 51
+  },
+  {
+   "id": "h13",
+   "input": {
+    "input": "home\n\tuser\n\t\tprojects\n\t\t\tproject1\n\t\t\t\tcode.py\n\t\t\tproject2\n\t\t\t\tREADME.md\n\t\tpictures\n\t\t\tvacation\n\t\t\t\tbeach.jpg\n\t\t\t\tcity.jpg"
+   },
+   "expected": 37
+  },
+  {
+   "id": "h14",
+   "input": {
+    "input": "data\n\tset1\n\t\ttrain\n\t\t\timage1.jpg\n\t\t\timage2.jpg\n\t\ttest\n\t\t\timage3.jpg\n\tset2\n\t\ttrain\n\t\t\timage4.jpg"
+   },
+   "expected": 26
+  },
+  {
+   "id": "h15",
+   "input": {
+    "input": "project\n\tsrc\n\t\tmain\n\t\t\tfile1.java\n\t\t\tfile2.java\n\t\ttests\n\t\t\ttest1.java"
+   },
+   "expected": 28
+  },
+  {
+   "id": "h16",
+   "input": {
+    "input": "project\n\tsrc\n\t\tmodule1\n\t\t\tfile1.py\n\t\t\tfile2.py\n\t\tmodule2\n\t\t\tfile3.py\n\t\t\tfile4.py\n\t\t\t\tsubmodule\n\t\t\t\t\tfile5.py"
+   },
+   "expected": 38
+  },
+  {
+   "id": "h17",
+   "input": {
+    "input": "user\n\tfiles\n\t\twork\n\t\t\tpresentation.pptx\n\t\t\tresearch\n\t\t\t\tarticle.pdf\n\t\t\t\tdata.xlsx\n\t\tpersonal\n\t\t\tphotos\n\t\t\t\tfamily\n\t\t\t\t\twedding.jpg\n\t\t\t\t\tvacation\n\t\t\t\t\tbeach.png"
+   },
+   "expected": 45
+  },
+  {
+   "id": "h18",
+   "input": {
+    "input": "home\n\tuser\n\t\tdocuments\n\t\t\treports\n\t\t\t\treport1.pdf\n\t\t\t\treport2.pdf\n\t\tdownloads\n\t\t\tvideo.mp4\n\t\t\taudio.mp3"
+   },
+   "expected": 39
+  },
+  {
+   "id": "h19",
+   "input": {
+    "input": "home\n\tuser1\n\t\tDownloads\n\t\t\tvideos\n\t\t\tvideo1.mp4\n\t\t\tpictures\n\t\t\tpicture1.jpg\n\tuser2\n\t\tMusic\n\t\t\tsong1.mp3"
+   },
+   "expected": 33
+  },
+  {
+   "id": "h20",
+   "input": {
+    "input": "build\n\tsrc\n\t\tlib\n\t\t\tmodule1.py\n\t\t\tmodule2.py\n\t\t\t\tsubmodule1.py\n\t\t\t\tsubmodule2.py\n\t\t\t\t\tfunction1.py\n\t\t\t\t\tfunction2.py"
+   },
+   "expected": 27
+  },
+  {
+   "id": "h21",
+   "input": {
+    "input": "webapp\n\tstatic\n\t\tcss\n\t\t\tstyles.css\n\t\tjs\n\t\t\tapp.js\n\t\t\t\tcomponent1.js\n\t\t\t\tcomponent2.js\n\t\t\t\t\t\tsubcomponent1.js\n\ttemplates\n\t\tindex.html"
+   },
+   "expected": 33
+  },
+  {
+   "id": "h22",
+   "input": {
+    "input": "music\n\tartist1\n\t\tsong1.mp3\n\t\tsong2.mp3\n\tartist2\n\t\tsong3.mp3\n\t\tsong4.mp3\n\t\tsong5.mp3\n\tartist3\n\t\tsong6.mp3"
+   },
+   "expected": 23
+  },
+  {
+   "id": "h23",
+   "input": {
+    "input": "media\n\tvideo\n\t\tmovie1.mp4\n\t\tmovie2.mp4\n\t\tseries\n\t\t\tseason1\n\t\t\t\tepisode1.mp4"
+   },
+   "expected": 39
+  },
+  {
+   "id": "h24",
+   "input": {
+    "input": "project\n\tmodules\n\t\tmodule1\n\t\t\tsrc\n\t\t\t\tmain.py\n\t\t\t\tutils.py\n\t\t\ttests\n\t\t\t\ttest_main.py\n\t\t\t\ttest_utils.py"
+   },
+   "expected": 43
+  },
+  {
+   "id": "h25",
+   "input": {
+    "input": "system\n\tconfig\n\t\tsettings.conf\n\t\tusers.conf\n\t\tpermissions.conf\n\ttemp\n\t\ttempfile1.tmp\n\t\ttempfile2.tmp\n\t\ttempfile3.tmp"
+   },
+   "expected": 30
+  },
+  {
+   "id": "h26",
+   "input": {
+    "input": "root\n\tfolderA\n\t\tsubfolderA1\n\t\t\tfileA1.txt\n\t\t\tsubsubfolderA1\n\t\t\t\tfileA2.txt\n\t\tsubfolderA2\n\t\t\tfileA3.txt\n\tfolderB\n\t\tsubfolderB1\n\t\t\tsubsubfolderB1\n\t\t\t\tfileB1.txt\n\t\tsubfolderB2\n\t\t\tfileB2.txt"
+   },
+   "expected": 50
+  },
+  {
+   "id": "h27",
+   "input": {
+    "input": "system\n\tbin\n\t\tcmd\n\t\t\tscript1.sh\n\t\t\tscript2.sh\n\t\tsbin\n\t\t\tprogram.exe"
+   },
+   "expected": 27
+  },
+  {
+   "id": "h28",
+   "input": {
+    "input": "logs\n\t2023\n\t\tjanuary\n\t\t\t1.log\n\t\t\t2.log\n\t\tfebruary\n\t\t\t3.log\n\t2022\n\t\tnovember\n\t\t\t4.log\n\t\tdecember\n\t\t\t5.log\n\t\t\t6.log\n\t\t\t\tsubfolder\n\t\t\t\t\t7.log"
+   },
+   "expected": 34
+  },
+  {
+   "id": "h29",
+   "input": {
+    "input": "logs\n\tsystem\n\t\tkernel.log\n\t\tapp\n\t\t\tapp1.log\n\t\t\tapp2.log\n\t\tapp3.log\n\terror\n\t\tcritical.log\n\t\tnon_critical.log"
+   },
+   "expected": 27
+  },
+  {
+   "id": "h30",
+   "input": {
+    "input": "root\n\tdir1\n\t\tdir2\n\t\t\tdir3\n\t\t\t\tdir4\n\t\t\t\t\tdir5\n\t\t\t\t\t\tfile.txt"
+   },
+   "expected": 38
+  },
+  {
+   "id": "h31",
+   "input": {
+    "input": "archive\n\t2022\n\t\tjanuary\n\t\t\t\tfile1.txt\n\t\t\t\tfile2.txt\n\t\tfebruary\n\t\t\t\tfile3.txt\n\t\t\t\tfile4.txt\n\t\t2021\n\t\tnovember\n\t\t\t\tfile5.txt\t\t\t\tfile6.txt"
+   },
+   "expected": 44
+  },
+  {
+   "id": "h32",
+   "input": {
+    "input": "system\n\tbin\n\t\tapp1\n\t\t\tconfig.yaml\n\t\t\tdata.txt\n\t\tapp2\n\t\t\tlogs.txt\n\tetc\n\t\tconfig\n\t\t\tnetwork.conf\n\t\t\tsecurity.conf"
+   },
+   "expected": 31
+  },
+  {
+   "id": "h33",
+   "input": {
+    "input": "documents\n\treports\n\t\t2021\n\t\t\tq1\n\t\t\t\tsummary.pdf\n\t\t\tq2\n\t\t\t\tmonthly.pdf\n\t\t\t\tweekly.pdf"
+   },
+   "expected": 37
+  },
+  {
+   "id": "h34",
+   "input": {
+    "input": "home\n\tuser\n\t\tdocuments\n\t\t\treports\n\t\t\t\treport1.pdf\n\t\t\t\treport2.pdf\n\t\t\tmusic\n\t\t\t\tsong1.mp3\n\t\t\t\tsong2.mp3"
+   },
+   "expected": 39
+  },
+  {
+   "id": "h35",
+   "input": {
+    "input": "main\n\tlib\n\t\tcore\n\t\t\tmodule1.py\n\t\t\tmodule2.py\n\t\t\tmodule3.py\n\t\ttests\n\t\t\ttest_module1.py\n\t\t\ttest_module2.py"
+   },
+   "expected": 30
+  },
+  {
+   "id": "h36",
+   "input": {
+    "input": "media\n\tmusic\n\t\trock\n\t\t\tpop\n\t\t\t\tlove.mp3\n\t\t\tindie\n\t\t\t\tchill.wav\n\t\tjazz\n\t\t\tswing.flac\n\tvideos\n\t\tmovies\n\t\t\taction\n\t\t\t\tinception.mp4\n\t\t\t\tdrama\n\t\t\t\tschindler.list.mkv"
+   },
+   "expected": 45
+  },
+  {
+   "id": "h37",
+   "input": {
+    "input": "root\n\tdirA\n\t\tdirB\n\t\t\tdirC\n\t\t\t\tdirD\n\t\t\t\t\tdirE\n\t\t\t\t\t\tfile.txt"
+   },
+   "expected": 38
+  },
+  {
+   "id": "h38",
+   "input": {
+    "input": "workspace\n\tprojectA\n\t\tREADME.md\n\t\tsrc\n\t\t\tmain.py\n\t\t\tutils.py\n\tprojectB\n\t\tsrc\n\t\t\tmain.py"
+   },
+   "expected": 31
+  },
+  {
+   "id": "h39",
+   "input": {
+    "input": "root\n\tfolder1\n\t\tsubfolder1\n\t\t\tsubsubfolder1\n\t\t\t\tfile1.txt\n\t\tsubfolder2\n\t\t\tfile2.txt"
+   },
+   "expected": 47
+  },
+  {
+   "id": "h40",
+   "input": {
+    "input": "config\n\tsettings\n\t\tenvironment\n\t\t\tproduction.conf\n\t\t\tdevelopment.conf\n\t\t\tstaging.conf\n\t\tdatabase\n\t\t\tdb.conf"
+   },
+   "expected": 44
+  },
+  {
+   "id": "h41",
+   "input": {
+    "input": "dir1\n\tdir2\n\t\tdir3\n\t\t\tfile1.txt\n\tdir4\n\t\tdir5\n\t\t\tdir6\n\t\t\t\tfile2.txt"
+   },
+   "expected": 29
+  },
+  {
+   "id": "h42",
+   "input": {
+    "input": "root\n\tdir1\n\t\tdir11\n\t\t\tdir111\n\t\t\t\tfile111.txt\n\t\tdir12\n\tdir2\n\t\tdir21\n\t\t\tdir211\n\t\t\t\tfile2111.txt"
+   },
+   "expected": 35
+  },
+  {
+   "id": "h43",
+   "input": {
+    "input": "archive\n\t2019\n\t\tjanuary\n\t\t\treport1.txt\n\t\t\treport2.txt\n\t\tfebruary\n\t\t\treport3.txt\n\t\tmarch\n\t\t\treport4.txt\n\t2020\n\t\tjanuary\n\t\t\treport5.txt\n\t\tfebruary\n\t\t\treport6.txt"
+   },
+   "expected": 33
+  },
+  {
+   "id": "h44",
+   "input": {
+    "input": "home\n\tuser\n\t\tdocuments\n\t\t\twork\n\t\t\t\tproject1\n\t\t\t\t\t\treadme.md\n\t\t\t\tproject2\n\t\t\t\t\t\treadme.md"
+   },
+   "expected": 43
+  },
+  {
+   "id": "h45",
+   "input": {
+    "input": "documents\n\tbook\n\t\tchapter1\n\t\t\tsection1.1\n\t\t\t\t\tsection1.1.1\n\t\t\t\t\t\tfile1.txt\n\t\t\tsection1.2\n\t\tchapter2\n\t\t\tsection2.1"
+   },
+   "expected": 36
+  },
+  {
+   "id": "h46",
+   "input": {
+    "input": "root\n\tdata\n\t\tdata1.csv\n\t\tdata2.csv\n\t\tdata3.csv\n\tlogs\n\t\tlog1.txt\n\t\tlog2.txt\n\t\tlog3.txt"
+   },
+   "expected": 19
+  },
+  {
+   "id": "h47",
+   "input": {
+    "input": "config\n\tsettings1.json\n\tsettings2.json\n\tlogs\n\t\terror.log\n\t\tinfo.log\n\ttemp\n\t\ttempfile.tmp"
+   },
+   "expected": 24
+  },
+  {
+   "id": "h48",
+   "input": {
+    "input": "config\n\tsettings.ini\n\tlogs\n\t\terror.log\n\t\tinfo.log\n\t\tdebug.log\n\tbackups\n\t\t2023-01-01\n\t\t\tbackup1.zip\n\t\t2023-02-01\n\t\t\tbackup2.zip"
+   },
+   "expected": 37
+  }
+ ]
+}

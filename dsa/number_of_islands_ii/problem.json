@@ -1,0 +1,38 @@
+{
+ "id": "number_of_islands_ii",
+ "difficulty": "hard",
+ "tiers": [
+  "master"
+ ],
+ "tags": [
+  "arrays",
+  "hashing",
+  "union_find"
+ ],
+ "entry_point": "num_islands2",
+ "signature": {
+  "params": [
+   {
+    "name": "m",
+    "type": "int"
+   },
+   {
+    "name": "n",
+    "type": "int"
+   },
+   {
+    "name": "positions",
+    "type": "list[list[int]]"
+   }
+  ],
+  "returns": "list[int]"
+ },
+ "comparator": null,
+ "own_statement": false,
+ "source": {
+  "dataset": "newfacade/LeetCodeDataset",
+  "revision": "215604aeed660029df7de2fea5a4d7b6ed476a08",
+  "task_id": "number-of-islands-ii",
+  "question_id": 305
+ }
+}
